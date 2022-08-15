@@ -1,6 +1,5 @@
 #include <cs50.h>
 #include <stdio.h>
-
 int main(void)
 {
     int width = get_int("Width: ");
@@ -10,7 +9,10 @@ int main(void)
             {
                     printf("#");
                     
+            }
     }
     else
-        goto 6;
+    {
+            goto 5;
+    }
 }
