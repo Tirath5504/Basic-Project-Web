@@ -13,5 +13,5 @@ int main(void)
             {
                 printf("#");
             }
-    }while(width>0);
+    }while(width<=0);
 }
