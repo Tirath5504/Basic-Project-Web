@@ -3,14 +3,15 @@
 
 int main(void)
 {
+    int width;
     do
     {
-            int width = get_int("Enter width: ");
+            width = get_int("Enter width: ");
             printf("#");
             width--;
             for(int i = 0; i < width; i++)
             {
-                printf{"#"};
+                printf("#");
             }
     }while(width>0);
 }
