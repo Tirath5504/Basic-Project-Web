@@ -3,15 +3,11 @@
 
 int main(void)
 {
-    int width;
-    do
+    int width = get_int("Width: ");
+    if(width>0)
     {
-            width = get_int("Enter width: ");
-            printf("#");
-            width--;
-            for(int i = 0; i < width; i++)
-            {
-                printf("#");
-            }
-    }while(width<=0);
+            
+    }
+    else
+        goto 6;
 }
