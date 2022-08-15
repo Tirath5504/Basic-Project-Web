@@ -7,6 +7,10 @@ int main(void)
     {
             int width = get_int("Enter width: ");
             printf("#");
-            width--
+            width--;
+            for(int i = 0; i < width; i++)
+            {
+                printf{"#"};
+            }
     }while(width>0);
 }
