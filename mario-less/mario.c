@@ -31,10 +31,10 @@ void print_pattern(int n)
     {
         for(int j = i; j < (n - 1); j++)
         {
-                 printf("*");
+                 printf(" ");
 
         }
-        for(int j = i; j >= (n - 1); j++)
+        for(int j = n; j >= (n - i); j--)
         {
                  printf("#");
 
