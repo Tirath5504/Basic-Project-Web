@@ -15,7 +15,7 @@ int main(void)
         if( (width - i) >= c)
         {
                  printf("#");
-                 for(int j = 0; j < width; j++)
+                 for(int j = i; j <= width; j++)
                 {
                          printf("#");
                 }
