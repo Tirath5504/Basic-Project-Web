@@ -9,9 +9,9 @@ int main(void)
 
     }while(width>0;);
 
-    for(int i = width; i > 0; i--)
+    for(int i = width; width > 0; width--)
          {
-                if(i  width)
+                if(i >= width)
                 printf("#");
                 for(int j = 0; j < width; j++)
                 {
