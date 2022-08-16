@@ -11,7 +11,10 @@ int main(void)
 
     for(int i = 0; i <= width; i++)
     {
-        if(i)
+        for(int j = 0; j <=i ; j++)
+        {
+                if()
+        }
         printf("\n");
     }
 }
