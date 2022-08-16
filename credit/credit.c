@@ -20,6 +20,7 @@ int main(void)
     printf("%s \n", valid);
 }
 
+// Taking credit card number from user.
 long get_number(void)
 {
     long n;
@@ -31,6 +32,7 @@ long get_number(void)
     return n;
 }
 
+//Checking which company's credit card it is
 string get_type(long n)
 {
     if (n / 10000000000000 == 34 || n / 10000000000000 == 37)
@@ -51,6 +53,7 @@ string get_type(long n)
     }
 }
 
+// Finding if the number is valid
 string valid_number(long n)
 {
     int n1, sum1, sum2, sum3;
@@ -68,12 +71,12 @@ string valid_number(long n)
         sum3 = sum3 + (n2 % 100);
         n = n / 100;
     }
-    if(((sum2 + sum3) % 10) == 0)
-        {
-            return "Valid Number";
-        }
+    if (((sum2 + sum3) % 10) == 0)
+    {
+        return "Valid Number";
+    }
     else
-        {
-            return "Invalid Number";
-        }
+    {
+        return "Invalid Number";
+    }
 }
