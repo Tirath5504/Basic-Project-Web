@@ -59,7 +59,7 @@ string valid_number(long n)
     long n1;
     long sum1 = 0, sum2 = 0, sum3 = 0;
     long n2 = n / 10;
-    while (n >= 0)
+    while (n > 0)
     {
         n1 = n2 % 10;
         n1 = n1 * 2;
