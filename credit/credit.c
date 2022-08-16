@@ -62,10 +62,10 @@ string valid_number(long n)
     {
         n1 = n % 10;
         n1 = n1 * 2;
-        while (n1 > 0)
+        while (n2 > 0)
         {
-            sum1 = sum1 + (n1 % 10);
-            n1 = n1 / 10;
+            sum1 = sum1 + (n2 % 10);
+            n2 = n2 / 10;
         }
         sum2 = sum2 + sum1;
         sum3 = sum3 + (n2 % 100);
