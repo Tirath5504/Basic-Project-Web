@@ -5,7 +5,7 @@
 long get_number(void);
 int get_type(long n);
 int valid_number(long n);
-void print(int n1, int n2);
+int display(int n1, int n2);
 
 int main(void)
 {
@@ -20,7 +20,7 @@ int main(void)
     int valid = valid_number(n);
 
     // Printing result
-    void print(company , valid);
+    int display(company , valid);
 }
 
 // Taking credit card number from user.
