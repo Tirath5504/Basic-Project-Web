@@ -9,7 +9,7 @@ int main(void)
 
     }while(width>0;);
 
-    for(int i = width; width > 0; width--)
+    for(int i = width; i > 0; i--)
          {
                 if(i >= width)
                 printf("#");
