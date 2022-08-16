@@ -1,17 +1,29 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void input(void);
+// Declaring functions
+int input(void);
 
 int main(void)
 {
-    for(int i = width; i > 0; i--)
+    int n = input(void);
+    for(int i = n; i > 0; i--)
     {
-        input(void);
-        for(int j = width; ; j++)
+        for(int j = n; j > 0; j++)
         {
-                if(j < )
+
         }
         printf("\n");
     }
+}
+
+int input(void)
+{
+    int width;
+    do
+    {
+         width = get_int("Width: ");
+    }
+    while (width <= 0 && width > 8);
+    return width;
 }
