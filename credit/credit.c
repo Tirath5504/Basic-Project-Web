@@ -18,6 +18,8 @@ int main(void)
     // Checking if number is valid
     string valid = valid_number(n);
     printf("%s\n", valid);
+
+    return 0;
 }
 
 long get_number(void)
