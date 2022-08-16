@@ -2,22 +2,22 @@
 #include <stdio.h>
 
 // Declaring functions
-int
-
-
 long get_number(void);
 string get_type(long n);
+string valid_number(long n);
 
 int main(void)
 {
     // Asking user their credit card number
     long n = get_number();
 
-    //Checking what type of card they use
+    // Checking what type of card they use
     string type = get_type(n);
     printf("%s \n", type);
 
-
+    // Checking if number is valid
+    string valid = valid_number(n);
+    printf("%s", valid);
 }
 
 long get_number(void)
@@ -48,5 +48,18 @@ string get_type(long n)
     else
     {
         return "Invalid Card Number";
+    }
+}
+
+string valid_number(long n)
+{
+    while (n > 0)
+    {
+        int n1 = n % 100;
+        n1 = n1 * 2;
+        while (n1 > 0)
+        {
+            int sum = sum + 
+        }
     }
 }
