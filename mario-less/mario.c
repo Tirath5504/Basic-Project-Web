@@ -27,5 +27,4 @@ int main(void)
         }
         c++;
     }
-    printf("\n");
 }
