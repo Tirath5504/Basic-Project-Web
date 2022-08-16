@@ -56,7 +56,8 @@ string get_type(long n)
 // Finding if the number is valid
 string valid_number(long n)
 {
-    long n1, sum1, sum2, sum3;
+    long n1;
+    int sum1 = 0, sum2 = 0, sum3 = 0;
     long n2 = n / 10;
     while (n > 0)
     {
