@@ -5,14 +5,16 @@ int get_number(void);
 
 int main(void)
 {
-    int n = get_number(void);
+    int n = get_number();
 }
 
 int get_number(void)
 {
+    long n;
     do
     {
-        long n = get_long("Enter your credit card number");
+        n = get_long("Enter your credit card number");
     }
     while (n > 1000000000000);
+    return n;
 }
