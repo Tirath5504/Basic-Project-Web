@@ -20,7 +20,7 @@ int main(void)
     int valid = valid_number(n);
 
     // Printing result
-    int display(company , valid);
+    int a = display(company , valid);
 }
 
 // Taking credit card number from user.
@@ -92,7 +92,7 @@ int valid_number(long n)
 }
 
 // Printing result
-void print(int n1, int n2)
+int display(int n1, int n2)
 {
     if (n1 == 1 && n2 == 10)
     {
@@ -110,4 +110,5 @@ void print(int n1, int n2)
     {
         printf("INVALID\n");
     }
+    return 0;
 }
