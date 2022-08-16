@@ -68,8 +68,9 @@ string valid_number(long n)
             n1 = n1 / 10;
         }
         sum2 = sum2 + sum1;
-        sum3 = sum3 + (n2 % 100);
+        sum3 = sum3 + (n2 % 10);
         n = n / 100;
+        n2 = n2 / 100;
     }
     if (((sum2 + sum3) % 10) == 0)
     {
