@@ -38,7 +38,7 @@ void print_pattern(int n)
         {
             printf("#");
         }
-        printf(" ");
+        printf("  ");
 
         // Printing second part of pattern
         for (int j = 0; j <= i; j++)
