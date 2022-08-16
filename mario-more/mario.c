@@ -27,15 +27,14 @@ int input(void)
 // Printing Pattern
 void print_pattern(int n)
 {
-    int c = (n / 2);
-    for (int i = 0; i < c; i++)
+    for (int i = 0; i < n; i++)
     {
         // Printing first part of pattern
-        for (int j = i; j < (c - 1); j++)
+        for (int j = i; j < (n - 1); j++)
         {
             printf(" ");
         }
-        for (int j = c; j >= (c - i); j--)
+        for (int j = n; j >= (n - i); j--)
         {
             printf("#");
         }
