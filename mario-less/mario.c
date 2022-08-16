@@ -11,9 +11,9 @@ int main(void)
 
     for(int i = width; i > 0; i--)
     {
-        for(int j = width; j  ; j++)
+        for(int j = width; ; j++)
         {
-                if()
+                if(j < )
         }
         printf("\n");
     }
