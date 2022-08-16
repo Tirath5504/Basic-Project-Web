@@ -27,11 +27,7 @@ int main(void)
 long get_number(void)
 {
     long n;
-    do
-    {
-        n = get_long("Enter your credit card number ");
-    }
-    while (n < 1000000000000);
+    n = get_long("Enter your credit number");
     return n;
 }
 
