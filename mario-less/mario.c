@@ -5,9 +5,9 @@ int main(void)
     int width;
     do
     {
-            int width = get_int("Width: ");
+         width = get_int("Width: ");
 
-    }while(width>0;);
+    }while(width>0);
 
     for(int i = width; i > 0; i--)
          {
