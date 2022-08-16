@@ -15,6 +15,10 @@ int main(void)
         for(int j = width; j > (i-1) ; j--)
         {
                 printf(".");
+                if(j <= (i-2))
+                {
+                        printf("#");
+                }
         }
 
         printf("\n");
