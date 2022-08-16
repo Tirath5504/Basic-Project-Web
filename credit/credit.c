@@ -53,7 +53,8 @@ string get_type(long n)
 
 string valid_number(long n)
 {
-    int n1, sum1, sum2;
+    int n1, sum1, sum2, sum3;
+    int n2 = n % 10;
     while (n > 0)
     {
         n1 = n % 100;
@@ -63,6 +64,14 @@ string valid_number(long n)
             sum1 = sum1 + (n1 % 10);
         }
         sum2 = sum2 + sum1;
-        
+        sum3 = sum3 + (n2 % 100);
+    }
+    if(((sum2 + sum3) % 10) == 0)
+    {
+        return "\nValid Number\n";
+    }
+    else
+    {
+        return "\nInvalid Number\n";
     }
 }
