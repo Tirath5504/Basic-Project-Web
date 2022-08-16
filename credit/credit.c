@@ -57,7 +57,6 @@ string valid_number(long n)
     int n2 = n % 10;
     while (n > 0)
     {
-        n = n / 100;
         n1 = n % 100;
         n1 = n1 * 2;
         while (n1 > 0)
@@ -66,13 +65,14 @@ string valid_number(long n)
         }
         sum2 = sum2 + sum1;
         sum3 = sum3 + (n2 % 100);
+        n = n / 100;
     }
     if(((sum2 + sum3) % 10) == 0)
-    {
-        return "Valid Number";
-    }
+        {
+            return "Valid Number";
+        }
     else
-    {
-        return "Invalid Number";
-    }
+        {
+            return "Invalid Number";
+        }
 }
