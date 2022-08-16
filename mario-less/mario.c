@@ -9,13 +9,14 @@ int main(void)
 
     }while(width>0;);
 
-    for(int i = 0; i < width; i++)
+    for(int i = width; i > 0; i--)
          {
-                    printf("#");
-                    for(int j = 0; j < width; j++)
-                    {
+                if(i  width)
+                printf("#");
+                for(int j = 0; j < width; j++)
+                {
                         print
-                    }
+                }
 
          }
 }
