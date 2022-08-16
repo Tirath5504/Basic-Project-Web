@@ -12,9 +12,9 @@ int main(void)
     int c = 0;
     for(int i = width; i > 0; i--)
     {
-        if( (width - i) >= c)
+        if( (width - i) <= c)
         {
-                 printf("#");
+                 printf(" ");
                  for(int j = i; j <= width; j++)
                 {
                          printf("#");
@@ -23,7 +23,7 @@ int main(void)
         }
         else
         {
-                  printf(" ");
+                  printf("#");
         }
         c++;
     }
