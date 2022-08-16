@@ -63,6 +63,7 @@ string valid_number(long n)
     {
         n1 = n2 % 10;
         n1 = n1 * 2;
+        sum1 = 0;
         while (n1 > 0)
         {
             sum1 = sum1 + (n1 % 10);
