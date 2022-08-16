@@ -37,23 +37,23 @@ string get_type(long n)
 {
     if (n / 10000000000000 == 34 || n / 10000000000000 == 37)
     {
-        return "American Express";
+        return "AMEX\n";
     }
     else if (n / 100000000000000 == 51 || n / 100000000000000 == 52 || n / 100000000000000 == 53)
     {
-        return "MasterCard";
+        return "MASTERCARD\n";
     }
     else if (n / 100000000000000 == 54 || n / 100000000000000 == 55)
     {
-        return "MasterCard";
+        return "MASTERCARD\n";
     }
     else if (n / 1000000000000000 == 4 || n / 1000000000000 == 4)
     {
-        return "Visa";
+        return "VISA\n";
     }
     else
     {
-        return "Invalid Card Number";
+        return "INVALID\n";
     }
 }
 
