@@ -9,21 +9,23 @@ int main(void)
          width = get_int("Width: ");
 
     }while(width <= 0);
-
+    int c = 0;
     for(int i = width; i > 0; i--)
     {
-        if( (width - i) >= width)
+        if( (width - i) >= c)
         {
                  printf("#");
                  for(int j = 0; j < width; j++)
                 {
                          printf("#");
                 }
+                printf("\n");
         }
         else
         {
                   printf(" ");
         }
+        c++;
     }
     printf("\n");
 }
