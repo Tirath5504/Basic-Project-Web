@@ -2,17 +2,20 @@
 #include <stdio.h>
 int main(void)
 {
-    int width = get_int("Width: ");
-    if(width>0)
+    int width;
+    do
     {
-            for(int i = 0; i < width; i++)
-            {
+            int width = get_int("Width: ");
+
+    }while(width>0;);
+
+    for(int i = 0; i < width; i++)
+         {
                     printf("#");
-                    
-            }
-    }
-    else
-    {
-            goto 5;
-    }
+                    for(int j = 0; j < width; j++)
+                    {
+                        print
+                    }
+
+         }
 }
