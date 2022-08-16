@@ -13,14 +13,14 @@ int main(void)
     long n = get_number();
 
     // Checking what type of card they use
-    int type = get_type(n);
+    int company = get_type(n);
 
 
     // Checking if number is valid
     int valid = valid_number(n);
 
     // Printing result
-    void print(type , valid);
+    void print(company , valid);
 }
 
 // Taking credit card number from user.
