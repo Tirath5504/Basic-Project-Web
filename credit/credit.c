@@ -30,7 +30,7 @@ int get_number(void)
 
 string get_type(int n)
 {
-    if(n % 10000000000000 == 3)
+    if(n % 100000000000000 == 3)
     {
         return "American Express";
     }
