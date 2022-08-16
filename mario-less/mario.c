@@ -12,11 +12,16 @@ int main(void)
     for(int i = width; i > 0; i--)
          {
                 if(i >= width)
-                printf("#");
-                for(int j = 0; j < width; j++)
                 {
-                        print
+                        printf("#");
+                        for(int j = 0; j < width; j++)
+                        {
+                                printf("#");
+                        }
                 }
-
+                else
+                {
+                        printf{" "};
+                }
          }
 }
