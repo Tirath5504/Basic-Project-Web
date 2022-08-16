@@ -9,9 +9,9 @@ int main(void)
          width = get_int("Width: ");
     }while(width <= 0);
 
-    for(int i = 0; i <= width; i++)
+    for(int i = width; i > 0; i--)
     {
-        for(int j = 0; j <=i ; j++)
+        for(int j = width; j  ; j++)
         {
                 if()
         }
