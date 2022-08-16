@@ -41,7 +41,8 @@ int get_cents(void)
     do
     {
         cents = get_int("How many cents are you owed? \n");
-    }while(cents <= 0);
+    }
+    while(cents <= 0);
     return cents;
 }
 
