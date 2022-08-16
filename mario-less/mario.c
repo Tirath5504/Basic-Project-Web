@@ -3,20 +3,16 @@
 
 // Declaring functions
 int input(void);
+void print_pattern(int n);
 
+// Main Function
 int main(void)
 {
     int n = input();
-    for(int i = n; i > 0; i--)
-    {
-        for(int j = n; j > 0; j++)
-        {
-
-        }
-        printf("\n");
-    }
+    print_pattern(n);
 }
 
+// Taking Input
 int input(void)
 {
     int width;
@@ -26,4 +22,17 @@ int input(void)
     }
     while (width <= 0 || width > 8);
     return width;
+}
+
+// Printing Pattern
+void print_pattern(int n)
+{
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < n; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
 }
