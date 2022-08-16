@@ -28,18 +28,21 @@ int input(void)
 void print_pattern(int n)
 {
     int c = (n / 2);
-    for(int i = 0; i < c; i++)
+    for (int i = 0; i < c; i++)
     {
-        for(int j = i; j < (c - 1); j++)
+        // Printing first part of pattern
+        for (int j = i; j < (c - 1); j++)
         {
             printf(" ");
         }
-        for(int j = c; j >= (c - i); j--)
+        for (int j = c; j >= (c - i); j--)
         {
             printf("#");
         }
         printf(" ");
-        for(int j = 0; j <= i; j++)
+
+        // Printing second part of pattern
+        for (int j = 0; j <= i; j++)
         {
             printf("#");
         }
