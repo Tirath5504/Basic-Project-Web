@@ -48,15 +48,15 @@ int get_type(long n)
     }
     else if (n / 100000000000000 == 54 || n / 100000000000000 == 55)
     {
-        return 3;
+        return 2;
     }
     else if (n / 1000000000000000 == 4 || n / 1000000000000 == 4)
     {
-        return 4;
+        return 3;
     }
     else
     {
-        return 5;
+        return 4;
     }
 }
 
@@ -94,12 +94,20 @@ int valid_number(long n)
 // Printing result
 void print(int n1, int n2)
 {
-    if (n1 == 1 && n2 == 100)
+    if (n1 == 1 && n2 == 10)
     {
         printf("AMEX\n");
     }
-    else if (n1 == 1 && n2 == 100)
+    else if (n1 == 2 && n2 == 10)
     {
-        printf("AMEX\n");
+        printf("MASTERCARD\n");
+    }
+    else if (n1 == 3 && n2 == 10)
+    {
+        printf("VISA\n");
+    }
+    else
+    {
+        printf("INVALID\n");
     }
 }
