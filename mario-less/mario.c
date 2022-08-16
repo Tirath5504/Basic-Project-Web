@@ -6,7 +6,7 @@ int input(void);
 
 int main(void)
 {
-    int n = input(void);
+    int n = input();
     for(int i = n; i > 0; i--)
     {
         for(int j = n; j > 0; j++)
@@ -24,6 +24,6 @@ int input(void)
     {
          width = get_int("Width: ");
     }
-    while (width <= 0 && width > 8);
+    while (width <= 0 || width > 8);
     return width;
 }
