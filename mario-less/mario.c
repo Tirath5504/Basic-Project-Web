@@ -9,22 +9,13 @@ int main(void)
          width = get_int("Width: ");
 
     }while(width <= 0);
-    int c = 0;
-    for(int i = width; i > 0; i--)
+
+    for(int i = 0; i < width; i++)
     {
-        if( (width - i) <= c)
+        for(int j=0; j <= i ; j++)
         {
-                 printf(" ");
-                 for(int j = i; j <= width; j++)
-                {
-                         printf("#");
-                }
-                printf("\n");
+                printf(".");
         }
-        else
-        {
-                  printf("#");
-        }
-        c++;
+        printf("\n");
     }
 }
