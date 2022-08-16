@@ -17,7 +17,7 @@ int main(void)
 
     // Checking if number is valid
     string valid = valid_number(n);
-    printf("%s", valid);
+    printf("%s\n", valid);
 }
 
 long get_number(void)
