@@ -18,8 +18,6 @@ int main(void)
     // Checking if number is valid
     string valid = valid_number(n);
     printf("\n%s\n", valid);
-
-    return 0;
 }
 
 long get_number(void)
@@ -59,6 +57,7 @@ string valid_number(long n)
     int n2 = n % 10;
     while (n > 0)
     {
+        n = n / 100;
         n1 = n % 100;
         n1 = n1 * 2;
         while (n1 > 0)
