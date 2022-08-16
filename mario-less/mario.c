@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+
 int main(void)
 {
     int width;
@@ -10,18 +11,19 @@ int main(void)
     }while(width <= 0);
 
     for(int i = width; i > 0; i--)
-         {
-                if(i >= width)
+    {
+        if( (width - i) >= width)
+        {
+                 printf("#");
+                 for(int j = 0; j < width; j++)
                 {
-                        printf("#");
-                        for(int j = 0; j < width; j++)
-                        {
-                                printf("#");
-                        }
+                         printf("#");
                 }
-                else
-                {
-                        printf(" ");
-                }
-         }
+        }
+        else
+        {
+                  printf(" ");
+        }
+    }
+    printf("\n");
 }
