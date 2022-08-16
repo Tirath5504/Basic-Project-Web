@@ -7,6 +7,7 @@ int get_type(long n);
 int valid_number(long n);
 int display(int n1, int n2);
 
+// Main Function
 int main(void)
 {
     // Asking user their credit card number
@@ -34,22 +35,31 @@ long get_number(void)
 // Checking which company's credit card it is
 int get_type(long n)
 {
+    // Checking if it is an American Express card
     if (n / 10000000000000 == 34 || n / 10000000000000 == 37)
     {
         return 1;
     }
+
+    // Checking if it is a Visa card (Part 1)
     else if (n / 100000000000000 == 51 || n / 100000000000000 == 52 || n / 100000000000000 == 53)
     {
         return 2;
     }
+
+    // Checking if it is a Visa card (Part 2)
     else if (n / 100000000000000 == 54 || n / 100000000000000 == 55)
     {
         return 2;
     }
+
+    // Checking if it is a MasterCard
     else if (n / 1000000000000000 == 4 || n / 1000000000000 == 4)
     {
         return 3;
     }
+
+    // Checking if it is an invalid card
     else
     {
         return 4;
