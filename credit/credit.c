@@ -53,15 +53,16 @@ string get_type(long n)
 
 string valid_number(long n)
 {
-    int n1
+    int n1, sum1, sum2;
     while (n > 0)
     {
-        int n1 = n % 100;
+        n1 = n % 100;
         n1 = n1 * 2;
         while (n1 > 0)
         {
-            int sum1 = sum1 + (n1 % 10);
+            sum1 = sum1 + (n1 % 10);
         }
         sum2 = sum2 + sum1;
+        
     }
 }
