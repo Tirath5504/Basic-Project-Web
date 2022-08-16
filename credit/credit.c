@@ -17,7 +17,7 @@ int main(void)
 
     // Checking if number is valid
     string valid = valid_number(n);
-    printf("\n%s\n", valid);
+    printf(" %s ", valid);
 }
 
 long get_number(void)
@@ -62,10 +62,11 @@ string valid_number(long n)
         while (n1 > 0)
         {
             sum1 = sum1 + (n1 % 10);
+            n1 = n1 / 10;
         }
         sum2 = sum2 + sum1;
         sum3 = sum3 + (n2 % 100);
-        n = n / 100;
+        n = n / 10;
     }
     if(((sum2 + sum3) % 10) == 0)
         {
