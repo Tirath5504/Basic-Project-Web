@@ -42,7 +42,7 @@ int get_cents(void)
     {
         cents = get_int("How many cents are you owed? \n");
     }
-    while(cents <= 0);
+    while (cents <= 0);
     return cents;
 }
 
@@ -53,7 +53,7 @@ int calculate_quarters(int cents)
 
 int calculate_dimes(int cents)
 {
-    return (cents /10);
+    return (cents / 10);
 }
 
 int calculate_nickels(int cents)
