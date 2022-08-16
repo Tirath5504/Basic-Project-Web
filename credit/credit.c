@@ -57,7 +57,7 @@ string get_type(long n)
 string valid_number(long n)
 {
     long n1, sum1, sum2, sum3;
-    long n2 = n % 10;
+    long n2 = n / 10;
     while (n > 0)
     {
         n1 = n % 10;
