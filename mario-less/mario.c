@@ -18,7 +18,7 @@ int input(void)
     int width;
     do
     {
-         width = get_int("Width: ");
+        width = get_int("Width: ");
     }
     while (width <= 0 || width > 8);
     return width;
@@ -27,16 +27,16 @@ int input(void)
 // Printing Pattern
 void print_pattern(int n)
 {
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
-        for(int j = i; j < (n - 1); j++)
+        for (int j = i; j < (n - 1); j++)
         {
-                 printf(" ");
+            printf(" ");
 
         }
-        for(int j = n; j >= (n - i); j--)
+        for (int j = n; j >= (n - i); j--)
         {
-                 printf("#");
+            printf("#");
 
         }
         printf("\n");
