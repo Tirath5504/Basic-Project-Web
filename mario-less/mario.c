@@ -31,7 +31,14 @@ void print_pattern(int n)
     {
         for(int j = 0; j < n; j++)
         {
-            printf("#");
+            if ()
+            {
+                 printf("#");
+            }
+            else
+            {
+                printf(" ");
+            }
         }
         printf("\n");
     }
