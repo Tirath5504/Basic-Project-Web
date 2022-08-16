@@ -30,9 +30,20 @@ int get_number(void)
 
 string get_type(int n)
 {
-    if(n % 100000000000000 == 3)
+    if(n % 10000000000000 == 34 || n % 10000000000000 == 37)
     {
         return "American Express";
     }
-    else if(n % )
+    else if(n % 100000000000000 == 51 || n % 100000000000000 == 52 || n % 100000000000000 == 53 || n % 100000000000000 == 54 || n % 100000000000000 == 55)
+    {
+        return "MasterCard";
+    }
+    else if(n % 1000000000000000 == 4 || n % 100000000000000 == 4 || n % 10000000000000 == 4 || n % 1000000000000 == 4)
+    {
+        return "Visa";
+    }
+    else
+    {
+        return "Invalid Card Number";
+    }
 }
