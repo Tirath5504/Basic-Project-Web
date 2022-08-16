@@ -7,7 +7,7 @@ int main(void)
     do
     {
          width = get_int("Width: ");
-    }while(width <= 0);
+    }while(width <= 0 );
 
     for(int i = width; i > 0; i--)
     {
