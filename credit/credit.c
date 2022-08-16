@@ -3,8 +3,9 @@
 
 // Declaring functions
 long get_number(void);
-string get_type(long n);
-string valid_number(long n);
+int get_type(long n);
+int valid_number(long n);
+void print(int n1, int n2);
 
 int main(void)
 {
@@ -12,12 +13,14 @@ int main(void)
     long n = get_number();
 
     // Checking what type of card they use
-    string type = get_type(n);
-    printf("%s \n", type);
+    int type = get_type(n);
+
 
     // Checking if number is valid
-    string valid = valid_number(n);
-    printf("%s \n", valid);
+    int valid = valid_number(n);
+
+    // Printing result
+    void print(type , valid);
 }
 
 // Taking credit card number from user.
@@ -32,33 +35,33 @@ long get_number(void)
     return n;
 }
 
-//Checking which company's credit card it is
-string get_type(long n)
+// Checking which company's credit card it is
+int get_type(long n)
 {
     if (n / 10000000000000 == 34 || n / 10000000000000 == 37)
     {
-        return "AMEX\n";
+        return 1;
     }
     else if (n / 100000000000000 == 51 || n / 100000000000000 == 52 || n / 100000000000000 == 53)
     {
-        return "MASTERCARD\n";
+        return 2;
     }
     else if (n / 100000000000000 == 54 || n / 100000000000000 == 55)
     {
-        return "MASTERCARD\n";
+        return 3;
     }
     else if (n / 1000000000000000 == 4 || n / 1000000000000 == 4)
     {
-        return "VISA\n";
+        return 4;
     }
     else
     {
-        return "INVALID\n";
+        return 5;
     }
 }
 
 // Finding if the number is valid
-string valid_number(long n)
+int valid_number(long n)
 {
     long n1;
     long sum1 = 0, sum2 = 0, sum3 = 0;
@@ -80,10 +83,23 @@ string valid_number(long n)
     }
     if (((sum2 + sum3) % 10) == 0)
     {
-        return "Valid Number";
+        return 10;
     }
     else
     {
-        return "Invalid Number";
+        return 11;
+    }
+}
+
+// Printing result
+void print(int n1, int n2)
+{
+    if (n1 == 1 && n2 == 100)
+    {
+        printf("AMEX\n");
+    }
+    else if (n1 == 1 && n2 == 100)
+    {
+        printf("AMEX\n");
     }
 }
