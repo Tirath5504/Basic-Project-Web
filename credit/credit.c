@@ -57,11 +57,11 @@ string get_type(long n)
 string valid_number(long n)
 {
     long n1;
-    int sum1 = 0, sum2 = 0, sum3 = 0;
+    long sum1 = 0, sum2 = 0, sum3 = 0;
     long n2 = n / 10;
-    while (n > 0)
+    while (n >= 0)
     {
-        n1 = n % 10;
+        n1 = n2 % 10;
         n1 = n1 * 2;
         while (n1 > 0)
         {
@@ -69,7 +69,7 @@ string valid_number(long n)
             n1 = n1 / 10;
         }
         sum2 = sum2 + sum1;
-        sum3 = sum3 + (n2 % 10);
+        sum3 = sum3 + (n % 10);
         n = n / 100;
         n2 = n2 / 100;
     }
