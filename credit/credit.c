@@ -17,7 +17,7 @@ int main(void)
 
     // Checking if number is valid
     string valid = valid_number(n);
-    printf("%s\n", valid);
+    printf("\n%s\n", valid);
 
     return 0;
 }
@@ -70,10 +70,10 @@ string valid_number(long n)
     }
     if(((sum2 + sum3) % 10) == 0)
     {
-        return "\nValid Number\n";
+        return "Valid Number";
     }
     else
     {
-        return "\nInvalid Number\n";
+        return "Invalid Number";
     }
 }
