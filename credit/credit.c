@@ -2,13 +2,16 @@
 #include <stdio.h>
 
 // Declaring functions
-int get_number(void);
-string get_type(int n);
+int
+
+
+long get_number(void);
+string get_type(long n);
 
 int main(void)
 {
     // Asking user their credit card number
-    int n = get_number();
+    long n = get_number();
 
     //Checking what type of card they use
     string type = get_type(n);
@@ -17,7 +20,7 @@ int main(void)
 
 }
 
-int get_number(void)
+long get_number(void)
 {
     long n;
     do
@@ -28,7 +31,7 @@ int get_number(void)
     return n;
 }
 
-string get_type(int n)
+string get_type(long n)
 {
     if(n / 10000000000000 == 34 || n / 10000000000000 == 37)
     {
