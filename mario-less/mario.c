@@ -34,6 +34,11 @@ void print_pattern(int n)
                  printf("*");
 
         }
+        for(int j = i; j >= (n - 1); j++)
+        {
+                 printf("#");
+
+        }
         printf("\n");
     }
 }
