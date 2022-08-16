@@ -10,12 +10,13 @@ int main(void)
 
     }while(width <= 0);
 
-    for(int i = 0; i < width; i++)
+    for(int i = 1; i <= width; i++)
     {
-        for(int j=0; j <= i ; j++)
+        for(int j = width; j > (i-1) ; j--)
         {
                 printf(".");
         }
+
         printf("\n");
     }
 }
