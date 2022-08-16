@@ -30,5 +30,5 @@ int get_number(void)
 
 string get_type(int n)
 {
-    if(n)
+    if(n % 10 == )
 }
