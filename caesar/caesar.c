@@ -16,7 +16,7 @@ int main(int l, string key[])
     string a = key[1];
     int k = atoi(a);
     int r = valid(l, a);
-    if(r == 1)
+    if (r == 1)
     {
         return r;
     }
@@ -31,15 +31,15 @@ int valid(int l, string key)
 {
     int c = 0;
     int n = strlen(key);
-    if(l == 2)
+    if (l == 2)
     {
-        for(int i = 0; i < n; i++)
+        for (int i = 0; i < n; i++)
         {
-            if(isdigit(key[i]))
+            if (isdigit(key[i]))
             {
                 c = 0;
             }
-             else
+            else
             {
                 printf("Usage: ./caesar key\n");
                 c = 1;
@@ -65,13 +65,13 @@ string input(void)
 string cipher(string s, int k)
 {
     int n = strlen(s);
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
-        if(isupper(s[i]))
+        if (isupper(s[i]))
         {
             s[i] = 65 + (s[i] - 65 + k) % 26;
         }
-        else if(islower(s[i]))
+        else if (islower(s[i]))
         {
             s[i] = 97 + (s[i] - 97 + k) % 26;
         }
