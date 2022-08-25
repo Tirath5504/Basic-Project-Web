@@ -18,6 +18,7 @@ int main(int l, string key[])
     int r = valid(l, a);
     if (r == 1)
     {
+        printf("Usage: ./caesar key\n");
         return r;
     }
     string  s = input();
@@ -41,14 +42,12 @@ int valid(int l, string key)
             }
             else
             {
-                printf("Usage: ./caesar key\n");
                 c = 1;
             }
         }
     }
     else
     {
-        printf("Usage: ./caesar key\n");
         c = 1;
     }
     return c;
