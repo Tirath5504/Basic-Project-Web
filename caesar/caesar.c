@@ -20,7 +20,6 @@ int main(int l, string key[])
     {
         printf("Usage: ./caesar key\n");
     }
-    return r;
     string  s = input();
     s = cipher(s, k);
     output(s);
