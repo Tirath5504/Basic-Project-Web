@@ -13,7 +13,7 @@ int valid(int l, string key);
 // Main Function
 int main(int l, string key[])
 {
-    if(l != 1)
+    if (l != 1)
     {
         string a = key[1];
         int k = atoi(a);
