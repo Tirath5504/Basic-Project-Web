@@ -24,4 +24,7 @@ string input(void)
 }
 
 // Counting letters
-int 
+int letters(string s);
+{
+    
+}
