@@ -68,7 +68,9 @@ string cipher(string s, int k)
     for(int i = 0; i < n; i++)
     {
         if(isalpha(s[i]))
-        s[i] = s[i] + k;
+        {
+            s[i] = s[i] + k;
+        }
     }
     return s;
 }
