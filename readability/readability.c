@@ -75,8 +75,8 @@ int sentences(string s, int n)
 // Computing index
 float index(float n_l, float n_w, float n_s)
 {
-    float l = ((n_l) / (n_w)) * 100.0;
-    float s = ((n_s) / (n_w)) * 100.0;
+    float l = (n_l / n_w) * 100.0;
+    float s = (n_s / n_w) * 100.0;
     float i = (0.0588 * l) - (0.296 * s) - (15.8);
     return i;
 }
