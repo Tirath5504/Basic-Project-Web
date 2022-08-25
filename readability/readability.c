@@ -80,7 +80,7 @@ int index(int n_l, int n_w, int n_s)
 {
     int l = ((n_l) / (n_w)) * 100.0;
     int s = ((n_s) / (n_w)) * 100.0;
-    int i = round((0.0588 * l) - (0.026 * s) - 15.8);
+    int i = round((0.0588 * l) - (0.0296 * s) - 15.8);
     return i;
 }
 
