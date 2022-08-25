@@ -69,7 +69,7 @@ string cipher(string s, int k)
     {
         if(isalpha(s[i]))
         {
-            s[i] = s[i] + k;
+            s[i] = (s[i] + k) % 26;
         }
     }
     return s;
