@@ -13,15 +13,24 @@ int main(int l, string key[])
 {
     int k = atoi(key[1]);
     string a = key[1];
-    for (int i = 0; i < n; i++)
-    if(isdigit(key[1]) && l == 1)
+    if(l == 1)
     {
-        return 0;
+        for (int i = 0; i < n; i++)
+        {
+            if(isdigit(a[i]))
+            {
+                return 0;
+            }
+            else
+            {
+                printf("Usage: ./caesar key\n");
+                return 1;
+            }
+        }
     }
     else
     {
-        printf("Usage: ./caesar key\n");
-        return 1;
+        printf("Usage: )
     }
     string  s = input();
     string cipher_text = cipher(s, k);
