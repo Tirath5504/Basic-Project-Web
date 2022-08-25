@@ -22,7 +22,7 @@ int main(int l, string key[])
         }
     }
     string  s = input();
-    string cipher_text = cipher(s, key);
+    string cipher_text = cipher(s, key[]);
     void output(cipher_text);
 }
 
