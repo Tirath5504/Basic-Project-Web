@@ -84,12 +84,23 @@ int index(int n_l, int n_w, int n_s)
 {
     int l = ((n_l) / (n_w)) * 100.0;
     int s = ((n_s) / (n_w)) * 100.0;
-    int i = round((0.058 * l) - (0.026 * s) - 15.8);
+    int i = round((0.0588 * l) - (0.026 * s) - 15.8);
     return i;
 }
 
 // Printing output
 void output(int n)
 {
-    printf("Grade %i \n", n);
+    if(n >= 1 && n <= 16)
+    {
+        printf("Grade %i \n", n);
+    }
+    else if(n > 16)
+    {
+        printf("Grade 16+ \n");
+    }
+    else
+    {
+        printf("Before Grade 1");
+    }
 }
