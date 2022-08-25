@@ -8,18 +8,21 @@
 string input(void);
 string cipher(string s, int k);
 void output(string ct);
+int valid(int l, string key[]);
 
 // Main Function
 int main(int l, string key[])
 {
     int k = atoi(key[1]);
+    int r = valid(l, key[1]);
     string  s = input();
     string cipher_text = cipher(s, k);
     void output(string cipher_text);
+    return r;
 }
 
 // Checking if key is valid
-void valid(int l, string key[])
+int valid(int l, string key[])
 {
     int k = atoi(key[1]);
     string a = key[1];
