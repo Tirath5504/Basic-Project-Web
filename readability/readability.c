@@ -31,12 +31,12 @@ string input(void)
 }
 
 // Counting letters
-int letters(string s,int n)
+int letters(string s, int n)
 {
     int n1 = 0;
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
-        if(isalpha(s[i]))
+        if (isalpha(s[i]))
         {
             n1++;
         }
@@ -48,9 +48,9 @@ int letters(string s,int n)
 int words(string s, int n)
 {
     int n1 = 1;
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
-        if(s[i] == ' ')
+        if (s[i] == ' ')
         {
             n1++;
         }
@@ -62,9 +62,9 @@ int words(string s, int n)
 int sentences(string s, int n)
 {
     int n1 = 0;
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
-        if(s[i] == '.' || s[i] == '?' || s[i] == '!')
+        if (s[i] == '.' || s[i] == '?' || s[i] == '!')
         {
             n1++;
         }
@@ -85,11 +85,11 @@ float index(float n_l, float n_w, float n_s)
 void output(float n)
 {
     int i = round(n);
-    if(i >= 1 && i <= 16)
+    if (i >= 1 && i <= 16)
     {
         printf("Grade %i \n", i);
     }
-    else if(i > 16)
+    else if (i > 16)
     {
         printf("Grade 16+ \n");
     }
