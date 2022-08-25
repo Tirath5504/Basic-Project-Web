@@ -69,11 +69,11 @@ string cipher(string s, int k)
     {
         if(isupper(s[i]))
         {
-            s[i] = 65 + (s[i] + k) % 26;
+            s[i] = 65 + (s[i] - 65 + k) % 26;
         }
         else if(islower(s[i]))
         {
-            s[i] = 97 + (s[i] + k) % 26;
+            s[i] = 97 + (s[i] - 97 + k) % 26;
         }
     }
     return s;
