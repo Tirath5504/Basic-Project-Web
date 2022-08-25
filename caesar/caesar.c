@@ -14,19 +14,16 @@ int valid(int l, string key);
 int main(int l, string key[])
 {
     string a = key[1];
-    if(l != 1)
+    int k = atoi(a);
+    int r = valid(l, a);
+    if (r == 1)
     {
-        int k = atoi(a);
-        int r = valid(l, a);
-        if (r == 1)
-        {
-            printf("Usage: ./caesar key\n");
-        }
-        return r;
-        string  s = input();
-        s = cipher(s, k);
-        output(s);
+        printf("Usage: ./caesar key\n");
     }
+    return r;
+    string  s = input();
+    s = cipher(s, k);
+    output(s);
     return 0;
 }
 
