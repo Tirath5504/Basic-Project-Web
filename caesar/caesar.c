@@ -13,8 +13,9 @@ int valid(int l, string key);
 // Main Function
 int main(int l, string key[])
 {
-    int k = atoi(a[1]);
-    int r = valid(l, a[1]);
+    string a = key[1];
+    int k = atoi(a);
+    int r = valid(l, a);
     string  s = input();
     string cipher_text = cipher(s, k);
     void output(string cipher_text);
@@ -24,7 +25,6 @@ int main(int l, string key[])
 // Checking if key is valid
 int valid(int l, string key)
 {
-    int k = atoi(key[1]);
     string a = key[1];
     int n = strlen(a);
     if(l == 1)
