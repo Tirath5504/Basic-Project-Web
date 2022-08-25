@@ -17,10 +17,11 @@ int main(void)
 {
     string s = input();
     int n = length(s);
-    int n_l = letters(s,n);
-    int n_w = words(s,n);
-    int n_s = sentences(s,n);
-    output(n_l, n_w, n_s);
+    int n_l = letters(s, n);
+    int n_w = words(s, n);
+    int n_s = sentences(s, n);
+    int index = index(n_l, n_w, n_s);
+    output(index);
 }
 
 // Taking input
