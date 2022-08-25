@@ -26,26 +26,25 @@ int main(int l, string key[])
 int valid(int l, string key)
 {
     int n = strlen(key);
+    int c = 0;
     if(l == 1)
     {
         for (int i = 0; i < n; i++)
         {
             if(isdigit(key[i]))
             {
-                return 0;
+                c = 0;
             }
-            else
-            {
-                printf("Usage: ./caesar key\n");
-                return 1;
-            }
+            printf("Usage: ./caesar key\n");
+            c = 1;
         }
     }
     else
     {
         printf("Usage: ./caesar key");
-        return 1;
+        c = 1;
     }
+    return c;
 }
 
 // Taking Plain Text
