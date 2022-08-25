@@ -27,7 +27,6 @@ int valid(int l, string key)
 {
     int n = strlen(key);
     int c = 0;
-    if()
     if(l == 1)
     {
         for (int i = 0; i < n; i++)
@@ -36,8 +35,11 @@ int valid(int l, string key)
             {
                 c = 0;
             }
-            printf("Usage: ./caesar key\n");
-            c = 1;
+            else
+            {
+                printf("Usage: ./caesar key\n");
+                c = 1;
+            }
         }
     }
     else
