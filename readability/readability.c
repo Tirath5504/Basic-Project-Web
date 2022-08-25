@@ -9,7 +9,7 @@ string input(void);
 int letters(string s, int n);
 int words(string s, int n);
 int sentences(string s, int n);
-int index(float n_l, float n_w, float n_s);
+float index(float n_l, float n_w, float n_s);
 void output(float n);
 
 // Main Function
@@ -73,7 +73,7 @@ int sentences(string s, int n)
 }
 
 // Computing index
-int index(float n_l, float n_w, float n_s)
+float index(float n_l, float n_w, float n_s)
 {
     float l = ((n_l) / (n_w)) * 100.0;
     float s = ((n_s) / (n_w)) * 100.0;
