@@ -7,7 +7,7 @@ string input(void);
 string cipher(string s, int key);
 void output(string s);
 
-int main(int l, string key)
+int main(int l, string key[])
 {
     if(isdigit(key))
     {
