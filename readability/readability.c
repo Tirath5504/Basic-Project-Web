@@ -80,18 +80,19 @@ int index(int n_l, int n_w, int n_s)
 {
     int l = ((n_l) / (n_w)) * 100.0;
     int s = ((n_s) / (n_w)) * 100.0;
-    int i = round((0.0588 * l) - (0.0296 * s) - (15.8));
+    int i = (0.0588 * l) - (0.0296 * s) - (15.8);
     return i;
 }
 
 // Printing output
 void output(int n)
 {
-    if(n >= 1 && n <= 16)
+    int i = round(n);
+    if(i >= 1 && i <= 16)
     {
         printf("Grade %i \n", n);
     }
-    else if(n > 16)
+    else if(i > 16)
     {
         printf("Grade 16+ \n");
     }
