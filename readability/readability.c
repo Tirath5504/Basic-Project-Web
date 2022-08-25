@@ -9,8 +9,8 @@ string input(void);
 int letters(string s, int n);
 int words(string s, int n);
 int sentences(string s, int n);
-int index(int n_l, int n_w, int n_s);
-void output(int i);
+int index(float n_l, float n_w, float n_s);
+void output(float n);
 
 // Main Function
 int main(void)
@@ -76,21 +76,21 @@ int sentences(string s, int n)
 }
 
 // Computing index
-int index(int n_l, int n_w, int n_s)
+int index(float n_l, float n_w, float n_s)
 {
-    int l = ((n_l) / (n_w)) * 100.0;
-    int s = ((n_s) / (n_w)) * 100.0;
-    int i = (0.0588 * l) - (0.0296 * s) - (15.8);
+    float l = ((n_l) / (n_w)) * 100.0;
+    float s = ((n_s) / (n_w)) * 100.0;
+    float i = (0.0588 * l) - (0.0296 * s) - (15.8);
     return i;
 }
 
 // Printing output
-void output(int n)
+void output(float n)
 {
     int i = round(n);
     if(i >= 1 && i <= 16)
     {
-        printf("Grade %i \n", n);
+        printf("Grade %i \n", i);
     }
     else if(i > 16)
     {
