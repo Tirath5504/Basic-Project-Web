@@ -9,18 +9,21 @@ void output(string s);
 
 int main(int l, string key[])
 {
-    if(isdigit(key))
+    for(int i = 0; i < l; i++)
     {
-        string  s = input();
-        string cipher_text = cipher(s, key);
-        void output(cipher_text);
-        return 0;
+        if(isdigit(key[i]))
+        {
+            return 0;
+        }
+        else
+        {
+            printf("Usage: ./caesar key\n");
+            return 1;
+        }
     }
-    else
-    {
-        printf("Usage: ./caesar key\n");
-        return 1;
-    }
+    string  s = input();
+    string cipher_text = cipher(s, key);
+    void output(cipher_text);
 }
 
 // Taking Plain Text
