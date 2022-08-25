@@ -67,9 +67,13 @@ string cipher(string s, int k)
     int n = strlen(s);
     for(int i = 0; i < n; i++)
     {
-        if(isalpha(s[i]))
+        if(isupper(s[i]))
         {
-            s[i] = (s[i] + k) % 26;
+            s[i] = ((s[i] + k) % 26) + 65;
+        }
+        if(islower(s[i]))
+        {
+            s[i] = ((s[i] + k) % 26) + 97;
         }
     }
     return s;
