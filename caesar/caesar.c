@@ -12,6 +12,8 @@ void output(string ct);
 int main(int l, string key[])
 {
     int k = atoi(key[1]);
+    string a = key[1];
+    for (int i = 0; i < n; i++)
     if(isdigit(key[1]) && l == 1)
     {
         return 0;
