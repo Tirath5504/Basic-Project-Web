@@ -23,7 +23,7 @@ int main(int l, string key[])
     string  s = input();
     s = cipher(s, k);
     output(s);
-    return r;
+    return 0;
 }
 
 // Checking if key is valid
