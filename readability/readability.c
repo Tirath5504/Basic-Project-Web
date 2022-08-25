@@ -41,7 +41,6 @@ int letters(string s,int n)
             n1++;
         }
     }
-    printf("Letters = %i \n", n1);
     return n1;
 }
 
@@ -56,7 +55,6 @@ int words(string s, int n)
             n1++;
         }
     }
-    printf("Words = %i \n", n1);
     return n1;
 }
 
@@ -71,7 +69,6 @@ int sentences(string s, int n)
             n1++;
         }
     }
-    printf("Sentences = %i \n", n1);
     return n1;
 }
 
