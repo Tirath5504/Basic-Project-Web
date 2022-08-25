@@ -9,15 +9,15 @@ void output(string s);
 
 int main(int l, string key[])
 {
-    if(isdigit(key[1]))
-        {
-            return 0;
-        }
+    if(isdigit(key[1]) && l == 1)
+    {
+        return 0;
+    }
     else
-        {
-            printf("Usage: ./caesar key\n");
-            return 1;
-        }
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
     string  s = input();
     string cipher_text = cipher(s, key[]);
     void output(cipher_text);
