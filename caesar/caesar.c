@@ -38,7 +38,7 @@ string cipher(string s, int k)
     int n = strlen(s);
     for(int i = 0; i < n; i++)
     {
-        s[i] = s[i] + key;
+        s[i] = s[i] + k;
     }
     return s;
 }
