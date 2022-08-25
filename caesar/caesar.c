@@ -16,10 +16,10 @@ int main(int l, string key[])
     string a = key[1];
     int k = atoi(a);
     int r = valid(l, a);
+    return r;
     string  s = input();
     string cipher_text = cipher(s, k);
     void output(string cipher_text);
-    return r;
 }
 
 // Checking if key is valid
