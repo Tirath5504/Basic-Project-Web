@@ -12,7 +12,7 @@ void output(string ct);
 int main(int l, string key[])
 {
     int k = atoi(key[1]);
-    if(isdigit(k) && l == 1)
+    if(isdigit(key[1]) && l == 1)
     {
         return 0;
     }
