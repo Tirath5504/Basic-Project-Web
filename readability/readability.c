@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include <ctype.h>
 
 // Declaring Functions
 string input(void);
@@ -42,7 +43,7 @@ int letters(string s,int n)
     int n1 = 0;
     for(int i = 0; i < n; i++)
     {
-        if(isalphabet(s[i]))
+        if(isalpha(s[i]))
         {
             n1++;
         }
