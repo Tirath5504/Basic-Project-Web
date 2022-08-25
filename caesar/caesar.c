@@ -44,7 +44,7 @@ int valid(int l, string key)
     }
     else
     {
-        printf("Usage: ./caesar key");
+        printf("Usage: ./caesar key\n");
         c = 1;
     }
     return c;
