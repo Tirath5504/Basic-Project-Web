@@ -14,7 +14,10 @@ int valid(int l, string key);
 int main(int l, string key[])
 {
     string a = key[1];
-    int k = atoi(a);
+    if(l != 1)
+    {
+        int k = atoi(a);
+    }
     int r = valid(l, a);
     if (r == 1)
     {
