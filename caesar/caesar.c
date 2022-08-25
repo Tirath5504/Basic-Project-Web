@@ -18,7 +18,7 @@ int main(int l, string key[])
     }
     else
     {
-        printf("Usage: ./caesar key");
+        printf("Usage: ./caesar key\n");
         return 1;
     }
 }
