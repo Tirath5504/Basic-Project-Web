@@ -22,7 +22,7 @@ int main(int l, string key[])
 }
 
 // Checking if key is valid
-int valid(int l, string key[])
+int valid(int l, string key[1])
 {
     int k = atoi(key[1]);
     string a = key[1];
