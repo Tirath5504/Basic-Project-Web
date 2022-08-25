@@ -50,5 +50,23 @@ int letters(string s,int n)
 // Counting words
 int words(string s, int n)
 {
-    int n1 = 
+    int n1 = 1;
+    for(int i = 0; i < n; i++)
+    {
+        if(s[i] == ' ')
+        {
+            n1++;
+        }
+    }
+    return n1;
+}
+
+// Counting sentences
+int sentences(string s, int n)
+{
+    int n1 = 0;
+    for(int i = 0; i < n; i++)
+    {
+        if()
+    }
 }
