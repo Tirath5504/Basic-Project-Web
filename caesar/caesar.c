@@ -26,12 +26,16 @@ int main(int l, string key[])
 int valid(int l, string key)
 {
     int c = 0;
+    int n = strlen(key);
     if(l == 1)
     {
-            if(isdigit(key))
+        for(int i = 0; i < n; i++)
+        {
+            if(isdigit(key[i]))
             {
                 c = 0;
             }
+        }
     }
     else
     {
