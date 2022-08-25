@@ -87,14 +87,14 @@ void output(float n)
     int i = round(n);
     if (i >= 1 && i <= 16)
     {
-        printf("Grade %i \n", i);
+        printf("Grade %i\n", i);
     }
     else if (i > 16)
     {
-        printf("Grade 16+ \n");
+        printf("Grade 16+\n");
     }
     else
     {
-        printf("Before Grade 1 \n");
+        printf("Before Grade 1\n");
     }
 }
