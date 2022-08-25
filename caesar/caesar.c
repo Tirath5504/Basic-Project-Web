@@ -10,7 +10,8 @@ void output(string s);
 
 int main(int l, string key[])
 {
-    if(isdigit(key[1]) && l == 1)
+    int k = atoi(key[1]);
+    if(isdigit(k) && l == 1)
     {
         return 0;
     }
@@ -20,7 +21,6 @@ int main(int l, string key[])
         return 1;
     }
     string  s = input();
-    int k = atoi(key[1]);
     string cipher_text = cipher(s, k);
     void output(cipher_text);
 }
