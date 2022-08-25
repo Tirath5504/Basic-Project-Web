@@ -16,10 +16,14 @@ int main(int l, string key[])
     string a = key[1];
     int k = atoi(a);
     int r = valid(l, a);
-    return r;
+    if(r == 1)
+    {
+        return r;
+    }
     string  s = input();
     string cipher_text = cipher(s, k);
     void output(string cipher_text);
+    return r;
 }
 
 // Checking if key is valid
@@ -27,13 +31,18 @@ int valid(int l, string key)
 {
     int c = 0;
     int n = strlen(key);
-    if(l == 1)
+    if(l == 2)
     {
         for(int i = 0; i < n; i++)
         {
             if(isdigit(key[i]))
             {
                 c = 0;
+            }
+             else
+            {
+                printf("Usage: ./caesar key\n");
+                c = 1;
             }
         }
     }
