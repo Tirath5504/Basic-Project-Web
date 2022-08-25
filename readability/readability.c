@@ -10,7 +10,7 @@ int letters(string s, int n);
 int words(string s, int n);
 int sentences(string s, int n);
 int index(int n_l, int n_w, int n_s);
-void output(int index);
+void output(int i);
 
 // Main Function
 int main(void)
@@ -20,8 +20,8 @@ int main(void)
     int n_l = letters(s, n);
     int n_w = words(s, n);
     int n_s = sentences(s, n);
-    int index = index(n_l, n_w, n_s);
-    output(index);
+    int i = index(n_l, n_w, n_s);
+    output(i);
 }
 
 // Taking input
@@ -31,7 +31,7 @@ string input(void)
 }
 
 // Computing Length of text
-int length(string s);
+int length(string s)
 {
     return strlen(s);
 }
@@ -83,8 +83,8 @@ int index(int n_l, int n_w, int n_s)
 {
     int l = ((n_l) / (n_w)) * 100.0;
     int s = ((n_s) / (n_w)) * 100.0;
-    int index = round((0.058 * l) - (0.026 * s) - 15.8);
-    return index;
+    int i = round((0.058 * l) - (0.026 * s) - 15.8);
+    return i;
 }
 
 // Printing output
