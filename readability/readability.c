@@ -67,6 +67,16 @@ int sentences(string s, int n)
     int n1 = 0;
     for(int i = 0; i < n; i++)
     {
-        if()
+        if(s[i] == '.' || s[i] == '?' || s[i] == '!')
+        {
+            n1++;
+        }
     }
+    return n1;
+}
+
+// Printing output
+void output(int n_l, int n_w, int n_s)
+{
+    
 }
