@@ -41,6 +41,7 @@ int letters(string s,int n)
             n1++;
         }
     }
+    printf("Letters = %i \n", n1);
     return n1;
 }
 
@@ -94,6 +95,6 @@ void output(int n)
     }
     else
     {
-        printf("Before Grade 1");
+        printf("Before Grade 1 \n");
     }
 }
