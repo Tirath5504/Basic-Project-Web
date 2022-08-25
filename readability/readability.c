@@ -6,7 +6,6 @@
 
 // Declaring Functions
 string input(void);
-int length(string s);
 int letters(string s, int n);
 int words(string s, int n);
 int sentences(string s, int n);
@@ -17,7 +16,7 @@ void output(int i);
 int main(void)
 {
     string s = input();
-    int n = length(s);
+    int n = strlen(s);
     int n_l = letters(s, n);
     int n_w = words(s, n);
     int n_s = sentences(s, n);
@@ -29,12 +28,6 @@ int main(void)
 string input(void)
 {
     return get_string("Enter your text: \n");
-}
-
-// Computing Length of text
-int length(string s)
-{
-    return strlen(s);
 }
 
 // Counting letters
