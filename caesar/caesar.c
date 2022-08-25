@@ -9,10 +9,21 @@ string input(void);
 string cipher(string s, int k);
 void output(string ct);
 
+// Main Function
 int main(int l, string key[])
 {
     int k = atoi(key[1]);
+    string  s = input();
+    string cipher_text = cipher(s, k);
+    void output(string cipher_text);
+}
+
+// Checking if key is valid
+void valid(int l, string key[])
+{
+    int k = atoi(key[1]);
     string a = key[1];
+    int n = strlen(a);
     if(l == 1)
     {
         for (int i = 0; i < n; i++)
@@ -30,11 +41,8 @@ int main(int l, string key[])
     }
     else
     {
-        printf("Usage: )
+        printf("Usage: ./caesar key");
     }
-    string  s = input();
-    string cipher_text = cipher(s, k);
-    void output(string cipher_text);
 }
 
 // Taking Plain Text
