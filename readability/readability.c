@@ -1,13 +1,14 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 // Declaring Functions
 string input(void);
 int length(string s);
 int letters(string s, int n);
-int words(string s);
-int sentences(string s);
+int words(string s, int n);
+int sentences(string s, int n);
 int index(int n_l, int n_w, int n_s);
 void output(int index);
 
@@ -79,7 +80,14 @@ int sentences(string s, int n)
 // Computing index
 int index(int n_l, int n_w, int n_s)
 {
-    int l = (n_l) / 100.0;
-    int s = 
-    return (0.058 * n_l) - (0.026 * n_s) - 15.8;
+    int l = ((n_l) / (n_w)) * 100.0;
+    int s = ((n_s) / (n_w)) * 100.0;
+    int index = round((0.058 * l) - (0.026 * s) - 15.8);
+    return index;
+}
+
+// Printing output
+void output(int n)
+{
+    printf("Grade %i \n", n);
 }
