@@ -20,7 +20,7 @@ int main(void)
     int n_l = letters(s, n);
     int n_w = words(s, n);
     int n_s = sentences(s, n);
-    int i = index(n_l, n_w, n_s);
+    float i = index(n_l, n_w, n_s);
     output(i);
 }
 
