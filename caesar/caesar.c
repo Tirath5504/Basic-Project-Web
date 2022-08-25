@@ -21,8 +21,8 @@ int main(int l, string key[])
         return r;
     }
     string  s = input();
-    string cipher_text = cipher(s, k);
-    void output(string cipher_text);
+    s = cipher(s, k);
+    void output(s);
     return r;
 }
 
