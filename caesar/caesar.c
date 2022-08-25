@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <string.h>
 
 // Declaring Functions
 string input(void);
@@ -21,8 +22,8 @@ int main(int l, string key[])
         return 1;
     }
     string  s = input();
-    string ct = cipher(s, k);
-    void output(ct);
+    string cipher_text = cipher(s, k);
+    void output(string cipher_text);
 }
 
 // Taking Plain Text
