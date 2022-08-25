@@ -56,6 +56,7 @@ int words(string s, int n)
             n1++;
         }
     }
+    printf("Words = %i \n", n1);
     return n1;
 }
 
