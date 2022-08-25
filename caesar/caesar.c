@@ -21,12 +21,18 @@ int main(int l, string key[])
         if (r == 1)
         {
             printf("Usage: ./caesar key\n");
-                return 1;
+            return 1;
         }
         string  s = input();
         s = cipher(s, k);
         output(s);
-        return 0;
+    }
+    else
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
+    return 0;
 }
 
 // Checking if key is valid
