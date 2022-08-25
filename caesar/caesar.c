@@ -8,7 +8,7 @@
 string input(void);
 string cipher(string s, int k);
 void output(string ct);
-int valid(int l, string key[]);
+int valid(int l, string key);
 
 // Main Function
 int main(int l, string key[])
@@ -22,7 +22,7 @@ int main(int l, string key[])
 }
 
 // Checking if key is valid
-int valid(int l, string key[1])
+int valid(int l, string key)
 {
     int k = atoi(key[1]);
     string a = key[1];
