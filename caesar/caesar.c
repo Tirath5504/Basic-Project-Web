@@ -1,10 +1,11 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 // Declaring Functions
 string input(void);
-string cipher(string s, int key);
+string cipher(string s, int k);
 void output(string s);
 
 int main(int l, string key[])
@@ -19,7 +20,8 @@ int main(int l, string key[])
         return 1;
     }
     string  s = input();
-    string cipher_text = cipher(s, key[]);
+    int k = atoi(key[1]);
+    string cipher_text = cipher(s, k);
     void output(cipher_text);
 }
 
@@ -31,7 +33,7 @@ string input(void)
 }
 
 // Converting to Cipher Text
-string cipher(string s, int key)
+string cipher(string s, int k)
 {
     int n = strlen(s);
     for(int i = 0; i < n; i++)
