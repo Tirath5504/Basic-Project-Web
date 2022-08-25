@@ -25,13 +25,12 @@ int main(int l, string key[])
 // Checking if key is valid
 int valid(int l, string key)
 {
-    string a = key[1];
-    int n = strlen(a);
+    int n = strlen(key);
     if(l == 1)
     {
         for (int i = 0; i < n; i++)
         {
-            if(isdigit(a[i]))
+            if(isdigit(key[i]))
             {
                 return 0;
             }
@@ -45,6 +44,7 @@ int valid(int l, string key)
     else
     {
         printf("Usage: ./caesar key");
+        return 1;
     }
 }
 
