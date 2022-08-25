@@ -8,7 +8,8 @@ int length(string s);
 int letters(string s, int n);
 int words(string s);
 int sentences(string s);
-void output(int n1, int n2, int n3);
+int index(int n_l, int n_w, int n_s);
+void output(int index);
 
 // Main Function
 int main(void)
@@ -75,8 +76,10 @@ int sentences(string s, int n)
     return n1;
 }
 
-// Printing output
-void output(int n_l, int n_w, int n_s)
+// Computing index
+int index(int n_l, int n_w, int n_s)
 {
-    
+    int l = (n_l) / 100.0;
+    int s = 
+    return (0.058 * n_l) - (0.026 * n_s) - 15.8;
 }
