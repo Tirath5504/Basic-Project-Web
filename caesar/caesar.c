@@ -57,7 +57,7 @@ int valid(int l, string key)
 // Taking Plain Text
 string input(void)
 {
-    string s = get_string("Plain Text:  ");
+    string s = get_string("PlainText:  ");
     return s;
 }
 
@@ -67,6 +67,7 @@ string cipher(string s, int k)
     int n = strlen(s);
     for(int i = 0; i < n; i++)
     {
+        if(isalpha(s[i]))
         s[i] = s[i] + k;
     }
     return s;
@@ -75,5 +76,5 @@ string cipher(string s, int k)
 // Printing Output
 void output(string s)
 {
-    printf("\nCiphertext: %s\n", s);
+    printf("Ciphertext: %s\n", s);
 }
