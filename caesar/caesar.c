@@ -44,5 +44,5 @@ string cipher(string s, int key)
 // Printing Output
 void output(string s)
 {
-    printf(")
+    printf("\nCiphertext: %s", s);
 }
