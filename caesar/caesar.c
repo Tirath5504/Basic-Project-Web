@@ -13,18 +13,20 @@ int valid(int l, string key);
 // Main Function
 int main(int l, string key[])
 {
-    string a = key[1];
-    int k = atoi(a);
-    int r = valid(l, a);
-    if (r == 1)
+    if(l != 1)
     {
-        printf("Usage: ./caesar key\n");
-        return 1;
-    }
-    string  s = input();
-    s = cipher(s, k);
-    output(s);
-    return 0;
+        string a = key[1];
+        int k = atoi(a);
+        int r = valid(l, a);
+        if (r == 1)
+        {
+            printf("Usage: ./caesar key\n");
+                return 1;
+        }
+        string  s = input();
+        s = cipher(s, k);
+        output(s);
+        return 0;
 }
 
 // Checking if key is valid
