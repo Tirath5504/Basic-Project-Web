@@ -71,6 +71,7 @@ int sentences(string s, int n)
             n1++;
         }
     }
+    printf("Sentences = %i \n", n1);
     return n1;
 }
 
