@@ -71,11 +71,13 @@ int duplicate(string key)
     int c = 0;
     for(int i = 0; i < n; i++)
     {
+        char c1 = tolower(key[i]);
         for(int j = 0; j < n; j++)
         {
+            char c2 = tolower(key[j]);
             if(j != i)
             {
-                if(key[j] != key[i])
+                if(c1 != c2)
                 {
                     c = 0;
                 }
