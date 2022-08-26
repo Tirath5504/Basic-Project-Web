@@ -37,7 +37,7 @@ int main(int l, string key[])
 int valid(int l, string key)
 {
     int c = 0;
-    string cpy;
+    string cpy = NULL;
     int n = strlen(key);
     if (l == 2 && n == 26)
     {
