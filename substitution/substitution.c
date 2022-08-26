@@ -30,7 +30,7 @@ int main(int l, string key[])
     }
     else
     {
-        printf("Usage: ./caesar key\n");
+        printf("Usage: ./substitution key\n");
         return 1;
     }
 }
