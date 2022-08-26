@@ -6,7 +6,7 @@
 
 // Declaring Functions
 string input(void);
-string cipher(string s, int k);
+string cipher(string s, string a);
 void output(string s);
 int valid(int l, string key);
 
@@ -23,7 +23,7 @@ int main(int l, string key[])
             return 1;
         }
         string  s = input();
-        s = cipher(s, k);
+        s = cipher(s, a);
         output(s);
     }
     else
