@@ -37,11 +37,11 @@ int valid(int l, string key)
 {
     int c = 0;
     int n = strlen(key);
-    if (l == 2 && n == 26)
+    if (l == 2)
     {
         for (int i = 0; i < n; i++)
         {
-            if (isalpha(key[i]))
+            if (isalpha(key[i]) && n == 26)
             {
                 c = 0;
             }
@@ -61,6 +61,7 @@ int valid(int l, string key)
     return c;
 }
 
+// Taking 
 // Taking Plain Text
 string input(void)
 {
