@@ -80,8 +80,8 @@ string cipher(string s, string a)
                 if (s[i] == n1)
                 {
                     s[i] = a[(n1 - 65)];
-                    s[i] = toupper(s[i]);
                 }
+                s[i] = toupper(s[i]);
                 n1++;
             }
         }
@@ -92,9 +92,9 @@ string cipher(string s, string a)
                 if (s[i] == n2)
                 {
                     s[i] = a[(n2 - 97)];
-                    s[i] = tolower(s[i]);
                 }
                 n2++;
+                s[i] = tolower(s[i]);
             }
         }
     }
