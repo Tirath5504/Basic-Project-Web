@@ -23,10 +23,13 @@ int main(int l, string key[])
             printf("Usage: ./substitution key\n");
             return 1;
         }
-        string  s = input();
-        s = cipher(s, a);
-        output(s);
-        return 0;
+        else
+        {
+            string  s = input();
+            s = cipher(s, a);
+            output(s);
+            return 0;
+        }
     }
     else
     {
