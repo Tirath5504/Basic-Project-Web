@@ -17,9 +17,8 @@ int main(int l, string key[])
     if (l != 1)
     {
         string a = key[1];
-        int r1 = valid(l, a);
-        int r2 = duplicate(a);
-        if (r1 == 1 || r2 == 1)
+        int r = valid(l, a);
+        if (r == 1)
         {
             printf("Usage: ./substitution key\n");
             c = 1;
@@ -40,7 +39,7 @@ int main(int l, string key[])
     return c;
 }
 
-// Checking validity for 26 chars and alphabets
+// Checking validity of key
 int valid(int l, string key)
 {
     int c = 0;
@@ -66,14 +65,6 @@ int valid(int l, string key)
         printf("Usage: ./substitution key\n");
         c = 1;
     }
-    return c;
-}
-
-// Checking for duplicate
-int duplicate(string key)
-{
-    int n = strlen(key);
-    int c = 0;
     for (int i = 0; i < n; i++)
     {
         char c1 = tolower(key[i]);
@@ -96,6 +87,7 @@ int duplicate(string key)
     }
     return c;
 }
+
 // Taking Plain Text
 string input(void)
 {
