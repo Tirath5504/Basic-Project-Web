@@ -20,6 +20,7 @@ int main(int l, string key[])
         int r2 = duplicate(a);
         if(r1 == 1 || r2 == 1)
         {
+            printf("Usage: ./substitution key\n");
             return 1;
         }
         string  s = input();
