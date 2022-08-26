@@ -73,13 +73,16 @@ int duplicate(string key)
     {
         for(int j = 0; j < n; j++)
         {
-            if(j != i && key[j] != key[i])
+            if(j != i)
             {
-                c = 0;
-            }
-            else
-            {
-                c = 1;
+                if(key[j] != key[i])
+                {
+                    c = 0;
+                }
+                else
+                {
+                    c = 1;
+                }
             }
         }
     }
