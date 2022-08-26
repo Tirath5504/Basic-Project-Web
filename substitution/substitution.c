@@ -16,7 +16,6 @@ int main(int l, string key[])
     if (l != 1)
     {
         string a = key[1];
-        int k = atoi(a);
         int r = valid(l, a);
         if (r == 1)
         {
