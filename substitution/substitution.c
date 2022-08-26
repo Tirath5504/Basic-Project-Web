@@ -41,17 +41,16 @@ void valid(int l, string key)
             {
                 c = 0;
             }
-            }
             else
             {
-                printf("Key must have 26 characters");
+                printf("Key must have 26 characters\n");
                 break;
             }
         }
     }
     else
     {
-        printf("Key must have 26 characters"):
+        printf("Usage: ./substitution key\n");
     }
 }
 
