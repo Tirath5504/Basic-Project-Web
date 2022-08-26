@@ -42,14 +42,13 @@ int valid(int l, string key)
     {
         for (int i = 0; i < n; i++)
         {
-            string cpy[i] = tolower(key[i]);
-            if (isalpha(cpy[i]))
+            if (isalpha(key[i]))
             {
                 for (int j = 0; j < n; j++)
                 {
                     if (j != i)
                     {
-                        if (cpy[i] != cpy[j])
+                        if (key[i] != key[j])
                         {
                             c = 0;
                         }
