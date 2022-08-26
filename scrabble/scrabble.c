@@ -37,10 +37,16 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
-    int n1 = strlen(word1);
-    int n2 = strlen(word2);
-    for(int i = 0; i < n1; i++)
+    int n = strlen(word);
+    int c = 65, sum = 0;
+    for(int i = 0; i < n; i++)
     {
-        if (word1[i] = )
+        char ch = toupper(word[i]);
+        while(c < 92)
+        if (ch == c)
+        {
+            sum = sum + POINTS[i];
+        }
     }
+    return sum;
 }
