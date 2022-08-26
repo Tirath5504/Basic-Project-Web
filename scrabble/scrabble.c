@@ -43,9 +43,12 @@ int compute_score(string word)
     {
         char ch = toupper(word[i]);
         while(c < 92)
-        if (ch == c)
         {
-            sum = sum + POINTS[i];
+            if (ch == c)
+            {
+                sum = sum + POINTS[i];
+            }
+            c++;
         }
     }
     return sum;
