@@ -7,7 +7,7 @@
 string input(void);
 string cipher(string s, string a);
 void output(string s);
-void valid(int l, string key);
+int valid(int l, string key);
 
 // Main Function
 int main(int l, string key[])
@@ -15,7 +15,11 @@ int main(int l, string key[])
     if (l != 1)
     {
         string a = key[1];
-        valid(l, a);
+        int r = valid(l, a);
+        if(r == 1)
+        {
+            return 1;
+        }
         string  s = input();
         s = cipher(s, a);
         output(s);
@@ -29,7 +33,7 @@ int main(int l, string key[])
 }
 
 // Checking validity for 26 chars and alphabets
-void valid(int l, string key)
+int valid(int l, string key)
 {
     int c = 0;
     int n = strlen(key);
@@ -44,6 +48,7 @@ void valid(int l, string key)
             else
             {
                 printf("Key must have 26 characters\n");
+                c = 1;
                 break;
             }
         }
@@ -51,7 +56,9 @@ void valid(int l, string key)
     else
     {
         printf("Usage: ./substitution key\n");
+        c = 1;
     }
+    return c;
 }
 
 // Taking Plain Text
