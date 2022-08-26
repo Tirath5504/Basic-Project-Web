@@ -82,6 +82,7 @@ int duplicate(string key)
                 else
                 {
                     c = 1;
+                    break;
                 }
             }
         }
