@@ -21,7 +21,7 @@ int main(int l, string key[])
         if (r == 1)
         {
             printf("Usage: ./substitution key\n");
-            c = 1;
+            return r;
         }
         else
         {
@@ -35,6 +35,7 @@ int main(int l, string key[])
     {
         printf("Usage: ./substitution key\n");
         c = 1;
+        return c;
     }
     return c;
 }
@@ -56,6 +57,7 @@ int valid(int l, string key)
             {
                 printf("Key must have 26 characters\n");
                 c = 1;
+                return c;
                 break;
             }
         }
@@ -64,6 +66,7 @@ int valid(int l, string key)
     {
         printf("Usage: ./substitution key\n");
         c = 1;
+        return c;
     }
     for (int i = 0; i < n; i++)
     {
@@ -80,6 +83,7 @@ int valid(int l, string key)
                 else
                 {
                     c = 1;
+                    return c;
                     break;
                 }
             }
