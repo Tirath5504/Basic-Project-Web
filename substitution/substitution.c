@@ -1,7 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
-#include <stdlib.h>
 #include <string.h>
 
 // Declaring Functions
@@ -78,7 +77,7 @@ string cipher(string s, string a)
         {
             while ((n1 - 65) < 26)
             {
-                if(s[i] == n1)
+                if (s[i] == n1)
                 {
                     s[i] = a[(n1 - 65)];
                 }
@@ -89,7 +88,7 @@ string cipher(string s, string a)
         {
             while ((n2 - 97) < 26)
             {
-                if(s[i] == n2)
+                if (s[i] == n2)
                 {
                     s[i] = a[(n2 - 97)];
                 }
