@@ -47,17 +47,14 @@ int valid(int l, string key)
                 for (int j = 0; j < n; j++)
                 {
                     string cpy[j] = tolower(key[j]);
-                    if (j != i)
+                    if (key[i] != key[j] && j != i)
                     {
-                        if (key[i] != key[j])
-                        {
-                            c = 0;
-                        }
-                        else
-                        {
-                            c = 1;
-                            break;
-                        }
+                        c = 0;
+                    }
+                    else
+                    {
+                        c = 1;
+                        break;
                     }
                 }
             }
