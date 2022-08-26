@@ -72,7 +72,7 @@ int valid(int l, string key)
 // Taking Plain Text
 string input(void)
 {
-    string s = get_string("PlainText:  ");
+    string s = get_string("plainText:  ");
     return s;
 }
 
