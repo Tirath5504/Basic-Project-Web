@@ -20,11 +20,11 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
-    if(score1 > score2)
+    if (score1 > score2)
     {
         printf("Players 1 wins!\n");
     }
-    else if(score1 < score2)
+    else if (score1 < score2)
     {
         printf("Players 2 wins!\n");
     }
@@ -39,12 +39,12 @@ int compute_score(string word)
     // TODO: Compute and return score for string
     int n = strlen(word);
     int c = 65, sum = 0;
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         char ch = toupper(word[i]);
         if (isalpha(ch))
         {
-            while(c < 92)
+            while (c < 92)
             {
                 if (ch == c)
                 {
