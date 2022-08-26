@@ -8,6 +8,7 @@ string input(void);
 string cipher(string s, string a);
 void output(string s);
 int valid(int l, string key);
+int duplicate(string key);
 
 // Main Function
 int main(int l, string key[])
@@ -15,8 +16,9 @@ int main(int l, string key[])
     if (l != 1)
     {
         string a = key[1];
-        int r = valid(l, a);
-        if(r == 1)
+        int r1 = valid(l, a);
+        int r2 = duplicate(a);
+        if(r1 == 1 || r2 == 1)
         {
             return 1;
         }
@@ -61,7 +63,27 @@ int valid(int l, string key)
     return c;
 }
 
-// Taking 
+// Checking for duplicate
+int duplicate(string key)
+{
+    int n = strlen(key);
+    int c = 0;
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < n; j++)
+        {
+            if(j != i && key[j] != key[i])
+            {
+                c = 0;
+            }
+            else
+            {
+                c = 1;
+            }
+        }
+    }
+    return c;
+}
 // Taking Plain Text
 string input(void)
 {
