@@ -13,6 +13,7 @@ int duplicate(string key);
 // Main Function
 int main(int l, string key[])
 {
+    int c = 0;
     if (l != 1)
     {
         string a = key[1];
@@ -21,21 +22,22 @@ int main(int l, string key[])
         if (r1 == 1 || r2 == 1)
         {
             printf("Usage: ./substitution key\n");
-            return 1;
+            c = 1;
         }
         else
         {
             string  s = input();
             s = cipher(s, a);
             output(s);
-            return 0;
+            c = 0;
         }
     }
     else
     {
         printf("Usage: ./substitution key\n");
-        return 1;
+        c = 1;
     }
+    return c;
 }
 
 // Checking validity for 26 chars and alphabets
