@@ -24,13 +24,13 @@ int main(int l, string key[])
         string  s = input();
         s = cipher(s, a);
         output(s);
+        return 0;
     }
     else
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    return 0;
 }
 
 // Checking if key is valid
