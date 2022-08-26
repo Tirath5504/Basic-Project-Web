@@ -38,9 +38,10 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
     int n = strlen(word);
-    int c = 65, sum = 0;
+    int sum = 0;
     for (int i = 0; i < n; i++)
     {
+        int c = 65;
         char ch = toupper(word[i]);
         if (isalpha(ch))
         {
