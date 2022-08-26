@@ -76,9 +76,12 @@ string cipher(string s, string a)
     {
         if (isupper(s[i]))
         {
-            if(s[i] == n1)
+            for(int j = 0; j < 26; j++)
             {
-                s[i] = a[j];
+                if(s[i] == n1)
+                {
+                    s[i] = a[j];
+                }
             }
         }
         else if (islower(s[i]))
