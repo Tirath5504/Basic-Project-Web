@@ -55,6 +55,7 @@ int valid(int l, string key)
                         else
                         {
                             c = 1;
+                            break;
                         }
                     }
                 }
@@ -62,6 +63,7 @@ int valid(int l, string key)
             else
             {
                 c = 1;
+                break;
             }
         }
     }
