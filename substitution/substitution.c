@@ -70,9 +70,9 @@ string input(void)
 string cipher(string s, string a)
 {
     int n = strlen(s);
-    int n1 = 65, n2 = 97;
     for (int i = 0; i < n; i++)
     {
+        int n1 = 65, n2 = 97;
         if (isupper(s[i]))
         {
             while ((n1 - 65) < 26)
