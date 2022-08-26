@@ -68,7 +68,7 @@ string input(void)
 }
 
 // Converting to Cipher Text
-string cipher(string s, int k)
+string cipher(string s, string a)
 {
     int n = strlen(s);
     int n1 = 65;
@@ -78,7 +78,7 @@ string cipher(string s, int k)
         {
             if(s[i] == n1)
             {
-                s[i] = 65 + (s[i] - 65 + k) % 26;
+                s[i] = a[j];
             }
         }
         else if (islower(s[i]))
