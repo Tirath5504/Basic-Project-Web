@@ -37,14 +37,13 @@ int main(int l, string key[])
 int valid(int l, string key)
 {
     int c = 0;
-    string cpy = NULL;
     int n = strlen(key);
     if (l == 2 && n == 26)
     {
         for (int i = 0; i < n; i++)
         {
-            cpy[i] = tolower(key[i]);
-            if (isalpha(key[i]))
+            string cpy[i] = tolower(key[i]);
+            if (isalpha(cpy[i]))
             {
                 for (int j = 0; j < n; j++)
                 {
