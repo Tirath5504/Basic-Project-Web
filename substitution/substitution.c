@@ -39,11 +39,11 @@ int valid(int l, string key)
 {
     int c = 0;
     int n = strlen(key);
-    if (l == 2)
+    if (l == 2 && n == 26)
     {
         for (int i = 0; i < n; i++)
         {
-            if (isdigit(key[i]))
+            if (isalpha(key[i]))
             {
                 c = 0;
             }
