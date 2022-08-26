@@ -18,7 +18,7 @@ int main(int l, string key[])
         string a = key[1];
         int r1 = valid(l, a);
         int r2 = duplicate(a);
-        if(r1 == 1 || r2 == 1)
+        if (r1 == 1 || r2 == 1)
         {
             printf("Usage: ./substitution key\n");
             return 1;
@@ -69,15 +69,15 @@ int duplicate(string key)
 {
     int n = strlen(key);
     int c = 0;
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         char c1 = tolower(key[i]);
-        for(int j = 0; j < n; j++)
+        for (int j = 0; j < n; j++)
         {
             char c2 = tolower(key[j]);
-            if(j != i)
+            if (j != i)
             {
-                if(c1 != c2)
+                if (c1 != c2)
                 {
                     c = 0;
                 }
