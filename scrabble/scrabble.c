@@ -42,7 +42,7 @@ int compute_score(string word)
     for(int i = 0; i < n; i++)
     {
         char ch = toupper(word[i]);
-        if (isalpha(c))
+        if (isalpha(ch))
         {
             while(c < 92)
             {
