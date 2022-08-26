@@ -49,7 +49,7 @@ int compute_score(string word)
             {
                 if (ch == c)
                 {
-                    sum = sum + POINTS[c-65];
+                    sum = sum + POINTS[c - 65];
                 }
                 c++;
             }
