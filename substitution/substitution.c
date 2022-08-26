@@ -71,11 +71,15 @@ string input(void)
 string cipher(string s, int k)
 {
     int n = strlen(s);
+    int n1 = 65;
     for (int i = 0; i < n; i++)
     {
         if (isupper(s[i]))
         {
-            s[i] = 65 + (s[i] - 65 + k) % 26;
+            if(s[i] == n1)
+            {
+                s[i] = 65 + (s[i] - 65 + k) % 26;
+            }
         }
         else if (islower(s[i]))
         {
