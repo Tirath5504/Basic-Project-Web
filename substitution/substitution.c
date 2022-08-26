@@ -64,7 +64,6 @@ int valid(int l, string key)
     }
     else
     {
-        printf("Usage: ./substitution key\n");
         c = 1;
         return c;
     }
