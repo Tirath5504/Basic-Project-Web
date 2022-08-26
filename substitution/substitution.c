@@ -71,22 +71,30 @@ string input(void)
 string cipher(string s, string a)
 {
     int n = strlen(s);
-    int n1 = 65;
+    int n1 = 65, n2 = 97;
     for (int i = 0; i < n; i++)
     {
         if (isupper(s[i]))
         {
-            for(int j = 0; j < 26; j++)
+            while ((n1 - 65) < 26)
             {
                 if(s[i] == n1)
                 {
-                    s[i] = a[j];
+                    s[i] = a[(n1 - 65)];
                 }
+                n1++;
             }
         }
-        else if (islower(s[i]))
+        if (isupper(s[i]))
         {
-            s[i] = 97 + (s[i] - 97 + k) % 26;
+            while ((n2 - 97) < 26)
+            {
+                if(s[i] == n2)
+                {
+                    s[i] = a[(n2 - 97)];
+                }
+                n2++;
+            }
         }
     }
     return s;
