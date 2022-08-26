@@ -84,7 +84,7 @@ string cipher(string s, string a)
                 n1++;
             }
         }
-        if (isupper(s[i]))
+        if (islower(s[i]))
         {
             while ((n2 - 97) < 26)
             {
