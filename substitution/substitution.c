@@ -44,15 +44,18 @@ int valid(int l, string key)
         {
             if (isalpha(key[i]))
             {
-                for(int j = 0; j < n; j++)
+                for (int j = 0; j < n; j++)
                 {
-                    if(key[i] != key[j])
+                    if (j != i)
                     {
-                        c = 0;
-                    }
-                    else
-                    {
-                        c = 1;
+                        if (key[i] != key[j])
+                        {
+                            c = 0;
+                        }
+                        else
+                        {
+                            c = 1;
+                        }
                     }
                 }
             }
