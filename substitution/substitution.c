@@ -7,7 +7,7 @@
 string input(void);
 string cipher(string s, string a);
 void output(string s);
-int valid(int l, string key);
+void valid(int l, string key);
 
 // Main Function
 int main(int l, string key[])
@@ -15,12 +15,7 @@ int main(int l, string key[])
     if (l != 1)
     {
         string a = key[1];
-        int r = valid(l, a);
-        if (r == 1)
-        {
-            printf("Usage: ./caesar key\n");
-            return 1;
-        }
+        valid(l, a);
         string  s = input();
         s = cipher(s, a);
         output(s);
@@ -33,8 +28,8 @@ int main(int l, string key[])
     }
 }
 
-// Checking if key is valid
-int valid(int l, string key)
+// Checking validity for 26 chars and alphabets
+void valid(int l, string key)
 {
     int c = 0;
     int n = strlen(key);
@@ -44,32 +39,20 @@ int valid(int l, string key)
         {
             if (isalpha(key[i]))
             {
-                for (int j = 0; j < n; j++)
-                {
-                    string cpy[j] = tolower(key[j]);
-                    if (key[i] != key[j] && j != i)
-                    {
-                        c = 0;
-                    }
-                    else
-                    {
-                        c = 1;
-                        break;
-                    }
-                }
+                c = 0;
+            }
             }
             else
             {
-                c = 1;
+                printf("Key must have 26 characters");
                 break;
             }
         }
     }
     else
     {
-        c = 1;
+        printf("Key must have 26 characters"):
     }
-    return c;
 }
 
 // Taking Plain Text
