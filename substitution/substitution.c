@@ -106,5 +106,5 @@ string cipher(string s, string a)
 // Printing Output
 void output(string s)
 {
-    printf("Ciphertext: %s\n", s);
+    printf("ciphertext: %s\n", s);
 }
