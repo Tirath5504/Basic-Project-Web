@@ -22,15 +22,15 @@ int main(void)
     // TODO: Print the winner
     if(score1 > score2)
     {
-        printf("Players 1 wins!");
+        printf("Players 1 wins!\n");
     }
     else if(score1 < score2)
     {
-        printf("Players 2 wins!");
+        printf("Players 2 wins!\n");
     }
     else
     {
-        printf("Tie!");
+        printf("Tie!\n");
     }
 }
 
@@ -42,13 +42,16 @@ int compute_score(string word)
     for(int i = 0; i < n; i++)
     {
         char ch = toupper(word[i]);
-        while(c < 92)
+        if (isalpha(c))
         {
-            if (ch == c)
+            while(c < 92)
             {
-                sum = sum + POINTS[i];
+                if (ch == c)
+                {
+                    sum = sum + POINTS[i];
+                }
+                c++;
             }
-            c++;
         }
     }
     return sum;
