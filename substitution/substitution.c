@@ -46,6 +46,7 @@ int valid(int l, string key)
             {
                 for (int j = 0; j < n; j++)
                 {
+                    string cpy[j] = tolower(key[j]);
                     if (j != i)
                     {
                         if (key[i] != key[j])
