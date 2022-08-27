@@ -1,11 +1,14 @@
-sort1 uses: TODO
+sort1 uses: BUBBLE SORT
 
-How do you know?: TODO
+How do you know?:
+Since time taken for random list (7.862 s) and sorted list (0.770 s) varies greatly and for Bubble Sort O(n^2) and omega(n).
 
-sort2 uses: TODO
+sort2 uses: MERGE SORT
 
-How do you know?: TODO
+How do you know?:
+Since time taken for random list (0.716 s) and sorted list (0.766 s) is almost same and also since it takes the least amount of time.
 
-sort3 uses: TODO
+sort3 uses: SELECTION SORT
 
-How do you know?: TODO
+How do you know?:
+Since time taken for random list (3.423 s) and sorted list (3.712 s) is almost same but it is also a significantly larger amount.
