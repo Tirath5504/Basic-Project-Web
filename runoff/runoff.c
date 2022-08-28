@@ -149,11 +149,11 @@ void tabulate(void)
             candidates[j].votes = 0;
             if (!candidates[j].eliminated)
             {
-                 if (strcmp(candidates[j].name, candidates[preferences[i][j]].name))
-                 {
+                if (strcmp(candidates[j].name, candidates[preferences[i][j]].name))
+                {
                     candidates[j].votes++;
                     break;
-                 }
+                }
             }
         }
     }
@@ -181,7 +181,7 @@ int find_min(void)
     int c = MAX_VOTERS;
     for (int i = 0; i < candidate_count; i++)
     {
-        if(candidates[i].votes < c)
+        if (candidates[i].votes < c)
         {
             c = candidates[i].votes;
         }
