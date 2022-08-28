@@ -150,7 +150,6 @@ void tabulate(void)
             {
                 if (strcmp(candidates[preferences[i][j]].name, candidates[j].name) == 0)
                 {
-                    printf("%i", candidates[j].votes);
                     candidates[j].votes++;
                     break;
                 }
