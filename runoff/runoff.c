@@ -146,12 +146,12 @@ void tabulate(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            candidate[j].votes = 0;
+            candidates[j].votes = 0;
             if (!candidates[j].eliminated)
             {
-                 if (strcmp(candidate[j].name, preference[i][j] == 0))
+                 if (strcmp(candidates[j].name, preferences[i][j]) == 0)
                  {
-                    candidate[j].votes++;
+                    candidates[j].votes++;
                     break;
                  }
             }
@@ -195,7 +195,7 @@ bool is_tie(int min)
     int c = 0;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidate[i].votes != min)
+        if (candidates[i].votes != min)
         {
             c = 1;
         }
