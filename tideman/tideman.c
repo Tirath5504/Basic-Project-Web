@@ -172,7 +172,7 @@ void lock_pairs(void)
     {
         for (int j = 0; j < pair_count; j++)
         {
-            if (pairs[j])
+            locked[pairs[j].winner][pairs[j].loser] = true;
         }
     }
     return;
@@ -186,8 +186,10 @@ void print_winner(void)
         for(int j = 0; j < pair_count; j++)
         {
             if(locked[i][j])
+            {
+                printf("%s", candidates[pairs[j].winner]);
+            }
         }
     }
-    printf("%s", candidates[pairs[0].winner]);
     return;
 }
