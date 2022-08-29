@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 // Max number of candidates
 #define MAX 9
@@ -102,7 +103,7 @@ bool vote(int rank, string name, int ranks[])
     int c = 0;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcmp(candidates[i].name, name) == 0)
+        if (strcmp(candidates[i], name) == 0)
         {
             ranks[i] = i;
             c = 1;
@@ -135,7 +136,7 @@ void record_preferences(int ranks[])
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
-    for (int i = 0; i < voter_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
         {
@@ -170,13 +171,13 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    
+
     return;
 }
 
 // Print the winner of the election
 void print_winner(void)
 {
-    // TODO
+    printf("%s", candidates[pairs[0][0]]);
     return;
 }
