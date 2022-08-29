@@ -163,7 +163,11 @@ void tabulate(void)
                     break;
                 }
             }
-
+            else
+            {
+                k++;
+                j = 0;
+            }
         }
     }
     return;
