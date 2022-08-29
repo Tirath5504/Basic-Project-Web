@@ -152,17 +152,22 @@ void tabulate(void)
 {
     for (int i = 0; i < voter_count; i++)
     {
+        int k = 0;
         for (int j = 0; j < candidate_count; j++)
         {
             if (!candidates[j].eliminated)
             {
-                if (strcmp(candidates[preferences[i][j]].name, candidates[j].name) == 0)
+                if (strcmp(candidates[preferences[i][k]].name, candidates[j].name) == 0)
                 {
                     candidates[j].votes++;
                     break;
                 }
                 printf("%i", i);
                 printf("%i", j);
+            }
+            else
+            {
+                k++;
             }
         }
     }
