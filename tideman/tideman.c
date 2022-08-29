@@ -142,7 +142,7 @@ void add_pairs(void)
         {
             if (preferences[i][j] > 0)
             {
-                pairs[i][j] = preferences[i][j];
+                pairs[j] = preferences[i][j];
                 pair_count++;
             }
         }
@@ -157,11 +157,11 @@ void sort_pairs(void)
     {
         for (int j = 0; j < pair_count; j++)
         {
-            if (pairs[i][j] < pairs[i][j + 1])
+            if (pairs[j] < pairs[j + 1])
             {
-                temp = pairs[i][j];
-                pairs[i][j] = pairs[i][j + 1];
-                pairs[i][j + 1] = pairs[i][j];
+                temp = pairs[j];
+                pairs[j] = pairs[j + 1];
+                pairs[j + 1] = pairs[j];
             }
         }
     }
@@ -178,6 +178,6 @@ void lock_pairs(void)
 // Print the winner of the election
 void print_winner(void)
 {
-    printf("%s", candidates[pairs[0][0]]);
+    printf("%s", candidates[pairs[0]]);
     return;
 }
