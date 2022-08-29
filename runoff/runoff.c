@@ -166,7 +166,7 @@ void tabulate(void)
             else
             {
                 k++;
-                j = 0;
+                j = -1;
             }
         }
     }
