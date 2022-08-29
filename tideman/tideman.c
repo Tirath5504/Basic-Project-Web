@@ -124,10 +124,7 @@ void record_preferences(int ranks[])
 {
     for (int i = 0; i < voter_count; i++)
     {
-    int k = 0;
-    for (int j = 0; j < candidate_count; j++)
-    {
-        if (!candidates[j].eliminated)
+        for (int j = 0; j < candidate_count; j++)
         {
             if (strcmp(candidates[preferences[i][k]].name, candidates[j].name) == 0)
             {
@@ -135,12 +132,6 @@ void record_preferences(int ranks[])
                 break;
             }
         }
-        else
-        {
-            k++;
-            j = -1;
-        }
-    }
     }
     return;
 }
