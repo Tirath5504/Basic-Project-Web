@@ -172,7 +172,7 @@ void lock_pairs(void)
     {
         for (int j = 0; j < pair_count; j++)
         {
-            if ()
+            if (pairs[j])
         }
     }
     return;
