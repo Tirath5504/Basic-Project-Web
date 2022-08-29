@@ -153,12 +153,12 @@ void sort_pairs(void)
         {
             if (pairs[j].winner - pairs[j].loser < pairs[j + 1].winner - pairs[j + 1].loser)
             {
-                temp = pairs[j].winner;
+                temp1 = pairs[j].winner;
                 pairs[j].winner = pairs[j + 1].winner;
-                pairs[j + 1].winner = pairs[j].winner;
-                temp = pairs[j].loser;
+                pairs[j + 1].winner = temp1;
+                temp2 = pairs[j].loser;
                 pairs[j].loser = pairs[j + 1].loser;
-                pairs[j + 1].loser = pairs[j].loser;
+                pairs[j + 1].loser = temp2;
             }
         }
     }
@@ -185,7 +185,7 @@ void print_winner(void)
     {
         for (int j = 0; j < pair_count; j++)
         {
-            if (locked[i][j])
+            if (locked[i][j] && i != j)
             {
                 printf("%s", candidates[pairs[j].winner]);
             }
