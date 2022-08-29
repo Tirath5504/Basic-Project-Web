@@ -154,7 +154,15 @@ void sort_pairs(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
-        
+        for (int j = 0; j < pair_count; j++)
+        {
+            if (pairs[i][j] < pairs[i][j + 1])
+            {
+                temp = pairs[i][j];
+                pairs[i][j] = pairs[i][j + 1];
+                pairs[i][j + 1] = pairs[i][j];
+            }
+        }
     }
     return;
 }
