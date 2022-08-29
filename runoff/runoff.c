@@ -156,7 +156,7 @@ void tabulate(void)
         {
             if (!candidates[j].eliminated)
             {
-                if (strcmp(candidates[preferences[i][j]].name, candidates[j].name) == 0)
+                if (strcmp(candidates[preferences[i][0]].name, candidates[j].name) == 0)
                 {
                     candidates[j].votes++;
                     break;
