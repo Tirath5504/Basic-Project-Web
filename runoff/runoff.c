@@ -163,15 +163,19 @@ void tabulate(void)
 bool print_winner(void)
 {
     int maj = voter_count / 2;
+    int c = 0;
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes > maj)
         {
             printf("%s", candidates[i].name);
-            return true;
+            c = 1;
         }
     }
-    return false;
+    if (c == 1)
+        return true;
+    else
+        return false;
 }
 
 // Return the minimum number of votes any remaining candidate has
