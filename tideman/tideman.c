@@ -134,8 +134,8 @@ void add_pairs(void)
         {
             if (preferences[i][j] > preferences[j][i])
             {
-                pairs[j].winner = i;
-                pairs[i].loser = j;
+                pairs[i].winner = i;
+                pairs[j].loser = j;
                 pair_count++;
             }
         }
