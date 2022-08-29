@@ -162,8 +162,6 @@ void tabulate(void)
                     candidates[j].votes++;
                     break;
                 }
-                printf("%i", i);
-                printf("%i", j);
             }
             else
             {
