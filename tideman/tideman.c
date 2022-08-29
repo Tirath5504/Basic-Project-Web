@@ -124,7 +124,7 @@ void record_preferences(int ranks[])
 {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (strcmp(candidates[ranks[j]].name, candidates[j].name) > 0)
+            if (strcmp(candidates[j].name, candidates[j+1].name) > 0)
             {
                 candidates[ranks[j]].votes++;
                 break;
