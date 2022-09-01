@@ -43,10 +43,10 @@ int main(int argc, char *argv[])
 
     int16_t buffer;
     int c = fread(&buffer, 2, 1, input);
-    for(int i = 0; i < c; i++)
+    buffer = buffer * factor;
+    for (int i = 0; i < c; i++)
     {
         fread(&buffer, 2, 1, input);
-        buffer = buffer * factor;
         fwrite(&buffer, 2, 1, output);
     }
 
