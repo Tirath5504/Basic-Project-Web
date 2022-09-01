@@ -42,16 +42,13 @@ int main(int argc, char *argv[])
     // Read samples from input file and write updated data to output file
 
     int16_t buffer;
-    char ch;
-    int i = 0;
-    do
+    int c = fread(&buffer, 2, 1, input);
+    for(int i = 0; i < c; i++)
     {
-        int c = fread(&buffer, 2, 1, input);
+        fread(&buffer, 2, 1, input);
         buffer = buffer * factor;
         fwrite(&buffer, 2, 1, output);
-        i++;
     }
-    while (i < c)
 
     // Close files
     fclose(input);
