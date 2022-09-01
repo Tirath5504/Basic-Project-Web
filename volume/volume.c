@@ -32,13 +32,7 @@ int main(int argc, char *argv[])
     }
 
     float factor = atof(argv[3]);
-    char ch;
-    int c = 0;
-    while ((ch = fgetc(input)) != EOF)
-    {
-        c++;
-    }
-
+    
     // Copy header from input file to output file
 
     uint8_t header[HEADER_SIZE];
