@@ -47,6 +47,7 @@ int main(int argc, char *argv[])
         buffer = buffer * factor;
         fwrite(&buffer, 2, 1, output);
     }
+    
     // Close files
     fclose(input);
     fclose(output);
