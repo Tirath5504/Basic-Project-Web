@@ -43,14 +43,15 @@ int main(int argc, char *argv[])
 
     int16_t buffer;
     char ch;
-
-    int c = fread(&buffer, 2, 1, input);
-    for(int i = 0; i < c; i++)
+    int i = 0;
+    do
     {
-        
+        int c = fread(&buffer, 2, 1, input);
         buffer = buffer * factor;
         fwrite(&buffer, 2, 1, output);
+        i++;
     }
+    while (i < c)
 
     // Close files
     fclose(input);
