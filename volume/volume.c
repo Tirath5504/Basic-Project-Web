@@ -44,8 +44,7 @@ int main(int argc, char *argv[])
     int16_t buffer;
     size_t c = fread(&buffer, 2, 1, input);
     buffer = buffer * factor;
-    fread(&buffer, 2, 1, input);
-    fwrite(&buffer, 2, 1, output);
+    size_t a = fwrite(&buffer, 2, 1, output);
 
     // Close files
     fclose(input);
