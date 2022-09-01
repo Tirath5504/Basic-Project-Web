@@ -47,6 +47,7 @@ int main(int argc, char *argv[])
     int c = fread(&buffer, 2, 1, input);
     for(int i = 0; i < c; i++)
     {
+        
         buffer = buffer * factor;
         fwrite(&buffer, 2, 1, output);
     }
