@@ -43,9 +43,10 @@ int main(int argc, char *argv[])
 
     int16_t buffer;
     char ch;
-    while ((ch = fgetc(input)) != EOF)
+
+    int c = fread(&buffer, 2, 1, input);
+    for(int i = 0; i < c; i++)
     {
-        fread(&buffer, 2, 1, input);
         buffer = buffer * factor;
         fwrite(&buffer, 2, 1, output);
     }
