@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
     // Read samples from input file and write updated data to output file
 
     int16_t buffer;
-    int c = fread(&buffer, 2, 1, input);
+    size_t c = fread(&buffer, 2, 1, input);
     buffer = buffer * factor;
     for (int i = 0; i < c; i++)
     {
