@@ -100,6 +100,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     // Creating a copy
 
     RGBTRIPLE copy[height][width];
+    int n;
 
     // Inputing blurred image to copy
 
@@ -107,7 +108,18 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            if ()
+            if ((i == 0 && j == 0) || (i == height && j == width) || (i == 0 && j == width) || (i == height && j == 0))
+            {
+                n = 6;
+            }
+            else if ((i == 0 && j != width && j != 0) || (i == height && j == 0))
+            {
+                n = 4;
+            }
+            else
+            {
+                n = 10;
+            }
             for (int k = i - 1; k < i + 2; k++)
             {
                 for (int l = j - 1; l < j + 2; l++)
