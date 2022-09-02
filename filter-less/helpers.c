@@ -28,12 +28,20 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
+            // Creating a copy of original colours
+
             int old_blue = image[i][j].rgbtBlue;
             int old_green = image[i][j].rgbtGreen;
             int old_red = image[i][j].rgbtRed;
+
+            // Deriving new colours
+
             int sepia_blue = round(.272 * old_red + .534 * old_green + .131 * old_blue);
             int sepia_green = round(.349 * old_red + .686 * old_green + .168 * old_blue);
             int sepia_red = round(.393 * old_red + .769 * old_green + .189 * old_blue);
+
+            // Checking if attribute is greater than 255
+
             if (sepia_blue > 255)
             {
                 sepia_blue = 255;
