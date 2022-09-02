@@ -54,6 +54,12 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             {
                 sepia_red = 255;
             }
+
+            // Printing new colours
+
+            image[i][j].rgbtBlue = sepia_blue;
+            image[i][j].rgbtGreen = sepia_green;
+            image[i][j].rgbtRed = sepia_red;
         }
     }
     return;
