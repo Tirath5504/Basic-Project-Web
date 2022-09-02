@@ -68,7 +68,22 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    
+    RGBTRIPLE copy[height][width];
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = width, k = 0; j > 0; j--, k++)
+        {
+            copy[i][j] = image[i][k];
+            k++;
+        }
+    }
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j] = copy[i][j];
+        }
+    }
     return;
 }
 
