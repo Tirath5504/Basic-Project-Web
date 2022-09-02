@@ -101,14 +101,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     RGBTRIPLE copy[height][width];
 
-    // Inputing attributes of image to copy
+    // Inputing blurred image to copy
 
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            copy[i][j] = image[i][j];
-            
+            int c1 = image[i][j] + image[i][j + 1] + image[i][j - 1] / 3;
+            int c2 = image[i + 1][j] + image[i + 1][j + 1] + image[i + 1][j - 1] / 3;
+            int c3 = image[i - 1][j] + image[i - 1][j + 1] + image[i - 1][j - 1] / 3;
+            copy[i][j] = c1 + c2 + c3 / 3;
         }
     }
 
