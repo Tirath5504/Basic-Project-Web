@@ -116,6 +116,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 n = 4;
             }
+            else if ((j == 0 && i != width && i != 0) || (j == height && i != 0 && i != width))
+            {
+                n = 4;
+            }
             else
             {
                 n = 10;
@@ -124,7 +128,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int l = j - 1; l < j + 2; l++)
                 {
-                    copy[i][j].red = copy[i][j].red + copy[k][l].red / n;
+                    copy[i][j].red = copy[i][j].red + copy
                 }
             }
         }
