@@ -107,10 +107,30 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            int c1 = image[i][j] + image[i][j + 1] + image[i][j - 1] / 3;
-            int c2 = image[i + 1][j] + image[i + 1][j + 1] + image[i + 1][j - 1] / 3;
-            int c3 = image[i - 1][j] + image[i - 1][j + 1] + image[i - 1][j - 1] / 3;
-            copy[i][j] = c1 + c2 + c3 / 3;
+            if (i == 0 && j == 0)
+            {
+                copy[i][j] = image[i][j] + image[i + 1][j] + image[i][j + 1] / 3;
+            }
+            else if (i == 0 && j != 0 && j != width)
+            {
+                copy[i][j] = image[i][j] + image[i + 1][j] + image[i][j + 1] + image[i][j - 1] + image[i + 1][j - 1] + image[i + 1][j + 1] / 6;
+            }
+            else if (i == 0 && j == width)
+            {
+                copy[i][j] = image[i][j] + image[i + 1][j] + image[i][j - 1] + image[i + 1][j - 1] / 4;
+            }
+            else if (i == 0 && j != 0)
+            {
+                copy[i][j] = image[i][j] + image[i + 1][j] + image[i][j + 1] + image[i][j - 1];
+            }
+            else if (i == 0 && j != 0)
+            {
+                copy[i][j] = image[i][j] + image[i + 1][j] + image[i][j + 1] + image[i][j - 1];
+            }
+            else
+            {
+                copy[i][j] = image[i][j] + image[i + 1][j] + image[i][j + 1] + image[i][j - 1] + image[i + 1][j - 1] + image[i + 1][j + 1] + image[i - 1][j] + image[i - 1][j + 1] + image[i - 1][j - 1] / 10;
+            }
         }
     }
 
