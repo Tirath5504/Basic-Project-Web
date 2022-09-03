@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // C
+    // Checking if input is JPEG file
+
+    
     return 0;
 }
