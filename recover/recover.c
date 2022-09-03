@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdint.h>
 
+const int BLOCK_SIZE = 512;
+
 int main(int argc, char *argv[])
 {
     // Checking if user input is valid
@@ -20,6 +22,8 @@ int main(int argc, char *argv[])
 
     // Checking if input is JPEG file
 
-    
+    int16_t buffer;
+    fread(buffer, 1, BLOCK_SIZE, file);
+    if (buffer == )
     return 0;
 }
