@@ -23,9 +23,12 @@ int main(int argc, char *argv[])
     // Checking if input is JPEG file
 
     int16_t buffer;
-    while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
+    while (fread(&buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
-        if (buffer == )
+        if (buffer == 255)
+        {
+            printf("a\n");
+        }
     }
     return 0;
 }
