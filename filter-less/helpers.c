@@ -99,7 +99,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     // Creating a copy
 
-    RGBTRIPLE copy[height][width];
+    int red, green, blue;
     int n;
 
     // Inputing blurred image to copy
@@ -108,9 +108,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            copy[i][j].rgbtRed = 0;
-            copy[i][j].rgbtBlue = 0;
-            copy[i][j].rgbtGreen = 0;
+            red = 0;
+            green = 0;
+            blue = 0;
             if ((i == 0 && j == 0) || (i == height && j == width) || (i == 0 && j == width) || (i == height && j == 0))
             {
                 n = 4.0;
@@ -133,27 +133,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if ((k >= 0) && (l >= 0) && (k < height) && (l < width))
                     {
-                        copy[i][j].rgbtRed = copy[i][j].rgbtRed + image[k][l].rgbtRed;
-                        copy[i][j].rgbtBlue = copy[i][j].rgbtBlue + image[k][l].rgbtBlue;
-                        copy[i][j].rgbtGreen = copy[i][j].rgbtGreen + image[k][l].rgbtGreen;
+                        red = red + image[k][l].rgbtRed;
+                        blue = blue + image[k][l].rgbtBlue;
+                        green = green + image[k][l].rgbtGreen;
                     }
                 }
             }
-            copy[i][j].rgbtRed = copy[i][j].rgbtRed / n;
-            copy[i][j].rgbtBlue = copy[i][j].rgbtBlue / n;
-            copy[i][j].rgbtGreen = copy[i][j].rgbtGreen / n;
-        }
-    }
-
-    // Printing blurred image
-
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            image[i][j].rgbtRed = copy[i][j].rgbtRed;
-            image[i][j].rgbtBlue = copy[i][j].rgbtBlue;
-            image[i][j].rgbtGreen = copy[i][j].rgbtGreen;
+            image[i][j].rgbtRed = red / n;
+            image[i][j].rgbtBlue = blue / n;
+            image[i][j].rgbtGreen = green / n;
         }
     }
     return;
