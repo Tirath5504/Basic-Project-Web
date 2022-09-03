@@ -23,7 +23,9 @@ int main(int argc, char *argv[])
     // Checking if input is JPEG file
 
     int16_t buffer;
-    fread(buffer, 1, BLOCK_SIZE, file);
-    if (buffer == )
+    while (fread(buffer, 1, BLOCK_SIZE, file))
+    {
+        if (buffer == )
+    }
     return 0;
 }
