@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
             {
                 sprintf(file, "%03i.jpg", i + 1);
                 FILE *img = fopen(file, "w");
-                fwrite(file, 512, 1, img);
+                fwrite(file, BLOCK_SIZE, 1, img);
                 i++;
             }
             else
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-            
+
         }
     }
     return 0;
