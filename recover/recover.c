@@ -37,6 +37,14 @@ int main(int argc, char *argv[])
                 fwrite(file, 512, 1, img);
                 i++;
             }
+            else
+            {
+
+            }
+        }
+        else
+        {
+            
         }
     }
     return 0;
