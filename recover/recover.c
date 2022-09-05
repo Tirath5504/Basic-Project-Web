@@ -22,10 +22,13 @@ int main(int argc, char *argv[])
 
     // Checking if input is JPEG file
 
-    int16_t buffer;
-    while (fread(&buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
+    int16_t buffer[];
+    while ((int n = fread(&buffer, 1, BLOCK_SIZE, file)) == BLOCK_SIZE)
     {
-        if (buffer == )
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        {
+            
+        }
     }
     return 0;
 }
