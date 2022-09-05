@@ -39,12 +39,14 @@ int main(int argc, char *argv[])
             }
             else
             {
-
+                fclose(img);
+                FILE *img = fopen(file, "w");
+                fwrite(file, BLOCK_SIZE, 1, img);
             }
         }
         else
         {
-
+            fwrite(file, BLOCK_SIZE, 1, img);
         }
     }
     return 0;
