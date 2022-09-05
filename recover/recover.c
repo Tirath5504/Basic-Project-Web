@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
         {
             if (i == 0)
             {
-                sprintf(file, "%03i.jpg", i);
+                sprintf(file, "%03i.jpg", i + 1);
                 FILE *img = fopen(file, "w");
                 fwrite(file, 512, 1, img);
                 i++;
