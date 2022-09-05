@@ -22,7 +22,6 @@ int main(int argc, char *argv[])
 
     // Checking if input is JPEG file
 
-    int16_t buffer[];
     int i = 1;
     int n = fread(&buffer, 1, BLOCK_SIZE, file);
     while (n != 0)
@@ -40,6 +39,7 @@ int main(int argc, char *argv[])
             else
             {
                 fclose(img);
+                sprintf(file, "%03i.jpg", i + 1);
                 FILE *img = fopen(file, "w");
                 fwrite(file, BLOCK_SIZE, 1, img);
             }
