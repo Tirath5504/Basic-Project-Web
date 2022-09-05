@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
     int16_t buffer[513];
     int i = 1;
     int n = fread(&buffer, 1, BLOCK_SIZE, file);
+    char *filename;
     while (n != 0)
     {
         fread(buffer, 1, BLOCK_SIZE, file);
@@ -32,7 +33,7 @@ int main(int argc, char *argv[])
         {
             if (i == 0)
             {
-                sprintf(file, "%03i.jpg", i + 1);
+                sprintf(filename, "%03i.jpg", i + 1);
                 FILE *img = fopen(file, "w");
                 fwrite(file, BLOCK_SIZE, 1, img);
                 i++;
@@ -42,7 +43,7 @@ int main(int argc, char *argv[])
                 fclose(img);
                 sprintf(file, "%03i.jpg", i + 1);
                 FILE *img = fopen(file, "w");
-                fwrite(file, BLOCK_SIZE, 1, img);
+                fwrite(*filename, BLOCK_SIZE, 1, img);
             }
         }
         else
