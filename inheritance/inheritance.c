@@ -71,7 +71,6 @@ person *create_family(int generations)
                 }
                 ch = random_allele();
             }
-            n->alleles[i] = ch;
         }
     }
 
