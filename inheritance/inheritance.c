@@ -62,7 +62,7 @@ person *create_family(int generations)
         for (int i = 0; i < 2; i++)
         {
             char ch = random_allele();
-            while (ch != parent0->alleles[0] || ch != parent0->alleles[1] || ch != parent1->alleles[0] || ch != parent0->alleles[1])
+            while (ch == parent0->alleles[0] || ch == parent0->alleles[1] || ch == parent1->alleles[0] || ch == parent0->alleles[1])
             {
                 ch = random_allele();
             }
