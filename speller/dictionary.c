@@ -27,15 +27,17 @@ int count[N];
 bool load(const char *dictionary)
 {
     char wor[LENGTH + 1];
+
+    // Initi
     for (int j = 0; j < N; j++)
     {
         table[j] = 0;
     }
-    int i = 0;
     for (int j = 0; j < N; j++)
     {
         count[j] = 0;
     }
+    int i = 0;
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
@@ -63,7 +65,7 @@ bool load(const char *dictionary)
 unsigned int hash(const char *word)
 {
     int prod = 0;
-    for (int i = 0,n = strlen(word) + 1; i < n; i++)
+    for (int i = 0, n = strlen(word) + 1; i < n; i++)
     {
         char ch = toupper(word[i]);
         prod = prod + ch;
