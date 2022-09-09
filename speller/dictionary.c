@@ -2,7 +2,7 @@
 
 #include <ctype.h>
 #include <stdbool.h>
-
+#include <stdio.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -16,7 +16,11 @@ node;
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    
+    FILE *file = fopen("/dictionaries/large.txt", "r");
+    if (file == NULL)
+    {
+        
+    }
     return false;
 }
 
