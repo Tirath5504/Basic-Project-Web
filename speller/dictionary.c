@@ -13,6 +13,13 @@ typedef struct node
 }
 node;
 
+// Loads dictionary into memory, returning true if successful, else false
+bool load(const char *dictionary)
+{
+    
+    return false;
+}
+
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
 
@@ -31,13 +38,6 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     return toupper(word[0]) - 'A';
-}
-
-// Loads dictionary into memory, returning true if successful, else false
-bool load(const char *dictionary)
-{
-    // TODO
-    return false;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
