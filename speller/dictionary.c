@@ -25,6 +25,11 @@ bool load(const char *dictionary)
 {
     const char w[LENGTH + 1];
     int i = 0;
+    int c[N];
+    for (int j = 0; j < N; j++)
+    {
+        c[j] = 0;
+    }
     FILE *file = fopen("/dictionaries/large.txt", "r");
     if (file == NULL)
     {
@@ -41,6 +46,7 @@ bool load(const char *dictionary)
         int h = hash(n->word);
         n->next = table[h];
         table[h]->next = n;
+        c[N]++;
         i++;
     }
     return false;
