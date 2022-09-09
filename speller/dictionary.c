@@ -32,7 +32,7 @@ bool load(const char *dictionary)
     {
         count[j] = 0;
     }
-    FILE *file = fopen("/workspaces/111230032/speller/dictionaries/large", "r");
+    FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
         return false;
