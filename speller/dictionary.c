@@ -22,7 +22,7 @@ bool load(const char *dictionary)
     {
         return false;
     }
-    while (fread(buffer, some, 1))
+    while (fread(buffer, some, 1, ))
     fscanf(file, "%s", word);
     return false;
 }
