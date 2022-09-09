@@ -23,7 +23,7 @@ node *table[N];
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    char w[LENGTH];
+    char w[LENGTH + 1];
     int i = 0;
     FILE *file = fopen("/dictionaries/large.txt", "r");
     if (file == NULL)
@@ -38,7 +38,9 @@ bool load(const char *dictionary)
             return false;
         }
         strcpy(w[i],  n->word);
-        int hash = hash(n->word);
+        int h = hash(n->word);
+        n->next = table[h];
+        table[h]->next = n;
         i++;
     }
     return false;
@@ -52,10 +54,15 @@ bool check(const char *word)
 }
 
 // Hashes word to a number
-unsigned int hash(const char *word)
+unsigned int hash(const char w[LENGTH + 1])
 {
-    
-    return toupper(word[0]) - 'A';
+    for (char ch = 'A'; ch < 91; ch++)
+    {
+        if (w[0] == ch)
+        {
+            return toupper(ch - 'A');
+        }
+    }
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
