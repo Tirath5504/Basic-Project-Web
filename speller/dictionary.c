@@ -16,14 +16,18 @@ node;
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    char *w;
+    char w[LENGTH];
+    int i = 0;
     FILE *file = fopen("/dictionaries/large.txt", "r");
     if (file == NULL)
     {
         return false;
     }
-    while (fread(buffer, some, 1, ))
-    fscanf(file, "%s", word);
+    while (fscanf(file, "%s", w[i]) != EOF)
+    {
+        
+        i++;
+    }
     return false;
 }
 
