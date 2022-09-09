@@ -27,6 +27,10 @@ int count[N];
 bool load(const char *dictionary)
 {
     char wor[LENGTH + 1];
+    for (int j = 0; j < N; j++)
+    {
+        table[j] = 0;
+    }
     int i = 0;
     for (int j = 0; j < N; j++)
     {
