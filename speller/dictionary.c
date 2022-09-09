@@ -57,8 +57,8 @@ bool load(const char *dictionary)
         count[h]++;
         i++;
     }
+    fclose(dictionary);
     return true;
-    printf("%i", i);
 }
 
 // Hashes word to a number
