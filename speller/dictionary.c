@@ -27,8 +27,6 @@ int count[N];
 bool load(const char *dictionary)
 {
     char wor[LENGTH + 1];
-
-    // Initi
     for (int j = 0; j < N; j++)
     {
         table[j] = 0;
