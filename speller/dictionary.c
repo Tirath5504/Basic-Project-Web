@@ -64,13 +64,13 @@ bool load(const char *dictionary)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    int prod = 0;
+    int sum = 0;
     for (int i = 0, n = strlen(word) + 1; i < n; i++)
     {
         char ch = toupper(word[i]);
-        prod = prod + ch;
+        sum = sum + ch;
     }
-    return (prod % 24);
+    return (sum % 26);
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
