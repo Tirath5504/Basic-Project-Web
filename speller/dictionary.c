@@ -55,7 +55,6 @@ bool load(const char *dictionary)
         count[h]++;
         i++;
     }
-    fclose(dictionary);
     return true;
 }
 
