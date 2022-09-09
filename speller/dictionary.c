@@ -56,10 +56,13 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char w[LENGTH + 1])
 {
-    for (int i = 0; i < n; i++)
+    int prod = 1;
+    for (int i = 0; i <= LENGTH; i++)
     {
-
+        char ch = toupper(w[i]);
+        prod = prod * ch;
     }
+    return (prod % 13000);
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
