@@ -32,7 +32,7 @@ bool load(const char *dictionary)
     {
         count[j] = 0;s
     }
-    FILE *file = fopen("/home/cs50/pset5/dictionaries/large", "r");
+    FILE *file = fopen("dictionaries/large", "r");
     if (file == NULL)
     {
         return false;
