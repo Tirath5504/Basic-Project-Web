@@ -52,13 +52,6 @@ bool load(const char *dictionary)
     return false;
 }
 
-// Returns true if word is in dictionary, else false
-bool check(const char *word)
-{
-    // TODO
-    return false;
-}
-
 // Hashes word to a number
 unsigned int hash(const char w[LENGTH + 1])
 {
@@ -74,8 +67,19 @@ unsigned int hash(const char w[LENGTH + 1])
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
+    int sum = 0;
+    for (int i = 0; i < N; i++)
+    {
+        sum = sum + c[i];
+    }
+    return sum;
+}
+
+// Returns true if word is in dictionary, else false
+bool check(const char *word)
+{
     // TODO
-    return 0;
+    return false;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
