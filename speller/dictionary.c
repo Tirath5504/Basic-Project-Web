@@ -16,7 +16,7 @@ node;
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    char *word;
+    char *w;
     FILE *file = fopen("/dictionaries/large.txt", "r");
     if (file == NULL)
     {
