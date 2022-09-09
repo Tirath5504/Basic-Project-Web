@@ -23,7 +23,7 @@ node *table[N];
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    char w[LENGTH + 1];
+    const char w[LENGTH + 1];
     int i = 0;
     FILE *file = fopen("/dictionaries/large.txt", "r");
     if (file == NULL)
