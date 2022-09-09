@@ -68,7 +68,7 @@ unsigned int hash(const char *word)
         char ch = toupper(word[i]);
         prod = prod + ch;
     }
-    return (prod % 26);
+    return (prod % 24);
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
