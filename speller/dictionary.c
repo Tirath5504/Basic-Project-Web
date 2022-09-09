@@ -30,7 +30,7 @@ bool load(const char *dictionary)
     int i = 0;
     for (int j = 0; j < N; j++)
     {
-        count[j] = 0;s
+        count[j] = 0;
     }
     FILE *file = fopen("dictionaries/large.txt", "r");
     if (file == NULL)
