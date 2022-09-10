@@ -60,6 +60,7 @@ bool load(const char *dictionary)
         i++;
     }
     free(copy);
+    fclose(file);
     return true;
 }
 
