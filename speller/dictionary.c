@@ -55,6 +55,7 @@ bool load(const char *dictionary)
         count[h]++;
         i++;
     }
+    printf("%i", i);
     return true;
 }
 
