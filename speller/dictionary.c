@@ -26,7 +26,7 @@ int count[N];
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    char *copy = NULL;
+    char *copy = malloc(LENGTH +1);
     for (int j = 0; j < N; j++)
     {
         table[j] = 0;
@@ -59,6 +59,7 @@ bool load(const char *dictionary)
         count[h]++;
         i++;
     }
+    free(copy);
     printf("%i", i);
     return true;
 }
