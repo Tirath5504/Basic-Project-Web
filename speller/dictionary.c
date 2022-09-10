@@ -26,7 +26,7 @@ int count[N];
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    char wor[LENGTH + 1];
+    char *copy = NULL;
     for (int j = 0; j < N; j++)
     {
         table[j] = 0;
@@ -41,14 +41,14 @@ bool load(const char *dictionary)
     {
         return false;
     }
-    while (fscanf(file, "%s", &wor[i]) != EOF)
+    while (fscanf(file, "%s", copy) != EOF)
     {
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
             return false;
         }
-        strcpy(n->word,  &wor[i]);
+        strcpy(n->word,  copy);
         if (i == 0)
         {
             n->next = NULL;
