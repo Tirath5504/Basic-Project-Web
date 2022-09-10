@@ -48,7 +48,7 @@ bool load(const char *dictionary)
         {
             return false;
         }
-        strcpy(n->word,  copy);
+        strcpy(n->word, copy);
         if (i == 0)
         {
             n->next = NULL;
