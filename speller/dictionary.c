@@ -92,7 +92,7 @@ bool check(const char *word)
     int h = hash(word);
     for (node *cursor = table[h]; cursor != NULL; cursor = cursor->next)
     {
-        if (strcasecmp(word, cursor->word))
+        if (strcasecmp(word, cursor->word) == 0)
         {
             return true;
         }
