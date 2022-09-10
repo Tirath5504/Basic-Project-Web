@@ -60,7 +60,6 @@ bool load(const char *dictionary)
         i++;
     }
     free(copy);
-    printf("%i", i);
     return true;
 }
 
