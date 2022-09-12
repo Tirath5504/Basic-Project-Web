@@ -25,17 +25,13 @@ def main():
             teams.append(team_dictionary[key])
 
     counts = {}
-    for row in reader:
-        new_key = input(row["team"])
-        counts_dictionary[new_key] = 0
-
     # Simulating N tournaments and keep track of win counts
     for i in range(1000):
         winner = simulate_tournament(teams)
-        for key in counts:
-            if key == winners:
-                key(item) += 1
-
+        if winner in counts:
+            counts[winner] += 1
+        else:
+            counts_dictionary[winner] = 1
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
