@@ -21,7 +21,6 @@ def main():
         for row in reader:
             team.key() =row(["team"])
             team.valur = int(row["rating"])
-            team_dictionary[new_key] = new_rating
             teams.append(team_dictionary[key])
 
     counts = {}
