@@ -25,8 +25,10 @@ def main():
             teams.append(team_dictionary[key])
 
     counts = {}
-    # Simulating N tournaments and keep track of win counts
     
+    # Simulating N tournaments and keep track of win counts
+    for i in range(1000):
+
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
