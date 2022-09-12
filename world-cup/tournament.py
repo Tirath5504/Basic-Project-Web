@@ -19,8 +19,8 @@ def main():
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            team.key() = 
-            new_rating = int(input(row["rating"]))
+            team.key() =row(["team"])
+            team.valur = int(row["rating"])
             team_dictionary[new_key] = new_rating
             teams.append(team_dictionary[key])
 
