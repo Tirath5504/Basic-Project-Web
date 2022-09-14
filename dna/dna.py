@@ -25,7 +25,7 @@ def main():
     with open(sys.argv[1]) as file:
         for i in table:
             df = pd.read_csv(file)
-            saved_column = df.column_name
+            saved_column = df["column_name"]
             names = df.Names
             l = longest_match(sequence, )
 
