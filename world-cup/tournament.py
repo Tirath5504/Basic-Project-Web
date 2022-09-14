@@ -22,7 +22,7 @@ def main():
         for row in reader:
             nk = row["team"]
             nv = int(row["rating"])
-            team[nk] = nv
+            team[nk].append(nv)
             teams.append(team[nk])
 
     counts = {}
