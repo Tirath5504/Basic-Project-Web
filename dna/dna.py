@@ -39,7 +39,7 @@ def main():
             copy = table[i]
             if answer[c] == int(copy[j]):
                 count += 1
-            if count == (len(headers) - 1):
+            if count == (len(headers)):
                 print(copy["name"])
                 r = 1
                 break
