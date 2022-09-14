@@ -39,9 +39,6 @@ int main(int argc, char *argv[])
             else
             {
                 fclose(img);
-                sprintf(file, "%03i.jpg", i + 1);
-                FILE *img = fopen(file, "w");
-                fwrite(*filename, BLOCK_SIZE, 1, img);
             }
         }
         else
