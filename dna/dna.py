@@ -26,11 +26,11 @@ def main():
     with open(sys.argv[1]) as file:
         headers = reader.fieldnames
         headers.remove("name")
-        for i in table:
-            for j in range(len(headers)):
-                answer.append(longest_match(sequence, headers[j]))
+        for j in range(len(headers)):
+            answer.append(longest_match(sequence, headers[j]))
 
-    # TODO: Check database for matching profiles
+    # Checking database for matching profiles
+    solution = []
 
     return
 
