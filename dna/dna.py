@@ -32,8 +32,13 @@ def main():
     # Checking database for matching profiles
     solution = []
     for i in table:
-        for j in answer:
-            if answer == table[i]
+        count = 0
+        for j in header:
+            if answer == table[j]:
+                count += 1
+            if count == 3:
+                print(j)
+                break
 
     return
 
