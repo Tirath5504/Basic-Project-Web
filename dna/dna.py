@@ -25,7 +25,7 @@ def main():
     with open(sys.argv[1]) as file:
         for i in table:
             df = pd.read_csv(file)
-            names = df.Names
+            names = df["name"]
             l = longest_match(sequence, )
 
     # TODO: Check database for matching profiles
