@@ -3,6 +3,7 @@ import sys
 # Source: https://stackoverflow.com/a/16503807/19959015
 import pandas as pd
 
+
 def main():
 
     # Checking for command-line usage
@@ -87,6 +88,7 @@ def longest_match(sequence, subsequence):
 
     # After checking for runs at each character in seqeuence, return longest run found
     return longest_run
+
 
 if __name__ == "__main__":
     main()
