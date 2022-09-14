@@ -33,7 +33,8 @@ def main():
     for i in table:
         count = 0
         for j in headers:
-            if answer == table[j]:
+            copy = table[i]
+            if answer == copy[j]:
                 count += 1
             if count == 3:
                 print(j)
