@@ -26,7 +26,7 @@ def main():
     with open(sys.argv[1]) as file:
         for i in table:
             for j in headers:
-                l = longest_match(sequence, headers[i + 1])
+                l = longest_match(sequence, headers[j + 1])
 
     # TODO: Check database for matching profiles
 
