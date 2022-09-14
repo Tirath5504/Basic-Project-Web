@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
     // Checking if input is JPEG file
 
-    int16_t buffer[513];
+    int16_t buffer[512];
     int i = 0;
     char *filename = malloc(10000);
     while (fread(buffer, 1, BLOCK_SIZE, file) != EOF)
