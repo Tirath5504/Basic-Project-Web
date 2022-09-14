@@ -35,12 +35,15 @@ def main():
         count = 0
         for j in headers:
             copy = table[i]
+            a = answer[c]
+            b = copy[j]
             if answer[c] == copy[j]:
                 count += 1
-            if count == 3:
+            if count == len(headers):
                 print(j)
                 break
             c += 1
+    print("No match")
 
     return
 
