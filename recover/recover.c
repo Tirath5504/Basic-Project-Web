@@ -34,19 +34,22 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.jpg", i);
                 FILE *img = fopen(filename, "w");
                 fwrite(file, BLOCK_SIZE, 1, img);
+                fclose(img);
                 i++;
             }
             else
             {
-                fclose(img);
                 FILE *img = fopen(filename, "w");
                 fwrite(file, BLOCK_SIZE, 1, img);
+                fclose(img);
                 i++;
             }
         }
         else
         {
+            FILE *img = fopen(filename, "w");
             fwrite(file, BLOCK_SIZE, 1, img);
+            fclose(img);
         }
     }
     free(filename);
