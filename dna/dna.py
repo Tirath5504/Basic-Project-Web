@@ -15,10 +15,10 @@ def main():
         for row in reader:
             person = {}
             person_seg_count = []
-            length = len(row) - 1
-            nk = row["name"]
+            length = len(row)
             for i in range(length):
-                nv = row["AGATC"]
+                nk = row
+                nv = row[i]
                 person_seg_count.append(nv)
             person[nk] = person_seg_count
             person_copy = person.copy()
