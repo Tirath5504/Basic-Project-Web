@@ -14,13 +14,11 @@ def main():
         reader = csv.DictReader(file)
         for row in reader:
             person = {}
-            person_seg_count = []
             length = len(row)
             for i in range(length):
-                nk = row
-                nv = row[i]
-                person_seg_count.append(nv)
-            person[nk] = person_seg_count
+                nk = row[i]
+                nv = row[row[i]]
+            person[nk] = nv
             person_copy = person.copy()
             table.append(person_copy)
 
