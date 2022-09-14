@@ -20,9 +20,10 @@ def main():
         reader = csv.DictReader(file)
         for row in reader:
             team = {}
-            nk = row["team"]
-            nv = int(row["rating"])
-            team[nk] = nv
+            nk = "team"
+            nv = "rating"
+            team[nk] = row["team"]
+            team[nv] = int(row["rating"])
             team_copy = team.copy()
             teams.append(team_copy)
 
