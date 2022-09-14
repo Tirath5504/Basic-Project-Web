@@ -5,9 +5,24 @@ import sys
 def main():
 
     # Checking for command-line usage
-    
+    if not len(sys.argv) == 3:
+        print("Usage: python dna.py data.csv sequence.txt")
 
-    # TODO: Read database file into a variable
+    # Reading database file into a variable
+    table = []
+    with open(sys.argv[1]) as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            person = {}
+            person_seg_count = []
+            length = len(row) - 1
+            nk = row["name"]
+            for i in range(length):
+                nv = row["AGATC"]
+                person_seg_count.append(nv)
+            person[nk] = person_seg_count
+            person_copy = person.copy()
+            table.append(person_copy)
 
     # TODO: Read DNA sequence file into a variable
 
@@ -55,5 +70,5 @@ def longest_match(sequence, subsequence):
     # After checking for runs at each character in seqeuence, return longest run found
     return longest_run
 
-
-main()
+if __name__ == "__main__":
+    main()
