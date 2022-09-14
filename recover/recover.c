@@ -24,15 +24,15 @@ int main(int argc, char *argv[])
 
     int16_t buffer[513];
     int i = 0;
-    FILE *filename;
+    char *filename = malloc(10000);
     while (fread(buffer, 1, BLOCK_SIZE, file != EOF))
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             if (i == 0)
             {
-                FILE *img = fopen(file, "w");
-                sprintf(img, "%03i.jpg", i);
+                sprintf(filename, "%03i.jpg", i);
+                FILE *img = fopen(filename, "w");
                 fwrite(img, BLOCK_SIZE, 1, img);
                 i++;
             }
@@ -46,5 +46,6 @@ int main(int argc, char *argv[])
             fwrite(file, BLOCK_SIZE, 1, img);
         }
     }
+    free(filename);
     return 0;
 }
