@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
             {
                 FILE *img = fopen(file, "w");
                 sprintf(img, "%03i.jpg", i);
-                fwrite(file, BLOCK_SIZE, 1, img);
+                fwrite(img, BLOCK_SIZE, 1, img);
                 i++;
             }
             else
