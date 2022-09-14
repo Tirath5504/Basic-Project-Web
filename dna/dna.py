@@ -14,6 +14,7 @@ def main():
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         headers = reader.fieldnames
+        headers.remove("name")
         for row in reader:
             person = row.copy()
             table.append(person)
@@ -26,7 +27,7 @@ def main():
     with open(sys.argv[1]) as file:
         for i in table:
             for j in headers:
-                l = longest_match(sequence, headers[j + 1])
+                l = longest_match(sequence, headers)
 
     # TODO: Check database for matching profiles
 
