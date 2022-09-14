@@ -1,6 +1,7 @@
 import csv
 import sys
-
+# Source: https://stackoverflow.com/a/16503807/19959015
+import pandas as pd
 
 def main():
 
@@ -22,8 +23,10 @@ def main():
 
     # Finding longest match of each STR in DNA sequence
     for i in table:
-        for key in i.keys():
-            l = longest_match(sequence, )
+        df = pd.read_csv(file)
+        saved_column = df.column_name
+        names = df.Names
+        l = longest_match(sequence, )
 
     # TODO: Check database for matching profiles
 
