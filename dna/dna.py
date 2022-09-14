@@ -26,8 +26,8 @@ def main():
         headers = reader.fieldnames
         headers.remove("name")
         for i in table:
-            for j in headers:
-                l = longest_match(sequence, headers)
+            for j:
+                l = longest_match(sequence, headers[j])
 
     # TODO: Check database for matching profiles
 
