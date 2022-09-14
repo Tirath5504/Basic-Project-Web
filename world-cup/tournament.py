@@ -24,7 +24,7 @@ def main():
             nv = int(row["rating"])
             team[nk] = nv
             team_copy = team.copy()
-            teams.append(team_copy)
+        teams.append(team_copy)
 
     counts = {}
     # Simulating N tournaments and keep track of win counts
