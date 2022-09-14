@@ -30,7 +30,7 @@ def main():
             answer.append(longest_match(sequence, headers[j]))
 
     # Checking database for matching profiles
-    for i in table:
+    for i in range(len(table)):
         count = 0
         for j in headers:
             copy = table[i]
