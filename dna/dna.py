@@ -37,11 +37,13 @@ def main():
             copy = table[i]
             if answer[c] == int(copy[j]):
                 count += 1
-            if count == len(headers):
-                print(j)
+            if count == (len(headers) - 1):
+                print(copy["name"])
+                c = 1000
                 break
             c += 1
-    print("No match")
+    if not c == 1000:
+        print("No match")
 
     return
 
