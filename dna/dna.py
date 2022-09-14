@@ -31,14 +31,16 @@ def main():
 
     # Checking database for matching profiles
     for i in range(len(table)):
+        c = 0
         count = 0
         for j in headers:
             copy = table[i]
-            if answer[i] == copy[j]:
+            if answer[c] == copy[j]:
                 count += 1
             if count == 3:
                 print(j)
                 break
+            c += 1
 
     return
 
