@@ -33,16 +33,19 @@ def main():
     for i in range(len(table)):
         c = 0
         count = 0
+        r = 0
         for j in headers:
             copy = table[i]
             if answer[c] == int(copy[j]):
                 count += 1
             if count == (len(headers) - 1):
                 print(copy["name"])
-                c = 1000
+                r = 1
                 break
             c += 1
-    if not c == 1000:
+        if r == 1:
+            break
+    if not r == 1:
         print("No match")
 
     return
