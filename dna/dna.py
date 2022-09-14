@@ -13,6 +13,7 @@ def main():
     table = []
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
+        headers = reader.fieldnames
         for row in reader:
             person = row.copy()
             table.append(person)
