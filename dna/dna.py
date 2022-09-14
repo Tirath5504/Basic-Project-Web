@@ -34,7 +34,7 @@ def main():
         count = 0
         for j in headers:
             copy = table[i]
-            if answer == copy[j]:
+            if answer[i] == copy[j]:
                 count += 1
             if count == 3:
                 print(j)
