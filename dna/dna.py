@@ -25,9 +25,8 @@ def main():
     # Finding longest match of each STR in DNA sequence
     with open(sys.argv[1]) as file:
         for i in table:
-            j = 1
             for j in headers:
-                l = longest_match(sequence, headers[i])
+                l = longest_match(sequence, headers[i + 1])
 
     # TODO: Check database for matching profiles
 
