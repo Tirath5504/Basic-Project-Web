@@ -15,9 +15,9 @@ def main():
         for row in reader:
             person = {}
             length = len(row)
-            for i in range(length):
-                nk = row[i]
-                nv = row[row[i]]
+            for key in reader:
+                nk = key
+                nv = row[key]
             person[nk] = nv
             person_copy = person.copy()
             table.append(person_copy)
