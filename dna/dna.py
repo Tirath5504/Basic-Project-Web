@@ -30,10 +30,9 @@ def main():
             answer.append(longest_match(sequence, headers[j]))
 
     # Checking database for matching profiles
-    solution = []
     for i in table:
         count = 0
-        for j in header:
+        for j in headers:
             if answer == table[j]:
                 count += 1
             if count == 3:
