@@ -23,17 +23,15 @@ int main(int argc, char *argv[])
     // Checking if input is JPEG file
 
     int16_t buffer[513];
-    int i = 1;
-    int n = fread(&buffer, 1, BLOCK_SIZE, file);
+    int i = 0;
     char *filename;
-    while (n != 0)
+    while (fread(buffer, 1, BLOCK_SIZE, file != EOF))
     {
-        fread(buffer, 1, BLOCK_SIZE, file);
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             if (i == 0)
             {
-                sprintf(filename, "%03i.jpg", i + 1);
+                sprintf(filename, "%03i.jpg", i);
                 FILE *img = fopen(file, "w");
                 fwrite(file, BLOCK_SIZE, 1, img);
                 i++;
