@@ -22,12 +22,13 @@ def main():
     sequence = f.read()
 
     # Finding longest match of each STR in DNA sequence
+    answer = []
     with open(sys.argv[1]) as file:
         headers = reader.fieldnames
         headers.remove("name")
         for i in table:
             for j in range(len(headers)):
-                l = longest_match(sequence, headers[j])
+                answer.append(longest_match(sequence, headers[j]))
 
     # TODO: Check database for matching profiles
 
