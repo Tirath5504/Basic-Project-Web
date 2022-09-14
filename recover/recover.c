@@ -31,8 +31,8 @@ int main(int argc, char *argv[])
         {
             if (i == 0)
             {
-                sprintf(filename, "%03i.jpg", i);
                 FILE *img = fopen(file, "w");
+                sprintf(img, "%03i.jpg", i);
                 fwrite(file, BLOCK_SIZE, 1, img);
                 i++;
             }
