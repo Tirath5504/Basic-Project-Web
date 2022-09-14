@@ -13,14 +13,8 @@ def main():
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            person = {}
-            length = len(row)
-            for key in reader:
-                nk = key
-                nv = row[key]
-            person[nk] = nv
-            person_copy = person.copy()
-            table.append(person_copy)
+            person = row.copy()
+            table.append(person)
 
     # TODO: Read DNA sequence file into a variable
 
