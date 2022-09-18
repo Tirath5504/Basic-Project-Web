@@ -4,8 +4,7 @@ JOIN ratings
 ON movies.id = ratings.movie_id
 WHERE year = 2010
 GROUP BY title
-ORDER BY
 (CASE
-    WHERE COUNT(rating) = 1 THEN rating
-    ELSE title
+    HAVING COUNT(rating) = 1 THEN ORDER BY rating
+    ELSE ORDER BY title
 END);
