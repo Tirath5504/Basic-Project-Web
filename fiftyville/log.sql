@@ -222,8 +222,11 @@ SELECT *
 -- TEST CODE!!!
 SELECT *
     FROM flights
-    WHERE id =
-    (SELECT flight_id
-        FROM passengers
-        WHERE passport_number = 5773159633);
+    WHERE year = 2021
+    AND month = 7
+    AND day = 29
+    AND origin_airport_id =
+    (SELECT id FROM airports
+    WHERE city = "Fiftyville");
+
 -- TEST SUCCESSFULL!!!
