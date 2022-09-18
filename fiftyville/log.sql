@@ -9,10 +9,10 @@
 -- Mention of three witnesses and bakery
 
 -- Checking interviews on 28 July for first witness
-SELECT *
+/*SELECT *
     FROM interviews
     WHERE month = 7
-    AND day = 28;
+    AND day = 28;*/
 -- Thief exited bakery within 10 mins of 10:15 AM
 
 -- Checking bakery security logs for given day and time
@@ -62,3 +62,6 @@ SELECT *
     AND month = 7
     AND hour > 10;*/
 -- Got some infromation
+
+SELECT *
+    FROM people;
