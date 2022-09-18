@@ -3,9 +3,6 @@ WHERE id IN
     (SELECT movie_id FROM stars
     WHERE person_id =
         (SELECT id FROM people
-        WHERE name  = "Johnny Depp")
-    INTERSECT
-    SELECT movie_id FROM stars
-    WHERE person_id =
-        (SELECT id FROM people
-        WHERE name = "Helena Bohman Carter"));
+        WHERE name IN ("Johnny Depp", "Helena Bohman Carter"))
+    GROUP BY person_id
+    HAVING COUNT(person_id) = 2);
