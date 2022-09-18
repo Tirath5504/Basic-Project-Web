@@ -192,4 +192,30 @@ SELECT *
                     AND hour > 10));*/
 -- Got the criminal!
 
+-- Finding which city the thief escaped to
+SELECT *
+    FROM people
+    WHERE passport_number IN
+        (SELECT passport_number
+            FROM passengers
+            WHERE flight_id IN
+                (SELECT id
+                    FROM flights
+                    WHERE origin_airport_id =
+                        (SELECT id FROM airports
+                        WHERE city = "Fiftyville")
+                    AND day = 29
+                    AND month = 7
+                    AND hour > 10));*/
+
 -- Finding accomplise through phone call
+SELECT *
+    FROM people
+    WHERE phone_number =
+        (SELECT receiver
+            FROM phone_calls
+            WHERE month = 7
+            AND day = 28
+            AND duration < 60
+            AND caller = "(770) 555-1861");
+-- Got the accomplice!
