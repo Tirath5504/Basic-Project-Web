@@ -16,12 +16,12 @@
 -- Thief exited bakery within 10 mins of 10:15 AM
 
 -- Checking bakery security logs for given day and time
-/*SELECT *
+SELECT *
     FROM bakery_security_logs
     WHERE day = 28
     AND hour = 10
     AND minute > 14
-    AND minute < 26;*/
+    AND minute < 26;
 -- Many people exited during the given time
 
 -- Reducing possible thief prospects (with help of license plate) (1)
@@ -143,7 +143,7 @@ SELECT *
 -- Got some passenger details
 
 -- Reducing possible thief prospects (with help of passport number) (4)
-SELECT *
+/*SELECT *
     FROM people
     WHERE id IN
     (SELECT person_id
@@ -187,7 +187,7 @@ SELECT *
                         (SELECT id FROM airports
                         WHERE city = "Fiftyville")
                     AND day = 29
-                    AND month = 7));
+                    AND month = 7));*/
 -- Got the criminal!
 
 -- Finding which city the thief escaped to
