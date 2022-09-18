@@ -126,7 +126,7 @@ SELECT *
     AND duration < 60);*/
 -- Reduced number of prospects
 
--- Checking number of people whose flight departed from Fiftyville after 10 am on 29 july
+-- Checking number of people whose flight departed from Fiftyville on 29 july
 /*SELECT *
     FROM people
     WHERE passport_number IN
