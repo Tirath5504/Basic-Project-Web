@@ -19,8 +19,21 @@
 /*SELECT *
     FROM bakery_security_logs
     WHERE day = 28
-    AND hour = 10;*/
+    AND hour = 10
+    AND minute > 14
+    AND minute < 26;*/
 -- Many people exited during the given time
+
+-- Reducing possible thief prospects (with help of license plate) (1)
+/*SELECT *
+    FROM people
+    WHERE license_plate IN
+    (SELECT license_plate
+    FROM bakery_security_logs
+    WHERE day = 28
+    AND hour = 10
+    AND minute > 14
+    AND minute < 26);*/
 
 -- Checking interviews on 28 July again for second witness
 /*SELECT *
@@ -30,11 +43,11 @@
 -- Thief went to atm on Leggett Street
 
 -- Checking atm transactions on 28 july before 10 15 am
-/*SELECT *
+SELECT *
     FROM atm_transactions
     WHERE day = 28
     AND month = 7
-    AND atm_location = "Leggett Street";*/
+    AND atm_location = "Leggett Street"
 -- No paricular information obtained
 
 -- Checking interviews on 28 July again for third witness
@@ -62,6 +75,3 @@
     AND month = 7
     AND hour > 10;*/
 -- Got some infromation
-
-SELECT *
-    FROM people;
