@@ -43,12 +43,24 @@
 -- Thief went to atm on Leggett Street
 
 -- Checking atm transactions on 28 july before 10 15 am
-SELECT *
+/*SELECT *
     FROM atm_transactions
     WHERE day = 28
     AND month = 7
     AND atm_location = "Leggett Street"
--- No paricular information obtained
+    AND transaction_type = "withdraw";*/
+-- Several prospects found
+
+-- Reducing possible thief prospects (with help of account number) (2)
+SELECT *
+    FROM people
+    WHERE account_number IN
+    (SELECT account_number
+    FROM atm_transactions
+    WHERE day = 28
+    AND month = 7
+    AND atm_location = "Leggett Street"
+    AND transaction_type = "withdraw");
 
 -- Checking interviews on 28 July again for third witness
 /*SELECT *
