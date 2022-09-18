@@ -2,6 +2,4 @@
 
 SELECT *
     FROM crime_scene_reports
-    WHERE month = July
-    AND year = 2021
-    AND street = "Humphrey Street";
+    WHERE month = 7;
