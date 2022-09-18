@@ -1,10 +1,11 @@
-SELECT movies.title, ratings.rating, COUNT(rating)
+SELECT movies.title, ratings.rating
 FROM movies
 JOIN ratings
 ON movies.id = ratings.movie_id
 WHERE year = 2010
+GROUP BY title
 ORDER BY
 (CASE
-    WHEN COUNT(rating) = 1 THEN rating
+    HAVING COUNT(rating) = 1 THEN rating
     ELSE title
 END);
