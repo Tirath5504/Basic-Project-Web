@@ -130,11 +130,11 @@ SELECT *
 
 -- Checking whose flight departed first
 SELECT *
-    FROM people
-    WHERE passport_number IN
-        (SELECT passport_number
+    FROM flights
+    WHERE id IN
+        (SELECT flight_id
             FROM passengers
-            WHERE flight_id IN
+            WHERE  IN
                 (SELECT id
                     FROM flights
                     WHERE origin_airport_id =
