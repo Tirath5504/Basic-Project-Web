@@ -34,6 +34,7 @@
     AND hour = 10
     AND minute > 14
     AND minute < 26);*/
+-- Reduced number of prospects
 
 -- Checking interviews on 28 July again for second witness
 /*SELECT *
@@ -137,9 +138,9 @@ SELECT *
                     WHERE origin_airport_id =
                         (SELECT id FROM airports
                         WHERE city = "Fiftyville")
-                    AND day = 28
+                    AND day = 29
                     AND month = 7
-                    AND hour > 10));
+                    AND hour > 10));*/
 -- Got some passenger details
 
 -- Reducing possible thief prospects (with help of passport number) (4)
@@ -186,7 +187,9 @@ SELECT *
                     WHERE origin_airport_id =
                         (SELECT id FROM airports
                         WHERE city = "Fiftyville")
-                    AND day = 28
+                    AND day = 29
                     AND month = 7
                     AND hour > 10));*/
--- Reduced number of prospects
+-- Got the criminal!
+
+-- Finding accomplise through phone call
