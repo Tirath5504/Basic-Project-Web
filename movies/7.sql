@@ -1,4 +1,4 @@
-SELECT movies.title, DISTINCT (ratings.rating)
+SELECT movies.title, ratings.rating
 FROM movies
 INNER JOIN ratings
 ON ratings.movie_id = movies.id
