@@ -1,4 +1,4 @@
-SELECT title FROM movies JOIN ratings ON ratings.rating = movies.year
+SELECT title FROM movies JOIN ratings ON ratings.rating = movies.rating
 WHERE id IN
 (SELECT movie_id FROM stars
 WHERE person_id IN
