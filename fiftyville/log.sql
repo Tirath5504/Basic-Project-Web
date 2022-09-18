@@ -1,32 +1,32 @@
 -- Keep a log of any SQL queries you execute as you solve the mystery.
 
 -- Checking the crime scene report for the given crime
-/*SELECT *
+SELECT *
     FROM crime_scene_reports
     WHERE month = 7
     AND day = 28
-    AND street = "Humphrey Street";*/
+    AND street = "Humphrey Street";
 -- Mention of three witnesses and bakery
 
 -- Checking interviews on 28 July for first witness
-/*SELECT *
+SELECT *
     FROM interviews
     WHERE month = 7
-    AND day = 28;*/
+    AND day = 28;
 -- Thief exited bakery within 10 mins of 10:15 AM
 
 -- Checking bakery security logs for given day and time
-/*SELECT *
+SELECT *
     FROM bakery_security_logs
     WHERE day = 28
     AND hour = 10
     AND minute > 14
     AND minute < 26
-    AND activity = "exit";*/
+    AND activity = "exit";
 -- Many people exited during the given time
 
 -- Reducing possible thief prospects (with help of license plate) (1)
-/*SELECT *
+SELECT *
     FROM people
     WHERE license_plate IN
     (SELECT license_plate
@@ -34,28 +34,28 @@
     WHERE day = 28
     AND hour = 10
     AND minute > 14
-    AND minute < 26);*/
+    AND minute < 26);
 -- Reduced number of prospects
 
 -- Checking interviews on 28 July again for second witness
-/*SELECT *
+SELECT *
     FROM interviews
     WHERE month = 7
-    AND day = 28;*/
+    AND day = 28;
 -- Thief went to atm on Leggett Street
 
 -- Checking atm transactions on 28 july before 10 15 am
-/*SELECT *
+SELECT *
     FROM atm_transactions
     WHERE day = 28
     AND year = 2021
     AND month = 7
     AND atm_location = "Leggett Street"
-    AND transaction_type = "withdraw";*/
+    AND transaction_type = "withdraw";
 -- Several prospects found
 
 -- Reducing possible thief prospects (with help of account number) (2)
-/*SELECT *
+SELECT *
     FROM people
     WHERE id IN
     (SELECT person_id
@@ -76,26 +76,26 @@ SELECT *
         WHERE day = 28
         AND hour = 10
         AND minute > 14
-        AND minute < 26);*/
+        AND minute < 26);
 -- Reduced number of prospects
 
 -- Checking interviews on 28 July again for third witness
-/*SELECT *
+SELECT *
     FROM interviews
     WHERE month = 7
-    AND day = 28;*/
+    AND day = 28;
 -- Thief called during exit for a duration of less than a minute
 
 -- Checing phone calls on 28 july 2021 for duration of less than a minute
-/*SELECT *
+SELECT *
     FROM phone_calls
     WHERE month = 7
     AND day = 28
-    AND duration < 60;*/
+    AND duration < 60;
 -- Got some caller information
 
 -- Reducing possible thief prospects (with help of phone number) (3)
-/*SELECT *
+SELECT *
     FROM people
     WHERE id IN
     (SELECT person_id
@@ -125,7 +125,7 @@ SELECT *
     FROM phone_calls
     WHERE month = 7
     AND day = 28
-    AND duration < 60);*/
+    AND duration < 60);
 -- Reduced number of prospects
 
 -- Checking whose flight departed first
@@ -134,66 +134,17 @@ SELECT *
     WHERE id IN
         (SELECT flight_id
             FROM passengers
-            WHERE  IN
-                (SELECT id
-                    FROM flights
-                    WHERE origin_airport_id =
-                        (SELECT id FROM airports
-                        WHERE city = "Fiftyville")
-                    AND day = 29
-                    AND month = 7));
--- Got some passenger details
-
--- Reducing possible thief prospects (with help of passport number) (4)
-/*SELECT *
-    FROM people
+            WHERE passport_number = 3592750733);
+SELECT *
+    FROM flights
     WHERE id IN
-    (SELECT person_id
-    FROM bank_accounts
-    WHERE account_number IN
-        (SELECT account_number
-        FROM atm_transactions
-        WHERE day = 28
-        AND month = 7
-        AND atm_location = "Leggett Street"
-        AND transaction_type = "withdraw"))
-INTERSECT
-SELECT *
-    FROM people
-    WHERE license_plate IN
-        (SELECT license_plate
-        FROM bakery_security_logs
-        WHERE day = 28
-        AND hour = 10
-        AND minute > 14
-        AND minute < 26)
-INTERSECT
-SELECT *
-    FROM people
-    WHERE phone_number IN
-    (SELECT caller
-    FROM phone_calls
-    WHERE month = 7
-    AND day = 28
-    AND duration < 60)
-INTERSECT
-SELECT *
-    FROM people
-    WHERE passport_number IN
-        (SELECT passport_number
+        (SELECT flight_id
             FROM passengers
-            WHERE flight_id IN
-                (SELECT id
-                    FROM flights
-                    WHERE origin_airport_id =
-                        (SELECT id FROM airports
-                        WHERE city = "Fiftyville")
-                    AND day = 29
-                    AND month = 7));*/
--- Got the criminal!
+            WHERE passport_number = 5773159633);
+-- Found the thief (Bruce's flight was the earliest hence he is the thief!)
 
 -- Finding which city the thief escaped to
-/*SELECT city
+SELECT city
     FROM airports
     WHERE id =
         (SELECT destination_airport_id
@@ -201,11 +152,11 @@ SELECT *
             WHERE id =
                 (SELECT flight_id
                     FROM passengers
-                    WHERE passport_number = 3592750733));*/
+                    WHERE passport_number = 5773159633));
 -- Found the city the thief escaped to!
 
 -- Finding accomplise through phone call
-/*SELECT *
+SELECT *
     FROM people
     WHERE phone_number =
         (SELECT receiver
@@ -213,19 +164,5 @@ SELECT *
             WHERE month = 7
             AND day = 28
             AND duration < 60
-            AND caller = "(770) 555-1861");*/
+            AND caller = "(367) 555-5533");
 -- Got the accomplice!
-
-
-
-
--- TEST CODE!!!
-/*SELECT *
-    FROM flights
-    WHERE year = 2021
-    AND month = 7
-    AND day = 29
-    AND origin_airport_id =
-    (SELECT id FROM airports
-    WHERE city = "Fiftyville");*/
--- TEST SUCCESSFULL!!!
