@@ -1,3 +1,3 @@
-SELECT title FROM movies
+SELECT title FROM movies AND 
 WHERE year = 2010
-ORDER BY 
+ORDER BY rating DESC;
