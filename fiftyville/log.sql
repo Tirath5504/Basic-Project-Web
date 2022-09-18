@@ -220,7 +220,7 @@ SELECT *
 
 -- TEST CODE!!!
 SELECT *
-    FROM people
+    FROM flights
     WHERE passport_number =
     (SELECT )
 -- TEST SUCCESSFULL!!!
