@@ -50,4 +50,4 @@ SELECT *
     WHERE month = 7
     AND day = 28
     AND duration < 60;
--- Got some caller informationsd
+-- Got some caller information
