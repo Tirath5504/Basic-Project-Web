@@ -51,3 +51,13 @@ SELECT *
     AND day = 28
     AND duration < 60;
 -- Got some caller information
+
+-- Seeing how many flights departed from Fiftyville after 10 am on 28 july
+SELECT *
+    FROM flights
+    WHERE origin_airport_id =
+    (SELECT id IN airports
+    WHERE city = "Fiftyville")
+    AND day = 28
+    AND month = 7
+    AND hour > 10;
