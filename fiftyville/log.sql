@@ -128,8 +128,8 @@ SELECT *
     AND duration < 60);*/
 -- Reduced number of prospects
 
--- Checking number of people whose flight departed from Fiftyville on 29 july
-/*SELECT *
+-- Checking whose flight departed first
+SELECT *
     FROM people
     WHERE passport_number IN
         (SELECT passport_number
@@ -141,7 +141,7 @@ SELECT *
                         (SELECT id FROM airports
                         WHERE city = "Fiftyville")
                     AND day = 29
-                    AND month = 7));*/
+                    AND month = 7));
 -- Got some passenger details
 
 -- Reducing possible thief prospects (with help of passport number) (4)
@@ -220,13 +220,12 @@ SELECT *
 
 
 -- TEST CODE!!!
-SELECT *
+/*SELECT *
     FROM flights
     WHERE year = 2021
     AND month = 7
     AND day = 29
     AND origin_airport_id =
     (SELECT id FROM airports
-    WHERE city = "Fiftyville");
-
+    WHERE city = "Fiftyville");*/
 -- TEST SUCCESSFULL!!!
