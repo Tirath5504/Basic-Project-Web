@@ -193,8 +193,10 @@ SELECT *
 -- Got the criminal!
 
 -- Finding which city the thief escaped to
-SELECT *
-    FROM people
+SELECT city
+    FROM airports
+    WHERE id =
+    
     WHERE passport_number IN
         (SELECT passport_number
             FROM passengers
