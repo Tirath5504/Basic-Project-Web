@@ -93,7 +93,7 @@ SELECT *
 -- Got some caller information
 
 -- Reducing possible thief prospects (with help of phone number) (3)
-SELECT *
+/*SELECT *
     FROM people
     WHERE id IN
     (SELECT person_id
@@ -123,11 +123,11 @@ SELECT *
     FROM phone_calls
     WHERE month = 7
     AND day = 28
-    AND duration < 60);
+    AND duration < 60);*/
 -- Reduced number of prospects
 
--- Checking number of people whose flight departed from Fiftyville after 10 am on 28 july
-/*SELECT *
+-- Checking number of people whose flight departed from Fiftyville after 10 am on 29 july
+SELECT *
     FROM people
     WHERE passport_number IN
         (SELECT passport_number
@@ -139,8 +139,7 @@ SELECT *
                         (SELECT id FROM airports
                         WHERE city = "Fiftyville")
                     AND day = 29
-                    AND month = 7
-                    AND hour > 10));*/
+                    AND month = 7));
 -- Got some passenger details
 
 -- Reducing possible thief prospects (with help of passport number) (4)
