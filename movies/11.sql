@@ -1,6 +1,6 @@
 SELECT movies.title, ratings.rating
 FROM movies
-INNER JOIN ratings
+JOIN ratings
 ON ratings.movie_id = movies.id
 WHERE id IN
     (SELECT movie_id FROM stars
