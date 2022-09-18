@@ -1,4 +1,4 @@
-SELECT movies.title, ratings.rating, COUNT(rating) WHERE movie_id = (SELECT id)
+SELECT movies.title, ratings.rating, COUNT(rating)
 FROM movies
 JOIN ratings
 ON movies.id = ratings.movie_id
