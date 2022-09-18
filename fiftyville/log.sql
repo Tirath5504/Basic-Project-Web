@@ -9,10 +9,10 @@
 -- Mention of three witnesses and bakery
 
 -- Checking interviews on 28 July for first witness
-/*SELECT *
+SELECT *
     FROM interviews
     WHERE month = 7
-    AND day = 28;*/
+    AND day = 28;
 -- Thief exited bakery within 10 mins of 10:15 AM
 
 -- Checking bakery security logs for given day and time
@@ -53,11 +53,12 @@
 -- Got some caller information
 
 -- Seeing how many flights departed from Fiftyville after 10 am on 28 july
-SELECT *
+/*SELECT *
     FROM flights
     WHERE origin_airport_id =
     (SELECT id FROM airports
     WHERE city = "Fiftyville")
     AND day = 28
     AND month = 7
-    AND hour > 10;
+    AND hour > 10;*/
+-- Got some infromation
