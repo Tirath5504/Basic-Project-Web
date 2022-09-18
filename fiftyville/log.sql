@@ -50,4 +50,4 @@
     WHERE month = 7
     AND day = 28
     AND duration < 60;*/
--- Got some caller informations
+-- Got some caller informationsd
