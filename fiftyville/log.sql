@@ -126,7 +126,7 @@ SELECT *
 -- Reduced number of prospects
 
 -- Checking number of people whose flight departed from Fiftyville after 10 am on 28 july
-SELECT *
+/*SELECT *
     FROM people
     WHERE passport_number IN
         (SELECT passport_number
@@ -140,7 +140,7 @@ SELECT *
                     AND day = 28
                     AND month = 7
                     AND hour > 10));
--- Got some information
+-- Got some passenger details
 
 -- Reducing possible thief prospects (with help of passport number) (4)
 /*SELECT *
