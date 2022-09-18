@@ -4,6 +4,6 @@ WHERE id IN
 WHERE person_id IN
 (SELECT id FROM people
 WHERE name = "Johnny Depp")
-AND WHERE person_id IN
+AND person_id IN
 (SELECT id FROM people
 WHERE name = "Helena Bonham Carter"));
