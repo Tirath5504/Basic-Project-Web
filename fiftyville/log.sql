@@ -38,8 +38,14 @@
 -- No paricular information obtained
 
 -- Checking interviews on 28 July again for third witness
-SELECT *
+/*SELECT *
     FROM interviews
     WHERE month = 7
+    AND day = 28;*/
+-- Thief called during exit for a duration of less than a minute
+
+-- Checing phone calls on 28 july 2021 for duration of less than a minute
+SELECT *
+    FROM phone_calls
+    WHERE month = 7
     AND day = 28;
--- Thief went to atm on Leggett Street
