@@ -5,6 +5,6 @@ ON movies.id = ratings.movie_id
 WHERE year = 2010
 ORDER BY
 (CASE
-    WHEN COUNT(rating) = 1 THEN rating DESC
-    ELSE title ASC
+    WHEN COUNT(rating) < 2 THEN title
+    ELSE rating
 END);
