@@ -126,12 +126,12 @@ SELECT *
 -- Reduced number of prospects
 
 -- Seeing how many flights departed from Fiftyville after 10 am on 28 july
-/*SELECT *
+SELECT *
     FROM flights
     WHERE origin_airport_id =
     (SELECT id FROM airports
     WHERE city = "Fiftyville")
     AND day = 28
     AND month = 7
-    AND hour > 10;*/
+    AND hour > 10;
 -- Got some information
