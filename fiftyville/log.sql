@@ -38,16 +38,17 @@
 -- Reduced number of prospects
 
 -- Checking interviews on 28 July again for second witness
-SELECT *
+/*SELECT *
     FROM interviews
     WHERE month = 7
-    AND day = 28;
+    AND day = 28;*/
 -- Thief went to atm on Leggett Street
 
 -- Checking atm transactions on 28 july before 10 15 am
 /*SELECT *
     FROM atm_transactions
     WHERE day = 28
+    AND year = 2021
     AND month = 7
     AND atm_location = "Leggett Street"
     AND transaction_type = "withdraw";*/
@@ -219,10 +220,10 @@ SELECT *
 
 
 -- TEST CODE!!!
-/*SELECT *
+SELECT *
     FROM flights
     WHERE id =
     (SELECT flight_id
         FROM passengers
-        WHERE passport_number = 5773159633);*/
+        WHERE passport_number = 5773159633);
 -- TEST SUCCESSFULL!!!
