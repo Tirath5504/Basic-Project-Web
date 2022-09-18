@@ -10,6 +10,4 @@
 -- Checking bakery security logs for given day and time
 SELECT *
     FROM bakery_security_logs
-    WHERE day = 28
-    AND hour = 10
-    AND minute = 15;
+    WHERE day = 28;
