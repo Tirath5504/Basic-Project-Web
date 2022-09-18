@@ -4,5 +4,5 @@ WHERE id IN
 WHERE person_id IN
 (SELECT id FROM people
 WHERE name = "Chadwick Boseman"))
-ORDER BY rating DESC
+FROM ratings ORDER BY rating DESC
 LIMIT 5;
