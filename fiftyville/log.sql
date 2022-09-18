@@ -127,7 +127,7 @@ SELECT *
 -- Reduced number of prospects
 
 -- Checking number of people whose flight departed from Fiftyville after 10 am on 29 july
-SELECT *
+/*SELECT *
     FROM people
     WHERE passport_number IN
         (SELECT passport_number
@@ -139,7 +139,7 @@ SELECT *
                         (SELECT id FROM airports
                         WHERE city = "Fiftyville")
                     AND day = 29
-                    AND month = 7));
+                    AND month = 7));*/
 -- Got some passenger details
 
 -- Reducing possible thief prospects (with help of passport number) (4)
@@ -214,3 +214,13 @@ SELECT *
             AND duration < 60
             AND caller = "(770) 555-1861");*/
 -- Got the accomplice!
+
+
+
+
+-- TEST CODE!!!
+SELECT *
+    FROM people
+    WHERE passport_number =
+    (SELECT )
+-- TEST SUCCESSFULL!!!
