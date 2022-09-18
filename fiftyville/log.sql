@@ -206,10 +206,11 @@ SELECT *
                         WHERE city = "Fiftyville")
                     AND day = 29
                     AND month = 7
-                    AND hour > 10));*/
+                    AND hour > 10));
+-- Found the city the thief escaped to!
 
 -- Finding accomplise through phone call
-SELECT *
+/*SELECT *
     FROM people
     WHERE phone_number =
         (SELECT receiver
@@ -217,5 +218,5 @@ SELECT *
             WHERE month = 7
             AND day = 28
             AND duration < 60
-            AND caller = "(770) 555-1861");
+            AND caller = "(770) 555-1861");*/
 -- Got the accomplice!
