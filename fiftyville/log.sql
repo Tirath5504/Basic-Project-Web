@@ -143,7 +143,7 @@ SELECT *
 -- Got some passenger details
 
 -- Reducing possible thief prospects (with help of passport number) (4)
-/*SELECT *
+SELECT *
     FROM people
     WHERE id IN
     (SELECT person_id
@@ -187,8 +187,7 @@ SELECT *
                         (SELECT id FROM airports
                         WHERE city = "Fiftyville")
                     AND day = 29
-                    AND month = 7
-                    AND hour > 10));*/
+                    AND month = 7));
 -- Got the criminal!
 
 -- Finding which city the thief escaped to
@@ -219,8 +218,10 @@ SELECT *
 
 
 -- TEST CODE!!!
-SELECT *
+/*SELECT *
     FROM flights
-    WHERE passport_number =
-    (SELECT )
+    WHERE id =
+    (SELECT flight_id
+        FROM passengers
+        WHERE passport_number = 5773159633);*/
 -- TEST SUCCESSFULL!!!
