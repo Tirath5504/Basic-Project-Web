@@ -1,3 +1,5 @@
-SELECT title FROM movies AND rating FROM ratings
+SELECT movies.title, ratings.rating
+FROM movies
+JOIN ratings
 WHERE year = 2010
 ORDER BY rating DESC;
