@@ -45,18 +45,18 @@
 -- Thief called during exit for a duration of less than a minute
 
 -- Checing phone calls on 28 july 2021 for duration of less than a minute
-SELECT *
+/*SELECT *
     FROM phone_calls
     WHERE month = 7
     AND day = 28
-    AND duration < 60;
+    AND duration < 60;*/
 -- Got some caller information
 
 -- Seeing how many flights departed from Fiftyville after 10 am on 28 july
 SELECT *
     FROM flights
     WHERE origin_airport_id =
-    (SELECT id IN airports
+    (SELECT id FROM airports
     WHERE city = "Fiftyville")
     AND day = 28
     AND month = 7
