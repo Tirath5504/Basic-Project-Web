@@ -52,15 +52,29 @@
 -- Several prospects found
 
 -- Reducing possible thief prospects (with help of account number) (2)
+/*SELECT *
+    FROM people
+    WHERE id IN
+    (SELECT person_id
+    FROM bank_accounts
+    WHERE account_number IN
+        (SELECT account_number
+        FROM atm_transactions
+        WHERE day = 28
+        AND month = 7
+        AND atm_location = "Leggett Street"
+        AND transaction_type = "withdraw"))
+INTERSECT
 SELECT *
     FROM people
-    WHERE account_number IN
-    (SELECT account_number
-    FROM atm_transactions
-    WHERE day = 28
-    AND month = 7
-    AND atm_location = "Leggett Street"
-    AND transaction_type = "withdraw");
+    WHERE license_plate IN
+        (SELECT license_plate
+        FROM bakery_security_logs
+        WHERE day = 28
+        AND hour = 10
+        AND minute > 14
+        AND minute < 26);*/
+-- Reduced number of prospects
 
 -- Checking interviews on 28 July again for third witness
 /*SELECT *
@@ -77,6 +91,40 @@ SELECT *
     AND duration < 60;*/
 -- Got some caller information
 
+-- Reducing possible thief prospects (with help of phone number) (3)
+/*SELECT *
+    FROM people
+    WHERE id IN
+    (SELECT person_id
+    FROM bank_accounts
+    WHERE account_number IN
+        (SELECT account_number
+        FROM atm_transactions
+        WHERE day = 28
+        AND month = 7
+        AND atm_location = "Leggett Street"
+        AND transaction_type = "withdraw"))
+INTERSECT
+SELECT *
+    FROM people
+    WHERE license_plate IN
+        (SELECT license_plate
+        FROM bakery_security_logs
+        WHERE day = 28
+        AND hour = 10
+        AND minute > 14
+        AND minute < 26)
+INTERSECT
+SELECT *
+    FROM people
+    WHERE phone_number IN
+    (SELECT caller
+    FROM phone_calls
+    WHERE month = 7
+    AND day = 28
+    AND duration < 60);*/
+-- Reduced number of prospects
+
 -- Seeing how many flights departed from Fiftyville after 10 am on 28 july
 /*SELECT *
     FROM flights
@@ -86,4 +134,4 @@ SELECT *
     AND day = 28
     AND month = 7
     AND hour > 10;*/
--- Got some infromation
+-- Got some information
