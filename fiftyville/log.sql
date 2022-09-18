@@ -126,7 +126,7 @@ SELECT *
 -- Reduced number of prospects
 
 -- Seeing how many flights departed from Fiftyville after 10 am on 28 july
-SELECT *
+SELECT id
     FROM flights
     WHERE origin_airport_id =
     (SELECT id FROM airports
