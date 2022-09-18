@@ -9,19 +9,19 @@
 -- Mention of three witnesses and bakery
 
 -- Checking interviews on 28 July for first witness
-/*SELECT *
+SELECT *
     FROM interviews
     WHERE month = 7
-    AND day = 28;*/
+    AND day = 28;
 -- Thief exited bakery within 10 mins of 10:15 AM
 
 -- Checking bakery security logs for given day and time
-SELECT *
+/*SELECT *
     FROM bakery_security_logs
     WHERE day = 28
     AND hour = 10
     AND minute > 14
-    AND minute < 26;
+    AND minute < 26;*/
 -- Many people exited during the given time
 
 -- Reducing possible thief prospects (with help of license plate) (1)
