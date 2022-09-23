@@ -22,7 +22,14 @@
             document.querySelector('#mcq').addEventListener('submit', mcqanswer);
             mcqanswer()
             {
-                let ans = 
+                if (mcq.id == "button4")
+                {
+                    alert('Correct Answer');
+                }
+                else
+                {
+                    alert('Wrong Answer');
+                }
             }
         </script>
     </head>
