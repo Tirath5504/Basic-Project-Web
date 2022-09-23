@@ -9,12 +9,20 @@
             document.querySelector('form').addEventListener('click', getanswer);
             getanswer()
             {
-                document.getElementById('option1').addEventListener('click', funtion() { alert("Wrong Answer") });
-                document.getElementById('option2').addEventListener('click', funtion() { alert("Wrong Answer") });
-                document.getElementById('option3').addEventListener('click', funtion() { alert("Wrong Answer") });
-                document.getElementById('button4').addEventListener('click', funtion() {
+                let ans = document.querySelector('form').addEventListener('submit')
+                document.getElementById('option1').addEventListener('click', funtion(e) {
+                    alert("Wrong Answer");
+                });
+                document.getElementById('option2').addEventListener('click', funtion(e) {
+                    alert("Wrong Answer");
+                });
+                document.getElementById('option3').addEventListener('click', funtion(e) {
+                    alert("Wrong Answer");
+                });
+                document.getElementById('button4').addEventListener('click', funtion(e) {
                     button.background-color = "00FF00";
-                    alert("Correct!");});
+                    alert("Correct!");
+                });
             }
         </script>
     </head>
