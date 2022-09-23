@@ -9,8 +9,8 @@
             document.querySelector('#freeresponse').addEventListener('submit', getanswer);
             getanswer()
             {
-                let ans = document.querySelector('q2').value.toLowerCase();
-                if (ans == "sailfish")
+                let ans = document.querySelector('q2').value;
+                if (ans.toLowerCase() == "sailfish")
                 {
                     alert('Correct Answer');
                 }
