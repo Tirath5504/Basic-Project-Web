@@ -6,8 +6,8 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            document.querySelector('#freeresponse').addEventListener('submit', getanswer);
-            getanswer()
+            document.querySelector('#freeresponse').addEventListener('submit', formanswer);
+            formanswer()
             {
                 let ans = document.querySelector('q2').value;
                 if (ans.toLowerCase() == "sailfish")
@@ -18,6 +18,11 @@
                 {
                     alert('Wrong Answer');
                 }
+            }
+            document.querySelector('#mcq').addEventListener('submit', mcqanswer);
+            mcqanswer()
+            {
+                let ans = 
             }
         </script>
     </head>
