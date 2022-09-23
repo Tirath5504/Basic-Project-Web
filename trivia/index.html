@@ -6,11 +6,11 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            document.querySelector('form').addEventListener('submit', getanswer);
+            document.querySelector('#freeresponse').addEventListener('submit', getanswer);
             getanswer()
             {
-                let ans = document.querySelector('#button4').value;
-                if (ans == ")
+                let ans = document.querySelector('q2').value;
+                if (ans == "sailfish)
             }
         </script>
     </head>
@@ -26,7 +26,7 @@
                 <h3>
                     <p>How many Olympic rings are there?</p>
                     <br>
-                    <form>
+                    <form name="mcq">
                         <input id="button1" type="submit" value="Four"/>
                         <input id="button2" type="submit" value="Six"/>
                         <input id="button3" type="submit" value="Seven"/>
@@ -40,7 +40,7 @@
                 <hr>
                 <h3>
                     What is the fastest aquatic animal?
-                    <form>
+                    <form name="freeresponse">
                         <input autocomplete="off" id="q2" placeholder="answer" type="text">
                         <input type="submit">
                     </form>
