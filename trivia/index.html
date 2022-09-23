@@ -6,7 +6,7 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            document.querySelector('form').addEventListener('click', getanswer);
+            document.querySelector('form').addEventListener('submit', getanswer);
             getanswer()
             {
                 let ans = document.querySelector('form').addEventListener('submit')
@@ -39,10 +39,10 @@
                     <p>How many Olympic rings are there?</p>
                     <br>
                     <form>
-                        <input id="button1" type="submit" name="option1" value="Four"/>
-                        <input id="button2" type="submit" name="option2" value="Six"/>
-                        <input id="button3" type="submit" name="option3" value="Seven"/>
-                        <input id="button4" type="submit" name="option4" value="Five"/>
+                        <input id="button1" type="submit" value="Four"/>
+                        <input id="button2" type="submit" value="Six"/>
+                        <input id="button3" type="submit" value="Seven"/>
+                        <input id="button4" type="submit" value="Five"/>
                     </form>
                 </h3>
             </div>
