@@ -17,7 +17,7 @@ int main(void)
         int len = strlen(str[i]);
         if (len > 10)
         {
-            string a = str[0] + len + str[len];
+            string a = strcat(str[0],len);
         }
         else
             printf(str[i]);
