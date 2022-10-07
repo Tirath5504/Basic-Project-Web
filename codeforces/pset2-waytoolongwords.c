@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main(void)
 {
@@ -15,9 +16,11 @@ int main(void)
     for(int i = 0; i < n; i++)
     {
         int len = strlen(str[i]);
+        string b = itoa(len);
         if (len > 10)
         {
-            string a = strcat(str[0],len);
+            string a = strcat(str[0],b);
+            printf(a);
         }
         else
             printf(str[i]);
