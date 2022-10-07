@@ -14,7 +14,7 @@ int main(void)
     }
     for(int i = 0; i < n; i++)
     {
-        int len = str[i].length();
+        int len = strlen(str[i]);
         if (len > 10)
         {
             string a = str[0] + len + str[len];
