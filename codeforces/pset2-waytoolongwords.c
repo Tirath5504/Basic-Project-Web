@@ -16,13 +16,15 @@ int main(void)
     for(int i = 0; i < n; i++)
     {
         int len = strlen(str[i]);
-        string b = sprintf(len, "%d");
+        string b = "";
+        sprintf(b, "%d", len);
         if (len > 10)
         {
-            string a = strcat(str[0],b);
-            printf(a);
+            string a = strcat(str[0], b);
+            a = strcat(a, str[len - 1]);
+            printf("%s", a);
         }
         else
-            printf(str[i]);
+            printf("%s", str[i]);
     }
 }
