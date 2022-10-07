@@ -16,7 +16,7 @@ int main(void)
     for(int i = 0; i < n; i++)
     {
         int len = strlen(str[i]);
-        string b = itoa(len);
+        string b = sprintf(len, "%d");
         if (len > 10)
         {
             string a = strcat(str[0],b);
