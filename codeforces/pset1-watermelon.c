@@ -3,7 +3,9 @@
 
 int main(void)
 {
-    int n = get_int("Enter a number: ");
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
     if (n % 2 == 0)
         printf("YES\n");
     else
