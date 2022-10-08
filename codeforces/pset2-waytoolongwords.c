@@ -19,7 +19,7 @@ int main(void)
         {
             char *ans = malloc(50 * sizeof(char));
             char first = str[0];
-            strcat(ans, &first);
+            strncat(ans, &first, 1);
             strcat(ans, length);
             strcat(ans, &str[len - 1]);
             printf("%s", ans);
