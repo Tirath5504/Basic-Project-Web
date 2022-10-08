@@ -17,8 +17,8 @@ int main(void)
         sprintf(length, "%d", len);
         if (len > 10)
         {
-            char *ans = strcat(&str[0], length);
-            ans = strcat(ans, &str[len - 1]);
+            char *ans = strcat(str[0], length);
+            ans = strcat(ans, str[len - 1]);
             printf("%s\n", ans);
         }
         else
