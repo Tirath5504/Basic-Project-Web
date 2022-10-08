@@ -18,13 +18,11 @@ int main(void)
         if (len > 10)
         {
             char *ans = malloc(50 * sizeof(char));
-            char *first = malloc(sizeof(char));
-            first = &str[0];
-            strcat(ans, first);
+            char first = str[0];
+            strcat(ans, &first);
             strcat(ans, length);
             strcat(ans, &str[len - 1]);
             printf("%s", ans);
-            free(first);
             free(ans);
         }
         else
