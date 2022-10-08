@@ -13,8 +13,8 @@ int main(void)
     {
         scanf("%s", str);
         int len = strlen(str);
-        char *length = "";
-        sprintf(length, "%s", len);
+        char *length = malloc(50 * sizeof(char));
+        sprintf(length, "%d", len);
         if (len > 10)
         {
             char *ans = strcat(&str[0], length);
@@ -23,5 +23,7 @@ int main(void)
         }
         else
             printf("%s\n", str);
+        free(length);
     }
+    free(str);
 }
