@@ -9,7 +9,7 @@ int main(void)
     printf("Enter a number: ");
     scanf("%d", &n);
     char *str = malloc(50 * sizeof(char));
-    string answer = NULL;
+    string answer = malloc(50 * sizeof(char));
     for(int i = 0; i < n; i++)
     {
         scanf("%s", str);
@@ -41,5 +41,6 @@ int main(void)
         else
             printf("%c", answer[i]);
     }
+    free(answer);
     free(str);
 }
