@@ -16,11 +16,11 @@ int main(void)
         int len = strlen(str);
         char *length = malloc(50 * sizeof(char));
         sprintf(length, "%d", len);
+        char comma = ',';
         if (len > 10)
         {
             char *ans = malloc(50 * sizeof(char));
             char first = str[0];
-            char comma = ',';
             strncat(ans, &first, 1);
             strcat(ans, length);
             strcat(ans, &str[len - 1]);
@@ -29,7 +29,10 @@ int main(void)
             free(ans);
         }
         else
-            printf("%s\n", str);
+        {
+            strcpy(answer, str);
+            strncat(answer, &comma, 1);
+        }
         free(length);
     }
     for(int i = 0; i < strlen(answer); i++)
