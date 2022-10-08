@@ -8,23 +8,20 @@ int main(void)
     int n;
     printf("Enter a number: ");
     scanf("%d", &n);
-    string str[n];
+    char str[50];
     for(int i = 0; i < n; i++)
     {
-        scanf("%s", &str[i]);
-    }
-    for(int i = 0; i < n; i++)
-    {
-        int len = strlen(str[i]);
-        string b = "";
-        sprintf(b, "%d", len);
+        scanf("%s", str);
+        int len = strlen(str);
+        string length = "";
+        sprintf(length, "%d", len);
         if (len > 10)
         {
-            string a = strcat(str[0], b);
-            a = strcat(a, str[len - 1]);
-            printf("%s", a);
+            string ans = strcat(&str[0], length);
+            ans = strcat(ans, &str[len - 1]);
+            printf("%s\n", ans);
         }
         else
-            printf("%s", str[i]);
+            printf("%s\n", str);
     }
 }
