@@ -17,9 +17,10 @@ int main(void)
         sprintf(length, "%d", len);
         if (len > 10)
         {
-            char *ans = strcat(&str[0], length);
-            ans = strcat(ans, &str[len - 1]);
-            printf("%s\n", ans);
+            char *ans = malloc(50 * sizeof(char));
+            strcat(ans, &str[0]);
+            strcat(ans, length);
+            strcat(ans, &str[len - 1]);
         }
         else
             printf("%s\n", str);
