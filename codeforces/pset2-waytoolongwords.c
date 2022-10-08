@@ -9,6 +9,7 @@ int main(void)
     printf("Enter a number: ");
     scanf("%d", &n);
     char *str = malloc(50 * sizeof(char));
+    string answer = NULL;
     for(int i = 0; i < n; i++)
     {
         scanf("%s", str);
@@ -19,15 +20,26 @@ int main(void)
         {
             char *ans = malloc(50 * sizeof(char));
             char first = str[0];
+            char comma = ',';
             strncat(ans, &first, 1);
             strcat(ans, length);
             strcat(ans, &str[len - 1]);
-            printf("%s", ans);
+            strcpy(answer, ans);
+            strncat(answer, &comma, 1);
             free(ans);
         }
         else
             printf("%s\n", str);
         free(length);
+    }
+    for(int i = 0; i < strlen(answer); i++)
+    {
+        if (answer[i] == ',')
+        {
+            printf("\n");
+        }
+        else
+            printf("%c", answer[i]);
     }
     free(str);
 }
