@@ -20,17 +20,18 @@ int main(void)
         if (len > 10)
         {
             char *ans = malloc(50 * sizeof(char));
+            ans = "";
             char first = str[0];
             strncat(ans, &first, 1);
             strcat(ans, length);
             strcat(ans, &str[len - 1]);
-            strcpy(answer, ans);
+            strcat(answer, ans);
             strncat(answer, &comma, 1);
             free(ans);
         }
         else
         {
-            strcpy(answer, str);
+            strcat(answer, str);
             strncat(answer, &comma, 1);
         }
         free(length);
