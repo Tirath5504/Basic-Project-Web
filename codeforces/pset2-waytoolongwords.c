@@ -8,7 +8,7 @@ int main(void)
     int n;
     printf("Enter a number: ");
     scanf("%d", &n);
-    char *str = malloc(sizeof(char));
+    char *str = malloc(50 * sizeof(char));
     for(int i = 0; i < n; i++)
     {
         scanf("%s", str);
