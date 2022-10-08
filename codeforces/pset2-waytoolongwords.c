@@ -13,11 +13,11 @@ int main(void)
     {
         scanf("%s", str);
         int len = strlen(str);
-        string length = "";
+        char *length = "";
         sprintf(length, "%d", len);
         if (len > 10)
         {
-            string ans = strcat(&str[0], length);
+            char *ans = strcat(&str[0], length);
             ans = strcat(ans, &str[len - 1]);
             printf("%s\n", ans);
         }
