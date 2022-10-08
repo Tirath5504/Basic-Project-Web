@@ -14,7 +14,7 @@ int main(void)
         scanf("%s", str);
         int len = strlen(str);
         char *length = "";
-        sprintf(length, "%d", len);
+        sprintf(length, "%s", len);
         if (len > 10)
         {
             char *ans = strcat(&str[0], length);
