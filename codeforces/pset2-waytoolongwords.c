@@ -27,7 +27,6 @@ int main(void)
             strcat(answer, ans);
             strncat(answer, &comma, 1);
             ans = "";
-            free(ans);
         }
         else
         {
