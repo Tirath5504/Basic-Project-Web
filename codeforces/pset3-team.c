@@ -20,7 +20,7 @@ int main(void)
         int c1 = 0;
         for (int j = 0; j < strlen(str); j++)
         {
-            if (str[i] == 1)
+            if (str[j] == 1)
                 c1++;
         }
         if (c1 > 2)
