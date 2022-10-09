@@ -1,11 +1,12 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main(void)
 {
     int n;
-    string str = NULL;
+    char *str = malloc(6*sizeof(char));
     do
     {
         printf("Enter number of problems (between 1 and 1000): ");
@@ -26,4 +27,5 @@ int main(void)
             c2++;
     }
     printf("%d\n", c2);
+    free(str);
 }
