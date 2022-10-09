@@ -6,7 +6,7 @@
 int main(void)
 {
     int n;
-    char *str = malloc(6*sizeof(char));
+    char *str = malloc(10*sizeof(char));
     do
     {
         printf("Enter number of problems (between 1 and 1000): ");
