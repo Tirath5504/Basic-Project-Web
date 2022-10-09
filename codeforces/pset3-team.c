@@ -4,6 +4,7 @@
 int main(void)
 {
     int n;
+    string str;
     do
     {
         printf("Enter number of problems (between 1 and 1000): ");
@@ -15,7 +16,7 @@ int main(void)
         scanf("%s", &str);
         for (int j = 0; j < strlen(str); j++)
         {
-            
+
         }
     }
 }
