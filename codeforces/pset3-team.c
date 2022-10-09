@@ -5,7 +5,7 @@
 int main(void)
 {
     int n;
-    string str;
+    string str = NULL;
     do
     {
         printf("Enter number of problems (between 1 and 1000): ");
