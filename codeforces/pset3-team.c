@@ -14,9 +14,14 @@ int main(void)
     }
     while (n > 1000 || n < 0);
     int c2 = 0;
+    char ch;
     for (int i = 0; i < n; i++)
     {
-        scanf("%s", str);
+        for (int j = 0; j < 3; j++)
+        {
+            scanf("%s", &ch);
+            strncat(str, &ch, 1);
+        }
         int c1 = 0;
         for (int j = 0; j < strlen(str); j++)
         {
@@ -25,6 +30,7 @@ int main(void)
         }
         if (c1 > 2)
             c2++;
+        str = "";
     }
     printf("%d\n", c2);
     free(str);
