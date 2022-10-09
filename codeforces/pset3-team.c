@@ -16,7 +16,7 @@ int main(void)
         scanf("%s", &str);
         for (int j = 0; j < strlen(str); j++)
         {
-
+            
         }
     }
 }
