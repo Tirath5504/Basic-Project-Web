@@ -32,6 +32,7 @@ void print_pattern(int n)
         for (int j = i; j < (n - 1); j++)
         {
             printf(" ");
+            
 
         }
         for (int j = n; j >= (n - i); j--)
