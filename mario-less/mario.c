@@ -22,7 +22,6 @@ int input(void)
     }
     while (width <= 0 || width > 8);
     return width;
-}
 
 // Printing Pattern
 void print_pattern(int n)
