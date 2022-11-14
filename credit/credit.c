@@ -28,7 +28,7 @@ int main(void)
 long get_number(void)
 {
     long n;
-    n = get_long("Enter your credit number");
+    n = get_long("Enter your credit number ");
     return n;
 }
 
