@@ -16,7 +16,6 @@ int main(void)
     // Checking what type of card they use
     int company = get_type(n);
 
-
     // Checking if number is valid
     int valid = valid_number(n);
 
