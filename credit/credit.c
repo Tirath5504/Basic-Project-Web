@@ -26,8 +26,7 @@ int main(void)
 // Taking credit card number from user.
 long get_number(void)
 {
-    long n;
-    n = get_long("Enter your credit number ");
+    long n = get_long("Enter your credit number ");
     return n;
 }
 
