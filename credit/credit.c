@@ -4,8 +4,8 @@
 // Declaring functions
 long get_number(void);
 int get_type(long n);
-int valid_number(long n);
-int display(int n1, int n2);
+bool valid_number(long n);
+int display(int n1, bool luhn);
 
 // Main Function
 int main(void)
@@ -17,7 +17,7 @@ int main(void)
     int company = get_type(n);
 
     // Checking if number is valid
-    int valid = valid_number(n);
+    bool valid = valid_number(n);
 
     // Printing result
     int a = display(company , valid);
@@ -65,7 +65,7 @@ int get_type(long n)
 }
 
 // Finding if the number is valid
-int valid_number(long n)
+bool valid_number(long n)
 {
     long n1;
     long sum1 = 0, sum2 = 0, sum3 = 0;
@@ -87,26 +87,25 @@ int valid_number(long n)
     }
     if (((sum2 + sum3) % 10) == 0)
     {
-        return 10;
+        return true;
     }
-    else
     {
-        return 11;
+        return false;
     }
 }
 
 // Printing result
-int display(int n1, int n2)
+int display(int n1, bool luhn)
 {
-    if (n1 == 1 && n2 == 10)
+    if (n1 == 1 && luhn)
     {
         printf("AMEX\n");
     }
-    else if (n1 == 2 && n2 == 10)
+    else if (n1 == 2 && luhn)
     {
         printf("MASTERCARD\n");
     }
-    else if (n1 == 3 && n2 == 10)
+    else if (n1 == 3 && luhn)
     {
         printf("VISA\n");
     }
