@@ -21,9 +21,9 @@ int main(void)
     int n_w = words(s, n);
     int n_s = sentences(s, n);
     float i = index(n_l, n_w, n_s);
-    printf("%i\n", n_l);
-    printf("%i\n", n_w);
-    printf("%i\n", n_s);
+    printf("%i letters\n", n_l);
+    printf("%i words\n", n_w);
+    printf("%i sentences\n", n_s);
     output(i);
 }
 
