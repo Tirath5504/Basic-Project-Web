@@ -25,7 +25,7 @@ int main(int l, string key[])
         }
         else
         {
-             string  s = input();
+            string s = input();
             s = cipher(s, a);
             output(s);
             c = 0;
