@@ -12,7 +12,7 @@ int main(void)
         printf("NO\n");
 }*/
 
-#include<iostream>
+#include <iostream.h>
 
 int main()
 {
