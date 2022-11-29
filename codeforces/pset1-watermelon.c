@@ -1,4 +1,4 @@
-#include <cs50.h>
+/*#include <cs50.h>
 #include <stdio.h>
 
 int main(void)
@@ -10,4 +10,12 @@ int main(void)
         printf("YES\n");
     else
         printf("NO\n");
+}*/
+
+#include<iostream>
+
+int main()
+{
+    std::cout<<"Hello World";
+    return 0;
 }
