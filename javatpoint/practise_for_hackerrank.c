@@ -15,13 +15,13 @@ void calculate_the_maximum(int n, int k)
         for (int j = 1; j < i; j++)
         {
             t = i & j;
-            if (t > and && t <= k)
+            if (t > and && t < k)
                 and = t;
             s = i | j;
-            if (s > or && s <= k)
+            if (s > or && s < k)
                 or = s;
             r = i ^ j;
-            if (r > exor && r <= k)
+            if (r > exor && r < k)
                 exor = r;
         }
     }
