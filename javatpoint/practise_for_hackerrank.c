@@ -10,7 +10,7 @@ void calculate_the_maximum(int n, int k)
     //Write your code here.
     int and = 0, or = 0, exor = 0;
     int t, s, r;
-    for(int i = 1; i < n; i++)
+    for(int i = 1; i <= n; i++)
     {
         for (int j = 1; j < i; j++)
         {
