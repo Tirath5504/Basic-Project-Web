@@ -1,38 +1,26 @@
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
 #include <stdlib.h>
-//Complete the following function.
 
-
-void calculate_the_maximum(int n, int k)
+int main()
 {
-    //Write your code here.
-    int and = 0, or = 0, exor = 0;
-    int t, s, r;
-    for(int i = 1; i <= n; i++)
-    {
-        for (int j = 1; j < i; j++)
-        {
-            t = i & j;
-            if (t > and && t < k)
-                and = t;
-            s = i | j;
-            if (s > or && s < k)
-                or = s;
-            r = i ^ j;
-            if (r > exor && r < k)
-                exor = r;
-        }
+    int n, *arr, i;
+    scanf("%d", &n);
+    arr = (int*) malloc(n * sizeof(int));
+    for(i = 0; i < n; i++) {
+        scanf("%d", arr + i);
     }
-    printf("%d\n%d\n%d\n", and, or, exor);
-}
+    int *arr2 = NULL;;
+    for (i = 0; i < n; i++)
+    {
+        arr2[i] = arr[n - i - 1];
+    }
+    for (i = 0; i < n; i++)
+    {
+        arr[i] = arr2[i];
+    }
+    /* Write the logic to reverse the array. */
 
-int main() {
-    int n, k;
-
-    scanf("%d %d", &n, &k);
-    calculate_the_maximum(n, k);
-
+    for(i = 0; i < n; i++)
+        printf("%d ", *(arr + i));
     return 0;
 }
