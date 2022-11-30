@@ -2,19 +2,37 @@
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
+//Complete the following function.
+
+
+void calculate_the_maximum(int n, int k)
+{
+    //Write your code here.
+    int and = 0, or = 0, exor = 0;
+    int t, s, r;
+    for(int i = 1; i < n; i++)
+    {
+        for (int j = 1; j < i; j++)
+        {
+            t = i & j;
+            if (t > and && t <= k)
+                and = t;
+            s = i | j;
+            if (s > or && s <= k)
+                or = s;
+            r = i ^ j;
+            if (r > exor && r <= k)
+                exor = r;
+        }
+    }
+    printf("%d\n%d\n%d\n", t, s, r);
+}
 
 int main() {
+    int n, k;
 
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-    int n;
-    scanf("%d", &n);
-    int *a = malloc(n * sizeof(int));
-    int sum = 0;
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%d", &a[i]);
-        sum = sum + a[i];
-    }
-    printf("%d", sum);
+    scanf("%d %d", &n, &k);
+    calculate_the_maximum(n, k);
+
     return 0;
 }
