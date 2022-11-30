@@ -3,16 +3,18 @@
 #include <math.h>
 #include <stdlib.h>
 
-int MAX_LEN = 40;
+int main() {
 
-int main()
-{
-    char ch;
-    scanf("%c", &ch);
-    printf("%c", ch);
-    char s[MAX_LEN];
-    scanf("%[^\n]%*c", s);
-    printf("%s", s);
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int n;
+    scanf("%d", &n);
+    int *a = malloc(n * sizeof(int));
+    int sum = 0;
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+        sum = sum + a[i];
+    }
+    printf("%d", sum);
     return 0;
 }
