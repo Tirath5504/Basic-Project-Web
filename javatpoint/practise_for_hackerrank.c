@@ -12,11 +12,11 @@ int main()
     int *arr2 = NULL;;
     for (i = 0; i < n; i++)
     {
-        arr2[i] = arr[n - i - 1];
+        arr2[i] = *arr[n - i - 1];
     }
     for (i = 0; i < n; i++)
     {
-        arr[i] = arr2[i];
+        arr[i] = *arr2[i];
     }
     /* Write the logic to reverse the array. */
 
