@@ -11,8 +11,8 @@ int main()
     scanf("%c", &ch);
     printf("%c", ch);
     char s[MAX_LEN];
-    gets(s);
-    printf("%c", s);
+    scanf("%[^\n]%*s", s);
+    printf("%s", s);
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     return 0;
 }
