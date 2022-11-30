@@ -10,8 +10,8 @@ int main()
     char ch;
     scanf("%c", &ch);
     printf("%c", ch);
-    char s;
-    scanf("%[^\n]%s", &s);
+    char s[MAX_LEN];
+    scanf("%s", &s);
     printf("%c", s);
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     return 0;
