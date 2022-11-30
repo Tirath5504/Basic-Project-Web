@@ -25,7 +25,7 @@ void calculate_the_maximum(int n, int k)
                 exor = r;
         }
     }
-    printf("%d\n%d\n%d\n", t, s, r);
+    printf("%d\n%d\n%d\n", and, or, exor);
 }
 
 int main() {
