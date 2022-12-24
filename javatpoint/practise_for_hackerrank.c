@@ -16,7 +16,7 @@ int main()
 		{
 			int div = num[i] / j;
             int a = sizeof(div), b = sizeof(num[i]);
-			if (sizeof(div) < sizeof(num[i]))
+			if (a < b)
 			{
 				count++;
 			}
