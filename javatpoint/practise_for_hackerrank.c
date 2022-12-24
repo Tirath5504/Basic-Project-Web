@@ -15,6 +15,7 @@ int main()
 		for (int j = 1; j <= tc; j++)
 		{
 			int div = num[i] / j;
+            int a = sizeof(div), b = sizeof(num[i]);
 			if (sizeof(div) < sizeof(num[i]))
 			{
 				count++;
