@@ -12,7 +12,7 @@ int main()
 	for (int i = 0; i < tc; i++)
 	{
 		int count = 0;
-		for (int j = 1; j <= tc; j++)
+		for (int j = 1; j <= num[i]; j++)
 		{
 			int div = num[i] / j;
             int a = sizeof(div), b = sizeof(j);
