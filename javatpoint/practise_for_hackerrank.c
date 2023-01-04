@@ -7,6 +7,6 @@ int main(void)
 	int n1;
 	printf("Enter a number : ");
 	scanf("%d", &n1);
-	n1 % 2 ? printf("Odd number"): printf("Even Number");
+	n1 % 2 ? printf("Odd number\n"): printf("Even Number\n");
 	return 0;
 }
