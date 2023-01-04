@@ -1,5 +1,3 @@
-// WAP to swap variables with help of three variables
-
 #include<stdio.h>
 
 int main(void)
