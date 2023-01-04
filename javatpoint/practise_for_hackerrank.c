@@ -10,6 +10,6 @@ int main(void)
 		sum = sum + n1 % 10;
 		n1 = n1 / 10;
 	}
-	printf("Sum = %d", sum);
+	printf("Sum = %d\n", sum);
 	return 0;
 }
