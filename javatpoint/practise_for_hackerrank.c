@@ -7,8 +7,9 @@ int main(void)
 	scanf("%d", &n1);
 	while (n1 > 0)
 	{
-		sum = sum = n1 % 10;
+		sum = sum + n1 % 10;
 		n1 = n1 / 10;
 	}
+	printf("Sum = %d", sum);
 	return 0;
 }
