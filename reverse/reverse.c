@@ -17,8 +17,8 @@ int main(int argc, char *argv[])
     }
 
     // Open input file for reading
-    FILE *file = fopen(argv[1], "r");
-    if (file == NULL)
+    FILE *input = fopen(argv[1], "r");
+    if (input == NULL)
     {
         printf("Could not open file\n");
         return 2;
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     // TODO #4
 
     // Open output file for writing
-    FILE *
+    FILE *output = fopen(argv[1])
 
     // Write header to file
     // TODO #6
