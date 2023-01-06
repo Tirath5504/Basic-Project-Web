@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     FILE *output = fopen(argv[1], "w");
     if (output == NULL)
     {
-        printf("");
+        printf("Could not open file");
     }
 
     // Write header to file
