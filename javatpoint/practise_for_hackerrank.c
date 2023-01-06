@@ -2,14 +2,15 @@
 
 int main(void)
 {
-	int n1, sum = 0;
+	int n1, count = 0;
 	printf("Enter a number : ");
 	scanf("%d", &n1);
-	while (n1 > 0)
+	do
 	{
-		sum = sum + n1 % 10;
+		count++;
 		n1 = n1 / 10;
 	}
-	printf("Sum = %d\n", sum);
+	while (n1 != 0);
+	printf("Number of digits = %d\n", count);
 	return 0;
 }
