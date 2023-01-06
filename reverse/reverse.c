@@ -31,7 +31,11 @@ int main(int argc, char *argv[])
     // TODO #4
 
     // Open output file for writing
-    FILE *output = fopen(argv[1], )
+    FILE *output = fopen(argv[1], "w");
+    if (output == NULL)
+    {
+        printf("");
+    }
 
     // Write header to file
     // TODO #6
