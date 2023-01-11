@@ -11,11 +11,11 @@ int main(void)
 		{
 			printf("*");
 		}
-		for (int k = 5; k >= i; k--)
+		for (int k = n; k >= i; k--)
 		{
 			printf(" ");
 		}
-		for (int l = 5; l > i; l--)
+		for (int l = n; l > i; l--)
 		{
 			printf(" ");
 		}
