@@ -4,6 +4,10 @@
 
 #include "wav.h"
 
+
+const int HEADER_SIZE = 44;
+WAVHEADER header;
+
 int check_format(WAVHEADER header);
 int get_block_size(WAVHEADER header);
 
@@ -25,10 +29,10 @@ int main(int argc, char *argv[])
     }
 
     // Read header into an array
-    // TODO #3
+    fread(header, 1, HEADER_SIZE, input);  // ERROR OVER HERE - 'header' IS NOT A POINTER
 
     // Use check_format to ensure WAV format
-    // TODO #4
+    int check = check_format(header);
 
     // Open output file for writing
     FILE *output = fopen(argv[1], "w");
@@ -50,7 +54,13 @@ int main(int argc, char *argv[])
 
 int check_format(WAVHEADER header)
 {
-    // TODO #4
+    int8_t buffer;
+    while (&buffer, 1, 4, header)
+    {
+        if (buffer == 65 || buffer == 69 || buffer == 86 || buffer == 87);
+        else
+            return 1;
+    }
     return 0;
 }
 
