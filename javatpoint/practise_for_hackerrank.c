@@ -15,7 +15,7 @@ int main(void)
 		{
 			printf(" ");
 		}
-		for (int l = 1; l < i; l++)
+		for (int l = 5; l > i; l--)
 		{
 			printf(" ");
 		}
