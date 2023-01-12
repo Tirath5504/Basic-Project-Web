@@ -13,7 +13,11 @@ int main(void)
 		}
 		for (int m = 1; m <= i; m++)
 		{
-			printf("*");
+			printf("%d", m);
+		}
+		for (int k = 2; k <= i; k++)
+		{
+			printf("%d", (k - 1));
 		}
 		printf("\n");
 	}
