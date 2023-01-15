@@ -1,5 +1,3 @@
-// Modifies the volume of an audio file
-
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -47,7 +45,7 @@ int main(int argc, char *argv[])
         buffer = buffer * factor;
         fwrite(&buffer, 2, 1, output);
     }
-    
+
     // Close files
     fclose(input);
     fclose(output);
