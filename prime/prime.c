@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <cs50.h>
 
 bool prime(int number);
 
@@ -31,7 +32,7 @@ int main(void)
 bool prime(int number)
 {
     // TODO
-    
+
     for (int i = 2; i <= (number / 2); i++)
     {
         if (number % i == 0)
