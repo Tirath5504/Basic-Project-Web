@@ -99,10 +99,21 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     // Creating a copy
 
+    RGBTRIPLE copy[height][width];
     int red, green, blue;
     int n;
 
     // Inputing blurred image to copy
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            copy[i][j] = image[i][j];
+        }
+    }
+
+    // Actually doing the changes
 
     for (int i = 0; i < height; i++)
     {
