@@ -1,7 +1,8 @@
 // Become familiar wih C syntax
 // Learn to debug buggy code
 
-#include <cs50.h>
+#include<cs50.h>
+#include<stdio.h>
 
 int main(void)
 {
@@ -12,6 +13,6 @@ int main(void)
 
     // Say hello
 
-    printf("Hello, %s, from %s!", name, location)
+    printf("Hello, %s, from %s!", name, location);
     return 0;
 }
