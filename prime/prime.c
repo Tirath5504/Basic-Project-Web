@@ -25,11 +25,13 @@ int main(void)
             printf("%i\n", i);
         }
     }
+    return 0;
 }
 
 bool prime(int number)
 {
     // TODO
+    
     for (int i = 2; i <= (number / 2); i++)
     {
         if (number % i == 0)
