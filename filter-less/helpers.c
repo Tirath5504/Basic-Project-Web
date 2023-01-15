@@ -101,7 +101,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     RGBTRIPLE copy[height][width];
     int red, green, blue;
-    int n;
+    float n;
 
     // Inputing blurred image to copy
 
