@@ -122,6 +122,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             red = 0;
             green = 0;
             blue = 0;
+            /*
             if ((i == 0 && j == 0) || (i == height && j == width) || (i == 0 && j == width) || (i == height && j == 0))
             {
                 n = 4.0;
@@ -135,6 +136,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 n = 6.0;
             }
             else
+            */
             {
                 n = 9.0;
             }
