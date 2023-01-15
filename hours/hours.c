@@ -24,8 +24,28 @@ int main(void)
     printf("%.1f hours\n", calc_hours(hours, weeks, output));
 }
 
-// TODO: complete the calc_hours function
+// Completed the calc_hours function
+
 float calc_hours(int hours[], int weeks, char output)
 {
+    int total;
 
+    for (int i = 0; i < weeks; i++)
+    {
+        total = total + hours[i];
+    }
+
+    switch (output)
+    {
+        case 'T':
+            return total;
+            break;
+
+        case 'A':
+            return (total / weeks);
+            break;
+
+        default:
+            return 1;
+    }
 }
