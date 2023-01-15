@@ -31,12 +31,28 @@ int main(void)
 
 bool prime(int number)
 {
-    // TODO
+    // Checking if number is prime or not
 
-    for (int i = 2; i <= (number / 2); i++)
+    // Initializing counter variable to zero
+
+    int count = 0;
+
+    for (int i = 1; i <= (number / 2); i++)
     {
         if (number % i == 0)
-            return false;
+        {
+            count++;
+        }
     }
-    return true;
+
+    // Checking if count is not equal to 1 since 1 is a factor of number
+
+    if (count != 1)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
 }
