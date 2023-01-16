@@ -4,6 +4,8 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
 
 bool valid(string password);
 
@@ -20,9 +22,29 @@ int main(void)
     }
 }
 
-// TODO: Complete the Boolean function below
+// Completing the Boolean function below
 bool valid(string password)
 {
-    
-    return false;
+    bool number, upper, lower, symbol;
+
+    for (int i = 0; n = strlen(password); i < n; i++)
+    {
+        char ch = password[i];
+        for (int j = 48; j < 58; j++)
+        {
+            if ((int)password[i] == j)
+            {
+                number = true;
+            }
+        }
+    }
+
+    if (num && upper && lower && symbol)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
