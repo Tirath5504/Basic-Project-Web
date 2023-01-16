@@ -30,11 +30,44 @@ bool valid(string password)
     for (int i = 0; n = strlen(password); i < n; i++)
     {
         char ch = password[i];
+
+        // Checking if password contains number
+
         for (int j = 48; j < 58; j++)
         {
             if ((int)password[i] == j)
             {
                 number = true;
+            }
+        }
+
+        // Checking if password contains uppercase alphabet
+
+        for (int j = 65; j < 91; j++)
+        {
+            if ((int)password[i] == j)
+            {
+                upper = true;
+            }
+        }
+
+        // Checking if password contains lowercase alphabet
+
+        for (int j = 97; j < 123; j++)
+        {
+            if ((int)password[i] == j)
+            {
+                lower = true;
+            }
+        }
+
+        // Checking if password contains symbol
+
+        for (int j = 48; j < 58; j++)
+        {
+            if ((int)password[i] == j)
+            {
+                symbol = true;
             }
         }
     }
