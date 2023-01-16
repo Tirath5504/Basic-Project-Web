@@ -33,12 +33,9 @@ bool valid(string password)
 
         // Checking if password contains number
 
-        for (int j = 48; j < 58; j++)
+        if (isnum)
         {
-            if ((int)password[i] == j)
-            {
-                number = true;
-            }
+            number = true;
         }
 
         // Checking if password contains uppercase alphabet
