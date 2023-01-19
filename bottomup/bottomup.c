@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
     }
 
     // CONVERTING BOTTOMUP TO TOPDOWN IMAGE [BY CHANGING "biHeight"]
-    
+    bi.biHeight = -(bi.biHeight);
 
     // Write outfile's BITMAPFILEHEADER
     fwrite(&bf, sizeof(BITMAPFILEHEADER), 1, outptr);
