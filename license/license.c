@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     }
 
     // Create buffer to read into
-    char buffer[7];
+    char *buffer[7] = malloc(7 * sizeof(char));
 
     // Create array to store plate numbers
     char *plates[8];
@@ -22,13 +22,16 @@ int main(int argc, char *argv[])
     int idx = 0;
 
     // Reading input file
-    while (fread(plates[idx], 1, 7, infile) == 7)
+    while (fread(buffer, 1, 7, infile) == 7)
     {
         // Replace '\n' with '\0'
-        buffer[6] = '\0';
+        if (buffer != NULL)
+        {
+            buffer[6] = '\0';
+        }
 
         // Save plate number in array
-        // plates[idx] = buffer;
+        plates[idx] = buffer;
         idx++;
     }
 
@@ -40,4 +43,5 @@ int main(int argc, char *argv[])
 
     // Closing input file
     fclose(infile);
+    free(buffer);
 }
