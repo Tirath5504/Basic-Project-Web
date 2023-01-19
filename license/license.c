@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main(int argc, char *argv[])
 {
@@ -10,7 +12,7 @@ int main(int argc, char *argv[])
     }
 
     // Create buffer to read into
-    char *buffer[7] = malloc(7 * sizeof(char));
+    char *buffer = malloc(7 * sizeof(char));
 
     // Create array to store plate numbers
     char *plates[8];
