@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 
     // Create buffer to read into
     char *buffer = malloc(7 * sizeof(char));
+    char *bf2 = NULL;
 
     // Create array to store plate numbers
     char *plates[8];
@@ -32,8 +33,10 @@ int main(int argc, char *argv[])
             buffer[6] = '\0';
         }
 
+        strcpy(bf2, buffer);
+
         // Save plate number in array
-        plates[idx] = buffer;
+        plates[idx] = bf2;
         idx++;
     }
 
