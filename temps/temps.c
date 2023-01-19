@@ -67,9 +67,9 @@ void sort_cities(void)
     {
         if (temps[i + 1].temp > temps[i].temp)
         {
-            avg_temp temp = temps[i];
+            avg_temp temporary = temps[i];
             temps[i] = temps[i + 1];
-            temps[i + 1] = temp;
+            temps[i + 1] = temporary;
         }
     }
 }
