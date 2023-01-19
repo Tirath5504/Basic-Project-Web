@@ -11,9 +11,9 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Create buffer to read into
+    // Create buffers to read into
     char *buffer = malloc(7 * sizeof(char));
-    char *bf2 = NULL;
+    char *bf2 = malloc(7 * sizeof(char));
 
     // Create array to store plate numbers
     char *plates[8];
@@ -49,4 +49,5 @@ int main(int argc, char *argv[])
     // Closing input file
     fclose(infile);
     free(buffer);
+    free(bf2);
 }
