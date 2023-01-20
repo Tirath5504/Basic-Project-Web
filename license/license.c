@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
         printf("%s\n", plates[i]);
     }
 
-    // Closing input file
+    // Closing input file and freeing manually allocated memory
     fclose(infile);
     free(buffer);
 }
