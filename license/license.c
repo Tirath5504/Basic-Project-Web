@@ -37,15 +37,13 @@ int main(int argc, char *argv[])
         }
 
         //
-        for (int i = 0; i < 7; i++)
-        {
-            ch = buffer[i];
-            str = str + &ch;
-        }
+        strcpy(str, buffer);
 
         // Save plate number in array
         plates[idx] = str;
         idx++;
+
+        free(str);
     }
 
     // Printing file
@@ -57,5 +55,4 @@ int main(int argc, char *argv[])
     // Closing input file and freeing manually allocated memory
     fclose(infile);
     free(buffer);
-    free(str);
 }
