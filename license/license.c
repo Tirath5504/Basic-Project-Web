@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     while (fread(buffer, 1, 7, infile) == 7)
     {
 
-        char *str = NULL;
+        char *str = malloc(7 * sizeof(char));
 
         // Replace '\n' with '\0'
         if (buffer != NULL)
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
         for (int i = 0; i < 7; i++)
         {
             ch = buffer[i];
-            str = str + ch;
+            str = str + &ch;
         }
 
         // Save plate number in array
@@ -57,4 +57,5 @@ int main(int argc, char *argv[])
     // Closing input file and freeing manually allocated memory
     fclose(infile);
     free(buffer);
+    free(str);
 }
