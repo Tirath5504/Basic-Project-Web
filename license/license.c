@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
             buffer[6] = '\0';
         }
 
-        //
+        // Copying buffer to a string
         strcpy(str, buffer);
 
         // Save plate number in array
