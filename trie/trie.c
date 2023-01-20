@@ -110,8 +110,7 @@ int main(int argc, char *argv[])
 // TODO: Complete the check function, return true if found, false if not found
 bool check(char* word)
 {
-    FILE *file = fopen(argv[i], "r");
-    
+
     return false;
 }
 
