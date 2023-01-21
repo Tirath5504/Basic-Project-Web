@@ -1,6 +1,7 @@
 # cs50 - Week 6 - Python - Figlet
 
 import sys
+from pyfiglet import Figlet
 
 def main():
 
@@ -9,4 +10,10 @@ def main():
         print("Invalid usage")
         sys.exit
 
-    
+    # Taking input text
+    text = input("Input: ")
+
+    # If no command-line argument then print text in random font
+    if len(sys.argv) == 1:
+        print("Output: ")
+        
