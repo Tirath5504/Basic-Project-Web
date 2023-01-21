@@ -3,12 +3,17 @@
 # Importing get_string from cs50 to get input
 from cs50 import get_string
 
-# Getting Input
-input = get_string("Input: ")
+def main():
 
-if "Hello" in input:
-    print("$0")
-elif input[0] in "H":
-    print("$20")
-else:
-    print("$100")
+    # Getting Input
+    input = get_string("Input: ")
+
+    # Checking the condition
+    if "Hello" in input:
+        print("$0")
+    elif input[0] in "H":
+        print("$20")
+    else:
+        print("$100")
+
+main()
