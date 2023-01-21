@@ -37,18 +37,18 @@ def main():
 
                 else:
                     print("Invalid usage")
-                    sys.exit()
+                    sys.exit(2)
 
             else:
                 print("Invalid usage")
-                sys.exit()
+                sys.exit(3)
 
         print(figlet.renderText(text))
 
     else:
 
         print("Invalid usage")
-        sys.exit()
+        sys.exit(1)
 
 
 main()
