@@ -30,7 +30,6 @@ def main():
                 if sys.argv[2] in figlet.getFonts():
 
                     # Taking input text
-                    # Taking input text
                     text = input("Input: ")
                     print("Output: ")
 
@@ -50,5 +49,6 @@ def main():
 
         print("Invalid usage")
         sys.exit()
+
 
 main()
