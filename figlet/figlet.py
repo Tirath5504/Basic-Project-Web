@@ -4,6 +4,8 @@ import sys
 from pyfiglet import Figlet
 import random
 
+figlet = Figlet()
+
 def main():
 
     # Checking input from command-line
@@ -14,7 +16,6 @@ def main():
 
             # Taking input text
             text = input("Input: ")
-            figlet = Figlet()
             print("Output: ")
 
             figlet.setFont(font = random.choice(figlet.getFonts()))
@@ -31,9 +32,8 @@ def main():
                     # Taking input text
                     # Taking input text
                     text = input("Input: ")
-                    figlet = Figlet()
                     print("Output: ")
-                    
+
                     figlet.setFont(font = sys.argv[2])
 
                 else:
