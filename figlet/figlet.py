@@ -30,9 +30,11 @@ def main():
 
                 else:
                     print("Invalid input")
+                    sys.exit()
 
             else:
                 print("Invalid input")
+                sys.exit()
 
         print(figlet.renderText(text))
 
