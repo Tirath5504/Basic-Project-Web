@@ -11,7 +11,8 @@ def main():
         # Taking input text
         text = input("Input: ")
         figlet = Figlet()
-        print(figlet.getFonts())
+        for i in figlet.getFonts():
+            print(i)
 
         # If no command-line argument then print text in random font
         if len(sys.argv) == 1:
