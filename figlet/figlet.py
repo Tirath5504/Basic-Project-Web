@@ -37,11 +37,11 @@ def main():
                     figlet.setFont(font = sys.argv[2])
 
                 else:
-                    print("Invalid input")
+                    print("Invalid usage")
                     sys.exit()
 
             else:
-                print("Invalid input")
+                print("Invalid usage")
                 sys.exit()
 
         print(figlet.renderText(text))
