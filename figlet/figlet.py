@@ -16,4 +16,7 @@ def main():
     # If no command-line argument then print text in random font
     if len(sys.argv) == 1:
         print("Output: ")
-        
+        f = Figlet(font=random)
+        print f.renderText(text)
+
+main()
