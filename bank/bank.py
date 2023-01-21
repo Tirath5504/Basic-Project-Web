@@ -8,7 +8,7 @@ input = get_string("Input: ")
 
 if "Hello" in input:
     print("$0")
-elif input[0] == "H":
+elif input[0] in "H":
     print("$20")
 else:
     print("$100")
