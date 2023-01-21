@@ -13,7 +13,7 @@ def main():
     # Taking input text
     text = input("Input: ")
     figlet = Figlet()
-    figlet.getFonts()
+    print(figlet.getFonts())
 
     # If no command-line argument then print text in random font
     if len(sys.argv) == 1:
