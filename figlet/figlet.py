@@ -2,6 +2,7 @@
 
 import sys
 from pyfiglet import Figlet
+import random
 
 def main():
 
@@ -15,7 +16,7 @@ def main():
 
         # If no command-line argument then print text in random font
         if len(sys.argv) == 1:
-            figlet.setFont(font = rand)
+            figlet.setFont(font = random.choice(figlet.getFonts()))
 
         # If two command-line arguments are inputted
         elif len(sys.argv) == 3:
