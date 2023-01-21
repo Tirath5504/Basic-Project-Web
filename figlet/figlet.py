@@ -8,15 +8,15 @@ def main():
     # Checking input from command-line
     if not len(sys.argv) == 1 or not len(sys.argv) == 3:
         print("Invalid usage")
-        sys.exit
+        sys.exit()
 
     # Taking input text
     text = input("Input: ")
+    figlet = Figlet()
+    figlet.getFonts()
 
     # If no command-line argument then print text in random font
     if len(sys.argv) == 1:
         print("Output: ")
-        f = Figlet(font=random)
-        print f.renderText(text)
 
 main()
