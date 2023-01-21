@@ -9,13 +9,14 @@ def main():
     # Checking input from command-line
     if len(sys.argv) == 1 or len(sys.argv) == 3:
 
-        # Taking input text
-        text = input("Input: ")
-        figlet = Figlet()
-        print("Output: ")
-
         # If no command-line argument then print text in random font
         if len(sys.argv) == 1:
+
+            # Taking input text
+            text = input("Input: ")
+            figlet = Figlet()
+            print("Output: ")
+
             figlet.setFont(font = random.choice(figlet.getFonts()))
 
         # If two command-line arguments are inputted
@@ -26,6 +27,13 @@ def main():
 
                 # Checking if input font is in figlet font list
                 if sys.argv[2] in figlet.getFonts():
+
+                    # Taking input text
+                    # Taking input text
+                    text = input("Input: ")
+                    figlet = Figlet()
+                    print("Output: ")
+                    
                     figlet.setFont(font = sys.argv[2])
 
                 else:
