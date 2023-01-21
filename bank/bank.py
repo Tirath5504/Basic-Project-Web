@@ -4,7 +4,11 @@
 from cs50 import get_string
 
 # Getting Input
-while True:
-    input = get_string("Input: ")
+input = get_string("Input: ")
 
-if 
+if "Hello" in input:
+    print("$0")
+elif input[0] == "H":
+    print("$20")
+else:
+    print("$100")
