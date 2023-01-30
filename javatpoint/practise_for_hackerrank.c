@@ -23,21 +23,14 @@ bool checkPrime(int num)
 
 int main(void)
 {
-	int num, flag = 0;
-	printf("Enter a number : ");
-	scanf("%d", &num);
-	for (int i = 1; i <= num; i++)
+	char str[100], copy[100];
+	printf("Enter a sentence : ");
+	scanf("%s", &str);
+	for (int i = 0, n = strlen(str); i < n; i++)
 	{
-		if (checkPrime(i) && checkPrime(num - i))
-		{
-			flag = 1;
-			printf("YES, %d = %d + %d\n", num, i, num - i);
-		}
+		copy[n - i] = str[i];
 	}
-	if (flag == 0)
-	{
-		printf("No sum of prime numbers found");
-	}
+	printf("");
 	printf("\n");
 	return 0;
 }
