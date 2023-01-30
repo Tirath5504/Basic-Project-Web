@@ -24,6 +24,8 @@ bool checkPrime(int num)
 }
 */
 
+char str[100];
+
 void rev(int num)
 {
 	int n = strlen(str);
@@ -43,7 +45,6 @@ void rev(int num)
 
 int main(void)
 {
-	char str[100], copy[100];
 	printf("Enter a sentence : ");
 	scanf("%s", str);
 	rev(0);
