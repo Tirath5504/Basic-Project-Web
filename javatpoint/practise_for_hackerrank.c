@@ -26,11 +26,18 @@ bool checkPrime(int num)
 
 void rev(int num)
 {
-	if (num == )
-
-	for (int i = num, n = strlen(str); i < n; i++)
+	int n = strlen(str);
+	if (num == n)
 	{
-			printf("%c", str[n - 1 - i]);
+		main();
+	}
+	else
+	{
+		for (int i = num; i < n; i++)
+		{
+				printf("%c", str[n - 1 - i]);
+		}
+		rev(i);
 	}
 }
 
