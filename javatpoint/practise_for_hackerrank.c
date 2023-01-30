@@ -24,22 +24,22 @@ bool checkPrime(int num)
 }
 */
 
+void rev(int num)
+{
+	if (num == )
+
+	for (int i = num, n = strlen(str); i < n; i++)
+	{
+			printf("%c", str[n - 1 - i]);
+	}
+}
+
 int main(void)
 {
 	char str[100], copy[100];
 	printf("Enter a sentence : ");
 	scanf("%s", str);
-	for (int i = 0, n = strlen(str); i < n; i++)
-	{
-		if (str[n-2-i] == ' ')
-		{
-			continue;
-		}
-		else
-		{
-			printf("%c", str[n - 1 - i]);
-		}
-	}
+	rev(0);
 	printf("\n");
 	return 0;
 }
