@@ -28,10 +28,10 @@ int main(void)
 	scanf("%d", &num);
 	for (int i = 1; i <= num; i++)
 	{
-		if ((num == (i + j)) && checkPrime(i) && checkPrime(j))
+		if (checkPrime(i) && checkPrime(num - i))
 		{
 			flag = 1;
-			printf("YES, %d = %d + %d", num, i, j);
+			printf("YES, %d = %d + %d\n", num, i, num - i);
 		}
 	}
 	if (flag == 0)
