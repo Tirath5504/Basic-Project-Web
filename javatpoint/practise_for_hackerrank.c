@@ -31,9 +31,8 @@ int main(void)
 	scanf("%s", str);
 	for (int i = 0, n = strlen(str); i < n; i++)
 	{
-		copy[n - i] = str[i];
+		printf("%c", str[n - 1 - i]);
 	}
-	printf("Reversed String: %s", copy);
 	printf("\n");
 	return 0;
 }
