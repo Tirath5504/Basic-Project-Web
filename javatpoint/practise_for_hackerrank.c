@@ -26,16 +26,21 @@ bool checkPrime(int num)
 
 char str[100];
 
+void copyMain()
+{
+	printf("\n");
+}
+
 void rev(int num)
 {
-	int n = strlen(str);
+	int i, n = strlen(str);
 	if (num == n)
 	{
-		main();
+		copyMain();
 	}
 	else
 	{
-		for (int i = num; i < n; i++)
+		for (i = num; i < n; i++)
 		{
 				printf("%c", str[n - 1 - i]);
 		}
@@ -48,7 +53,6 @@ int main(void)
 	printf("Enter a sentence : ");
 	scanf("%s", str);
 	rev(0);
-	printf("\n");
 	return 0;
 }
 
