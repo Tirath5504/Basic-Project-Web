@@ -1,10 +1,8 @@
-
-/*
 #include<stdio.h>
 #include<stdbool.h>
 #include<string.h>
 
-
+/*
 bool checkPrime(int num)
 {
 	int flag = 0;
@@ -24,7 +22,7 @@ bool checkPrime(int num)
 		return false;
 	}
 }
-
+*/
 
 int main(void)
 {
@@ -33,13 +31,20 @@ int main(void)
 	scanf("%s", str);
 	for (int i = 0, n = strlen(str); i < n; i++)
 	{
-		printf("%c", str[n - 1 - i]);
+		if (str[n-2-i] == ' ')
+		{
+			continue;
+		}
+		else
+		{
+			printf("%c", str[n - 1 - i]);
+		}
 	}
 	printf("\n");
 	return 0;
 }
-*/
 
+/*
 #include<stdio.h>
 #include<string.h>
 
@@ -60,7 +65,8 @@ int main(void)
 
     // iterate through each and every character of the string for printing it backwards or reverse direction
     for(g = leng - 1; g >= 0; g--) {
+
         printf("%c", mystrg[g]);
     }
     return 0;
-}
+}*/
