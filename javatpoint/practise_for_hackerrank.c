@@ -1,8 +1,9 @@
+/*
 #include<stdio.h>
 #include<stdbool.h>
 #include<string.h>
 
-/*
+
 bool checkPrime(int num)
 {
 	int flag = 0;
@@ -22,7 +23,7 @@ bool checkPrime(int num)
 		return false;
 	}
 }
-*/
+
 
 char str[100];
 
@@ -55,7 +56,7 @@ int main(void)
 	rev(0);
 	return 0;
 }
-
+*/
 /*
 #include<stdio.h>
 #include<string.h>
@@ -82,3 +83,24 @@ int main(void)
     }
     return 0;
 }*/
+
+#include <stdio.h>
+
+void reverseSentence();
+
+int main()
+{
+    printf("Enter a sentence: ");
+    reverseSentence();
+    return 0;
+}
+
+void reverseSentence()
+{
+    char c;
+    scanf("%c", &c);
+    if (c != '\n') {
+        reverseSentence();
+        printf("%c", c);
+    }
+}
