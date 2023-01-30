@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<stdbool.h>
+#include<string.h>
 
+/*
 bool checkPrime(int num)
 {
 	int flag = 0;
@@ -20,6 +22,7 @@ bool checkPrime(int num)
 		return false;
 	}
 }
+*/
 
 int main(void)
 {
@@ -30,7 +33,7 @@ int main(void)
 	{
 		copy[n - i] = str[i];
 	}
-	printf("");
+	printf("Reversed String: %s", str);
 	printf("\n");
 	return 0;
 }
