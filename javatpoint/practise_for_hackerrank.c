@@ -18,7 +18,7 @@ int main(void)
 				flag = 1;
 			}
 		}
-		if (flag == 1)
+		if (flag == 0)
 		{
 			printf("%d, ", i);
 		}
