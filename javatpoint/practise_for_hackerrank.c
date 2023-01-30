@@ -28,7 +28,7 @@ int main(void)
 {
 	char str[100], copy[100];
 	printf("Enter a sentence : ");
-	scanf("%s", &str);
+	scanf("%c", &str);
 	for (int i = 0, n = strlen(str); i < n; i++)
 	{
 		copy[n - i] = str[i];
