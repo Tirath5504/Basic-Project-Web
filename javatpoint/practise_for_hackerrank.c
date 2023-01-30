@@ -1,27 +1,42 @@
 #include<stdio.h>
+#include<stdbool.h>
+
+bool checkPrime(int num)
+{
+	int flag = 0;
+	for (int i = 2; i < num; i++)
+	{
+		if (num % i == 0)
+		{
+			flag = 1;
+		}
+	}
+	if (flag == 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
 
 int main(void)
 {
-	int n1, n2, flag;
-	printf("Enter lower number of range : ");
-	scanf("%d", &n1);
-	printf("Enter upper number of range : ");
-	scanf("%d", &n2);
-	printf("Prime numbers in (%d, %d): ", n1, n2);
-	for (int i = n1; i <= n2; i++)
+	int num, flag = 0;
+	printf("Enter a number : ");
+	scanf("%d", &num);
+	for (int i = 1; i <= num; i++)
 	{
-		flag = 0;
-		for (int j = 2; j < i; j++)
+		if ((num == (i + j)) && checkPrime(i) && checkPrime(j))
 		{
-			if (i % j == 0)
-			{
-				flag = 1;
-			}
+			flag = 1;
+			printf("YES, %d = %d + %d", num, i, j);
 		}
-		if (flag == 0)
-		{
-			printf("%d, ", i);
-		}
+	}
+	if (flag == 0)
+	{
+		printf("No sum of prime numbers found");
 	}
 	printf("\n");
 	return 0;
