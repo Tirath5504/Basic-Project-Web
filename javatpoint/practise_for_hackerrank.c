@@ -28,12 +28,12 @@ int main(void)
 {
 	char str[100], copy[100];
 	printf("Enter a sentence : ");
-	scanf("%c", &str);
+	scanf("%s", str);
 	for (int i = 0, n = strlen(str); i < n; i++)
 	{
 		copy[n - i] = str[i];
 	}
-	printf("Reversed String: %s", str);
+	printf("Reversed String: %s", copy);
 	printf("\n");
 	return 0;
 }
