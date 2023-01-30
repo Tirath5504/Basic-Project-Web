@@ -2,24 +2,27 @@
 
 int main(void)
 {
-	int n;
-	printf("Enter a number : ");
-	scanf("%d", &n);
-	for (int i = 1; i <= n; i++)
+	int n1, n2, flag;
+	printf("Enter lower number of range : ");
+	scanf("%d", &n1);
+	printf("Enter upper number of range : ");
+	scanf("%d", &n2);
+	printf("Prime numbers in (%d, %d): ", n1, n2);
+	for (int i = n1; i <= n2; i++)
 	{
-		for (int l = n; l > i; l--)
+		flag = 0;
+		for (int j = 2; j < i; j++)
 		{
-			printf(" ");
+			if (i % j == 0)
+			{
+				flag = 1;
+			}
 		}
-		for (int m = 1; m <= i; m++)
+		if (flag == 1)
 		{
-			printf("%d", m);
+			printf("%d, ", i);
 		}
-		for (int k = 2; k <= i; k++)
-		{
-			printf("%d", (k - 1));
-		}
-		printf("\n");
 	}
+	printf("\n");
 	return 0;
 }
