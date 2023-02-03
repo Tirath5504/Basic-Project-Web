@@ -99,7 +99,9 @@ void reverseSentence()
 {
     char c;
     scanf("%c", &c);
-    if (c != '\n') {
+    if (c != '\n')
+	{
         reverseSentence();
         printf("%c", c);
     }
+}
