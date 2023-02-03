@@ -103,4 +103,3 @@ void reverseSentence()
         reverseSentence();
         printf("%c", c);
     }
-}
