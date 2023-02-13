@@ -92,7 +92,7 @@ int main()
 {
     printf("Enter a sentence: ");
     reverseSentence();
-	printf
+	printf("\n");
     return 0;
 }
 
