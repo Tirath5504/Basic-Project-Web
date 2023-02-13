@@ -1,32 +1,26 @@
 #include <stdio.h>
 
-void perfect(int num);
+void nat(int n1, int n2);
 
 int main()
 {
-    int num;
-    printf("Enter a number: ");
-    scanf("%d", &num);
-    perfect(num);
+    int num1, num2;
+    printf("Enter range: ");
+    scanf("%d %d", &num1, &num2);
+    nat(num1, num2);
     return 0;
 }
 
-void perfect(int num)
+void nat(int n1, int n2)
 {
 	int sum = 0;
-	for (int i = 1; i < num; i++)
+	if (n1 != n2)
 	{
-		if (num % i == 0)
-		{
-			sum = sum + i;
-		}
-	}
-	if (sum == num)
-	{
-		printf("Perfect number\n");
+		printf("%d", n1);
+		nat(n1+1, n2);
 	}
 	else
 	{
-		printf("Not a perfect number\n");
+		return
 	}
 }
