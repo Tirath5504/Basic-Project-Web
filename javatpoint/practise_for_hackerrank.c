@@ -14,10 +14,9 @@ int main()
 
 int nat(int n1, int n2)
 {
-	int sum = 0;
 	if (n1 <= n2)
 	{
-		return (sum + nat(n1+1, n2));
+		return (n1 + nat(n1+1, n2));
 	}
 	else
 	{
