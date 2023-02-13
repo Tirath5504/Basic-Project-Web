@@ -86,23 +86,26 @@ int main(void)
 
 #include <stdio.h>
 
-void reverseSentence();
+int power(int num, int n);
 
 int main()
 {
-    printf("Enter a sentence: ");
-    reverseSentence();
-	printf("\n");
+	int num, pow, n;
+    printf("Enter a number and its power: ");
+	scanf("%d %d", &num, &n);
+    pow = power(num, n);
+	printf("Power = %d\n", pow);
     return 0;
 }
 
-void reverseSentence()
+int power(int num, int n)
 {
-    char c;
-    scanf("%c", &c);
-    if (c != '\n')
+    if (num != 0)
  	{
-	    reverseSentence();
-        printf("%c", c);
-    }
+		return num * power(num, n-1);
+	}
+    else
+	{
+		return num;
+	}
 }
