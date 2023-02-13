@@ -21,6 +21,6 @@ int nat(int n1, int n2)
 	}
 	else
 	{
-		return sum;
+		return n1;
 	}
 }
