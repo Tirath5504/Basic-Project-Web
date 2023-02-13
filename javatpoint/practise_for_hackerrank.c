@@ -102,7 +102,7 @@ int power(int num, int n)
 {
     if (num != 0)
  	{
-		return num * power(num, n-1);
+		return num * (power(num, n-1));
 	}
     else
 	{
