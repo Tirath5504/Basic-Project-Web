@@ -100,12 +100,13 @@ int main()
 
 int power(int num, int n)
 {
+	int res = 1;
     if (num != 0)
  	{
-		return num * (power(num, n-1));
+		return res * (power(num, n-1));
 	}
     else
 	{
-		return num;
+		return res;
 	}
 }
