@@ -1,25 +1,30 @@
 #include <stdio.h>
 
-int nat(int n1, int n2);
+#define MAX_SIZE 100
 
-int main()
+int main(void)
 {
-    int num1, num2, sum;
-    printf("Enter range: ");
-    scanf("%d %d", &num1, &num2);
-    sum = nat(num1, num2);
-	printf("Sum = %d", sum);
-    return 0;
-}
-
-int nat(int n1, int n2)
-{
-	if (n1 <= n2)
+	int arr[MAX_SIZE];
+	int n, lar1, lar2;
+	printf("Enter number of elements: ");
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++)
 	{
-		return (n1 + nat(n1+1, n2));
+		printf("Enter element %d: ", i+1);
+		scanf("%d", &arr[i]);
 	}
-	else
+	lar1 = arr[0], lar2 = arr[1];
+	for (int i = 0; i < n; i++)
 	{
-		return n1;
+		if (arr[i] < lar1 && arr[i] > lar2)
+		{
+			lar2 = arr[i];
+		}
+		else if (arr[i] > lar1)
+		{
+			lar1 = arr[i];
+		}
 	}
+	printf("Second Largest: %d\n", lar2);
+	return 0;
 }
