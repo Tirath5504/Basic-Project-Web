@@ -4,27 +4,36 @@
 
 int main(void)
 {
-	int arr[MAX_SIZE];
-	int n, lar1, lar2;
+	int arr[MAX_SIZE][MAX_SIZE];
+	int n;
 	printf("Enter number of elements: ");
 	scanf("%d", &n);
 	for (int i = 0; i < n; i++)
 	{
-		printf("Enter element %d: ", i+1);
-		scanf("%d", &arr[i]);
+		for (int j = 0; j < n; j++)
+		{
+			printf("Enter element (%d, %d): ", i+1, j+1);
+			scanf("%d", &arr[i][j]);
+		}
 	}
-	lar1 = arr[0], lar2 = arr[0];
 	for (int i = 0; i < n; i++)
 	{
-		if (arr[i] < lar1 && arr[i] > lar2)
+		for (int j = 0; j < n; j++)
 		{
-			lar2 = arr[i];
-		}
-		else if (arr[i] > lar1)
-		{
-			lar1 = arr[i];
+			if (i > j)
+			{
+				arr[i][j] = 0;
+			}
 		}
 	}
-	printf("Second Largest: %d\n", lar2);
+	printf("Upper triangular matrix: \n");
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			printf("%d\t", arr[i][j]);
+		}
+		printf("\n");
+	}
 	return 0;
 }
