@@ -13,7 +13,7 @@ int main(void)
 		printf("Enter element %d: ", i+1);
 		scanf("%d", &arr[i]);
 	}
-	lar1 = arr[0], lar2 = arr[1];
+	lar1 = arr[0], lar2 = arr[0];
 	for (int i = 0; i < n; i++)
 	{
 		if (arr[i] < lar1 && arr[i] > lar2)
