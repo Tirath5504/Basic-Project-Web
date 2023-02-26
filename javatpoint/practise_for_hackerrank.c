@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-int add(int start, int end)
+int add(int n)
 {
-	if (start >= end)
-		return start;
-	return (start + add(start+2, end));
+	if (n == 0)
+		return n;
+	return (n % 10 + add(n / 10));
 }
 
 int main(void)
 {
-	int start, end, plus;
+	int n, plus;
 	printf("Enter range: ");
-	scanf("%d %d", &start, &end);
-	plus = add(start, end);
+	scanf("%d", &n);
+	plus = add(n);
 	printf("Sum: %d\n", plus);
 	return 0;
 }
