@@ -60,7 +60,9 @@ int main(void)
 		print(res, n1a, n2b);
 	}
 	else
+	{
 		printf("Matrixes not compatible for multiplication");
+	}
 	printf("\n");
 	return 0;
 }
