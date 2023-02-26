@@ -6,7 +6,8 @@ int add(int n)
 {
 	if (n == 0)
 		return n;
-	return (sum + add(n-1));
+	sum = sum + add(n-1);
+	return (sum);
 }
 
 int main(void)
