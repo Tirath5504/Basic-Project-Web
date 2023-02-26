@@ -9,8 +9,8 @@ int main(void)
 	scanf("%d", &n);
 	for (int i = 1; i <= n; i++)
 	{
-		sum = sum + term;
 		term = (float)j/k;
+		sum = sum + term;
 		j = j + 2;
 		k = k + 2;
 	}
