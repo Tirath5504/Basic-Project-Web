@@ -1,3 +1,4 @@
+/*
 #include <stdio.h>
 
 #define MAX 10
@@ -62,6 +63,30 @@ int main(void)
 	else
 	{
 		printf("Matrixes not compatible for multiplication");
+	}
+	printf("\n");
+	return 0;
+}
+*/
+
+#include <stdio.h>
+#include <string.h>
+
+# define MAX 100
+
+int main(void)
+{
+	char str[MAX];
+	int characters = 0, lines = 1, words = 1;
+	printf("Enter a string ending with '.' : ");
+	gets(str);
+	for (int i = 0, n = strlen(str); i < n; i++)
+	{
+		if (ischar(str[i]))
+			characters++;
+		if (isspace(str[i]))
+			words++;
+		if (isnew)
 	}
 	printf("\n");
 	return 0;
