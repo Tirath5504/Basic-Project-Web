@@ -71,6 +71,7 @@ int main(void)
 
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 # define MAX 100
 
@@ -82,12 +83,15 @@ int main(void)
 	gets(str);
 	for (int i = 0, n = strlen(str); i < n; i++)
 	{
-		if (ischar(str[i]))
+		if (isalnum(str[i]))
 			characters++;
 		if (isspace(str[i]))
 			words++;
-		if (isnew)
+		if (iscntrl(str[i]))
+			lines++;
 	}
-	printf("\n");
+	printf("Characters = %d\n", characters);
+	printf("Words = %d\n", words);
+	printf("Lines = %d\n", lines);
 	return 0;
 }
