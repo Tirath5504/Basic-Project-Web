@@ -1,19 +1,20 @@
 #include <stdio.h>
 
+int sum = 0;
+
+int add(int n)
+{
+	if (n == 0)
+		return n;
+	return (sum + add(n-1));
+}
+
 int main(void)
 {
-	float sum = 0, term = 0.5;
-	int j = 1, k =2;
-	int n;
+	int n, plus;
 	printf("Enter a number: ");
 	scanf("%d", &n);
-	for (int i = 1; i <= n; i++)
-	{
-		term = (float)j/k;
-		sum = sum + term;
-		j = j + 2;
-		k = k + 2;
-	}
-	printf("Sum = %f\n", sum);
+	plus = add(n);
+	printf("Sum: %d\n", sum);
 	return 0;
 }
