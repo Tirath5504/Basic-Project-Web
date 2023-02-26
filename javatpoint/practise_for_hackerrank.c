@@ -1,39 +1,16 @@
 #include <stdio.h>
 
-#define MAX_SIZE 100
-
 int main(void)
 {
-	int arr[MAX_SIZE][MAX_SIZE];
+	float sum = 0, term = 1.0;
 	int n;
-	printf("Enter number of elements: ");
+	printf("Enter a number: ");
 	scanf("%d", &n);
-	for (int i = 0; i < n; i++)
+	for (int i = 1; i <= n; i)
 	{
-		for (int j = 0; j < n; j++)
-		{
-			printf("Enter element (%d, %d): ", i+1, j+1);
-			scanf("%d", &arr[i][j]);
-		}
+		sum = sum + term;
+		term = term / 2.0;
 	}
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			if (i > j)
-			{
-				arr[i][j] = 0;
-			}
-		}
-	}
-	printf("Upper triangular matrix: \n");
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			printf("%d\t", arr[i][j]);
-		}
-		printf("\n");
-	}
+	printf("Sum = %f\n", sum);
 	return 0;
 }
