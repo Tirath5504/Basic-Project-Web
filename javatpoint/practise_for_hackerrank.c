@@ -2,14 +2,17 @@
 
 int main(void)
 {
-	float sum = 0, term = 1.0;
+	float sum = 0, term = 0.5;
+	int j = 1, k =2;
 	int n;
 	printf("Enter a number: ");
 	scanf("%d", &n);
-	for (int i = 1; i <= n; i)
+	for (int i = 1; i <= n; i++)
 	{
 		sum = sum + term;
-		term = term / 2.0;
+		term = (float)j/k;
+		j = j + 2;
+		k = k + 2;
 	}
 	printf("Sum = %f\n", sum);
 	return 0;
