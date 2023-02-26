@@ -4,7 +4,8 @@ int add(int n)
 {
 	if (n == 0)
 		return n;
-	return (n % 10 + add(n / 10));
+	n = n % 10;
+	return (n * 10 + add(n / 10));
 }
 
 int main(void)
