@@ -1,19 +1,20 @@
 #include <stdio.h>
 
-int add(int n)
+#define MAX 10
+
+int a[MAX][MAX], b[MAX][MAX];
+
+void input(int mat[MAX][MAX])
 {
-	if (n == 0)
-		return n;
-	n = n % 10;
-	return (n * 10 + add(n / 10));
+
 }
 
 int main(void)
 {
-	int n, plus;
-	printf("Enter range: ");
-	scanf("%d", &n);
-	plus = add(n);
-	printf("Sum: %d\n", plus);
+	int n1a, n1b, n2a, n2b;
+	printf("Enter order of Matrix 1: ");
+	scanf("%d %d", &n1a, &n1b);
+	
+	printf("\n");
 	return 0;
 }
