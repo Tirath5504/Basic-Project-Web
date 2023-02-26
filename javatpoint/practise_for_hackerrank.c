@@ -50,14 +50,14 @@ int main(void)
 	int m1[MAX][MAX], m2[MAX][MAX];
 	printf("Enter order of Matrix 1: ");
 	scanf("%d %d", &n1a, &n1b);
-	input(m1[MAX][MAX], n1a, n1b);
+	input(m1, n1a, n1b);
 	printf("Enter order of Matrix 2: ");
 	scanf("%d %d", &n2a, &n2b);
-	input(m2[MAX][MAX], n2a, n2b);
+	input(m2, n2a, n2b);
 	if (n1b == n2a)
 	{
-		multiply(m1[MAX][MAX], m2[MAX][MAX], n1a, n2b);
-		print(res[MAX][MAX], n1a, n2b);
+		multiply(m1, m2, n1a, n2b);
+		print(res, n1a, n2b);
 	}
 	else
 		printf("Matrixes not compatible for multiplication");
