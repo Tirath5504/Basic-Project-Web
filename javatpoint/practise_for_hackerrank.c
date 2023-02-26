@@ -80,7 +80,7 @@ int main(void)
 	char str[MAX];
 	int characters = 0, lines = 1, words = 1;
 	printf("Enter a string ending with '.' : ");
-	gets(str);
+	scanf("^[.]%c", str);
 	for (int i = 0, n = strlen(str); i < n; i++)
 	{
 		if (isalnum(str[i]))
