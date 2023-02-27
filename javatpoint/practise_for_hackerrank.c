@@ -157,9 +157,9 @@ int main(void)
 		{
 			if ((s[j+1].m1 + s[j+1].m2 + s[j+1].m3) > (s[j].m1 + s[j].m2 + s[j].m3))
 			{
-				int temp = s[j].roll_no;
-				s[j].roll_no = s[j+1].roll_no;
-				s[j+1].roll_no = temp;
+				student temp = s[j];
+				s[j] = s[j+1];
+				s[j+1] = temp;
 			}
 		}
 	}
