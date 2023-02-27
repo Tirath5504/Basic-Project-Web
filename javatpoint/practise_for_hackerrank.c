@@ -98,6 +98,7 @@ int main(void)
 }
 */
 
+/*
 #include<stdio.h>
 int main()
 {
@@ -125,6 +126,42 @@ int main()
 			printf("* ");
 		}
 		printf("\n");
+	}
+	return 0;
+}
+*/
+
+#include <stdio.h>
+
+typedef struct
+{
+	char name[50];
+	int roll_no, m1, m2, m3;
+}student;
+
+int main(void)
+{
+	int n;
+	printf("Enter number of students: ");
+	scanf("%d", &n);
+	student s[n];
+	for (int i = 0; i < n; i++)
+	{
+		printf("Enter student's name, roll number and marks in 3 subjects: ");
+		gets(s.name[i]);
+		scanf("%d %d %d %d", s.roll_no[i], s.m1[i], s.m2[i], s.m3[i]);
+	}
+	int max = s.m1[0] + s.m2[0] + s.m3[0];
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if ((s.m1[i] + s.m2[i] + s.m3[i]) > max)
+			{
+				max = s.m1[i] + s.m2[i] + s.m3[i];
+				
+			}
+		}
 	}
 	return 0;
 }
