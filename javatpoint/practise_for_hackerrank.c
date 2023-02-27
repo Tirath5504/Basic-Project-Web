@@ -149,7 +149,7 @@ int main(void)
 	{
 		printf("Enter student's name, roll number and marks in 3 subjects: ");
 		scanf("%s", s[i].name);
-		scanf("%d %d %d %d", s[i].roll_no, s[i].m1, s[i].m2, s[i].m3);
+		scanf("%d %d %d %d", &s[i].roll_no, &s[i].m1, &s[i].m2, &s[i].m3);
 	}
 	for (int i = 0; i < n; i++)
 	{
@@ -165,7 +165,7 @@ int main(void)
 	}
 	for (int i = 0; i < n; i++)
 	{
-		printf("Student's name: %d\t", s[i].name);
+		printf("Student's name: %s\t", s[i].name);
 		printf("Roll Number: %d\t", s[i].roll_no);
 		printf("Marks in 3 subjects: %d %d %d", s[i].m1, s[i].m2, s[i].m3);
 		printf("\n");
