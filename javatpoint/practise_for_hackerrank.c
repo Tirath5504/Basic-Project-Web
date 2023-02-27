@@ -148,20 +148,27 @@ int main(void)
 	for (int i = 0; i < n; i++)
 	{
 		printf("Enter student's name, roll number and marks in 3 subjects: ");
-		gets(s.name[i]);
-		scanf("%d %d %d %d", s.roll_no[i], s.m1[i], s.m2[i], s.m3[i]);
+		scanf("%s", s[i].name);
+		scanf("%d %d %d %d", s[i].roll_no, s[i].m1, s[i].m2, s[i].m3);
 	}
-	int max = s.m1[0] + s.m2[0] + s.m3[0];
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
 		{
-			if ((s.m1[i] + s.m2[i] + s.m3[i]) > max)
+			if ((s[j+1].m1 + s[j+1].m2 + s[j+1].m3) > (s[j].m1 + s[j].m2 + s[j].m3))
 			{
-				max = s.m1[i] + s.m2[i] + s.m3[i];
-				
+				int temp = s[j].roll_no;
+				s[j].roll_no = s[j+1].roll_no;
+				s[j+1].roll_no = temp;
 			}
 		}
+	}
+	for (int i = 0; i < n; i++)
+	{
+		printf("Student's name: %d\t", s[i].name);
+		printf("Roll Number: %d\t", s[i].roll_no);
+		printf("Marks in 3 subjects: %d %d %d", s[i].m1, s[i].m2, s[i].m3);
+		printf("\n");
 	}
 	return 0;
 }
