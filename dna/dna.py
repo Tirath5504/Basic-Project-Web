@@ -8,7 +8,7 @@ import pandas as pd
 def main():
 
     # Checking for command-line usage
-    if not len(sys.argv) == 3:
+    if len(sys.argv) != 3:
         print("Usage: python dna.py data.csv sequence.txt")
 
     # Reading database file into a variable
