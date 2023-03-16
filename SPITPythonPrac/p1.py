@@ -1,9 +1,9 @@
 def main():
-    """string()"""
-    """number()"""
+    string()
+    number()
     formatString()
 
-"""
+
 def string():
     name = "Tirath Bhathawala"
     clg = " DJ Sanghvi"
@@ -32,7 +32,7 @@ def number():
     print("{0:8} | {1:9}".format("Apples", 5))
     print("{0:<8} | {1:^9} | {2:>9}".format("Left", "Centre", "Right"))
     print("{0:-<8} | {1:=^9} | {2:.>9}".format("Left", "Centre", "Right"))
-"""
+
 
 def formatString():
     name = "Tirath"
