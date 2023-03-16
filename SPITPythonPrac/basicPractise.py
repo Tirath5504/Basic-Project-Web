@@ -48,8 +48,9 @@ def lists():
     print(l1[1:])
     l1.append("Tirath")
     print(l1)
-    a = l1.pop(4)
+    a = l1.pop(2)
     print(a)
     print(l1)
+    print(l1.pop())
 
 main()
