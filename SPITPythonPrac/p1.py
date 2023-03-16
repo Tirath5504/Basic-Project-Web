@@ -1,8 +1,8 @@
 def main():
-    num = 5**3
-    print(num)
-    string()
+    """string()"""
+    number()
 
+"""
 def string():
     name = "Tirath Bhathawala"
     clg = " DJ Sanghvi"
@@ -19,5 +19,14 @@ def string():
     print(name + clg)
     print(name.split())
     print(name.split('w'))
+"""
+
+def number():
+    num = 5**3
+    n = 6*2.656
+    print(num)
+    print("Number: %4.2f", n)
+    print("This is a {a} and {a}".format(a = "Cat"))
+    print("{0:8} | {1:9}".format("Fruit", "Quantity"))
 
 main()
