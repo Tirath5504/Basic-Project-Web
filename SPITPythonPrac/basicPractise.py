@@ -1,6 +1,9 @@
+main()
+
 def main():
-    tuples()
+
 """
+    tuples()
     functions()
     lists()
     string()
@@ -69,7 +72,6 @@ def functions():
     print(l[1][2])
     l5 = [x[0] for x in l]
     print(l5)
-"""
 
 def tuples():
     # Tuples are immutable lists(cannot be changed).
@@ -79,6 +81,4 @@ def tuples():
     print(t[-1])
     print(t.index("Tirath"))
     print(t.count(2))
-    
-
-main()
+"""
