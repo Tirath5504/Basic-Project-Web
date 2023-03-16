@@ -1,10 +1,10 @@
 def main():
+    lists()
 """
     string()
     number()
     formatString()
 """
-    lists()
 
 """
 def string():
