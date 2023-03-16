@@ -18,5 +18,6 @@ def string():
     print(name[::-1])
     print(name + clg)
     print(name.split())
+    print(name.split('w'))
 
 main()
