@@ -72,10 +72,13 @@ def functions():
 """
 
 def tuples():
-    t = (1, 2, "Tirath")
+    # Tuples are immutable lists(cannot be changed).
+    t = (1, 2, "Tirath", 2, "Hello")
     print(t)
     print(len(t))
     print(t[-1])
+    print(t.index("Tirath"))
+    print(t.count(2))
     
 
 main()
