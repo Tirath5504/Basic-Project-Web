@@ -17,5 +17,6 @@ def string():
     print(name[2:9:2])
     print(name[::-1])
     print(name + clg)
+    print(name.split())
 
 main()
