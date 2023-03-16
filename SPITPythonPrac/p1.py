@@ -1,8 +1,11 @@
 def main():
     num = 5**3
-    name = "Tirath"
     print(num)
+    string()
+
+def string():
+    name = "Tirath"
     print(name)
     print(type(name))
-
+    
 main()
