@@ -43,7 +43,13 @@ def formatString():
 """
 
 def lists():
-    l1 = {1, 2, 3}
+    l1 = [1, 2, "Hello", "World"]
+    print(l1)
+    print(l1[1:])
+    l1.append("Tirath")
+    print(l1)
+    a = l1.pop(4)
+    print(a)
     print(l1)
 
 main()
