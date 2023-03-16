@@ -5,6 +5,7 @@ def main():
 
 def string():
     name = "Tirath Bhathawala"
+    clg = " DJ Sanghvi"
     print(name)
     print(type(name))
     print(name[2:5])
@@ -15,5 +16,6 @@ def string():
     print(name[2:-2])
     print(name[2:9:2])
     print(name[::-1])
+    print(name + clg)
 
 main()
