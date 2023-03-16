@@ -1,6 +1,7 @@
 def main():
     """string()"""
-    number()
+    """number()"""
+    formatString()
 
 """
 def string():
@@ -19,7 +20,7 @@ def string():
     print(name + clg)
     print(name.split())
     print(name.split('w'))
-"""
+
 
 def number():
     num = 5**3
@@ -29,5 +30,12 @@ def number():
     print("This is a {a} and {a}".format(a = "Cat"))
     print("{0:8} | {1:9}".format("Fruit", "Quantity"))
     print("{0:8} | {1:9}".format("Apples", 5))
+    print("{0:<8} | {1:^9} | {2:>9}".format("Left", "Centre", "Right"))
+    print("{0:-<8} | {1:=^9} | {2:.>9}".format("Left", "Centre", "Right"))
+"""
+
+def formatString():
+    name = "Tirath"
+    print(f"My name is {name}")
 
 main()
