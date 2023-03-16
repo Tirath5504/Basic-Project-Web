@@ -1,9 +1,12 @@
 def main():
+"""
     string()
     number()
     formatString()
+"""
+    lists()
 
-
+"""
 def string():
     name = "Tirath Bhathawala"
     clg = " DJ Sanghvi"
@@ -37,5 +40,10 @@ def number():
 def formatString():
     name = "Tirath"
     print(f"My name is {name}")
+"""
+
+def lists():
+    l1 = {1, 2, 3}
+    print(l1)
 
 main()
