@@ -1,6 +1,8 @@
 def main():
-    lists()
+    tuples()
 """
+    functions()
+    lists()
     string()
     number()
     formatString()
@@ -40,7 +42,6 @@ def number():
 def formatString():
     name = "Tirath"
     print(f"My name is {name}")
-"""
 
 def lists():
     l1 = [1, 2, "Hello", "World"]
@@ -52,5 +53,29 @@ def lists():
     print(a)
     print(l1)
     print(l1.pop())
+
+def functions():
+    l1 = ["a", "z", "d", "c"]
+    l2 = [1,2,3]
+    l3 = [4,5,6]
+    l4 = [7,8,9]
+    l = [l2,l3,l4]
+    l1.sort()
+    print(l1)
+    l1.reverse()
+    print(l1)
+    print(l)
+    print(l[2])
+    print(l[1][2])
+    l5 = [x[0] for x in l]
+    print(l5)
+"""
+
+def tuples():
+    t = (1, 2, "Tirath")
+    print(t)
+    print(len(t))
+    print(t[-1])
+    
 
 main()
