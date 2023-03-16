@@ -1,6 +1,6 @@
 def main():
     num = 5**3
-    name = 'Tirath'
+    name = "Tirath"
     print(num)
     print(name)
     print(type(name))
