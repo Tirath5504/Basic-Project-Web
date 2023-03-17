@@ -29,7 +29,6 @@ def string():
     print(name.split())
     print(name.split('w'))
 
-
 def number():
     num = 5**3
     n = 6*2.656
