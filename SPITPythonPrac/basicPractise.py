@@ -1,6 +1,7 @@
 def main():
-    sets()
+    conditionals()
 """
+    sets()
     dictionaries()
     tuples()
     functions()
@@ -94,7 +95,19 @@ def dictionaries():
     print(my_dict.items())
 """
 
+"""
 def sets():
+    l = [1,2,3,4,1]
+    x = set()
+    x.add(1)
+    x.add(2)
+    x.add(1)
+    print(x)
+    x = set(l)
+    print(x)
+"""
+
+def conditionals():
     
 
 main()
