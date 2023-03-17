@@ -108,6 +108,9 @@ def sets():
 """
 
 def conditionals():
-    
+    if 2 < 3:
+        print("{a} is greater than {b}",format(a=2,b=3))
+    elif 3 > 2:
+        
 
 main()
