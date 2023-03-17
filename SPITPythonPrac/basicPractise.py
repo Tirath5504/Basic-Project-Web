@@ -13,8 +13,9 @@ def main():
         print("WARM!")
     c = 2
     while ans != (int(input("Enter a number between 1 and 100: "))):
-        if abs(ans - num) > diff:
-            diff = abs(ans - num)
+        newDiff = abs(ans - num)
+        if newDiff > diff:
+            diff = newDiff
             print("COLDER!")
         else:
             diff = abs(ans - num)
