@@ -11,12 +11,12 @@ def main():
         print("COLD!")
     else:
         print("WARM!")
-    c = 1
+    c = 2
     while ans != (int(input("Enter a number between 1 and 100: "))):
         if abs(ans - num) > diff:
             diff = abs(ans - num)
             print("COLDER!")
-        elif abs(ans - num) < diff:
+        else:
             diff = abs(ans - num)
             print("WARMER!")
         c += 1
