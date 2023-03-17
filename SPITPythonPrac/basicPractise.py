@@ -1,6 +1,27 @@
 from random import shuffle, randint
 
 def main():
+    from random import randint
+    ans = randint(1,100)
+    num = int(input("Enter a number between 1 and 100: "))
+    diff = abs(ans - num)
+    if num > 100 or num <= 0:
+        print("OUT OF BOUNDS!")
+    elif diff > 10:
+        print("COLD!")
+    else:
+        print("WARM!")
+    c = 1
+    while ans != int(input("Enter a number between 1 and 100: ")):
+        if abs(ans - num) > diff:
+            diff = abs(ans - num)
+            print("COLDER!")
+        elif abs(ans - num) < diff:
+            diff = abs(ans - num)
+            print("WARMER!")
+        c += 1
+    print("CORRECT ANSWER {}".format(c))
+
 """
     listcomp()
     rand()
