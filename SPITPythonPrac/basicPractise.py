@@ -1,6 +1,7 @@
 def main():
-    dictionaries()
+    sets()
 """
+    dictionaries()
     tuples()
     functions()
     lists()
@@ -80,6 +81,7 @@ def tuples():
     print(t.count(2))
 """
 
+"""
 def dictionaries():
     my_dict = {"key1": "hello", "key2": [1,2,3,4], "key3": 3}
     print(my_dict["key3"])
@@ -90,5 +92,9 @@ def dictionaries():
     print(my_dict.keys())
     print(my_dict.values())
     print(my_dict.items())
+"""
+
+def sets():
+    
 
 main()
