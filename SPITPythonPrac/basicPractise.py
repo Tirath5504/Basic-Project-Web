@@ -1,6 +1,7 @@
 def main():
-    conditionals()
+    loops()
 """
+    conditionals()
     sets()
     dictionaries()
     tuples()
@@ -107,10 +108,19 @@ def sets():
     print(x)
 """
 
+"""
 def conditionals():
-    if 2 < 3:
-        print("{a} is greater than {b}",format(a=2,b=3))
+    if 3 < 2:
+        print("{a} is greater than {b}".format(a=2,b=3))
     elif 3 > 2:
-        
+        print("{a} is less than {b}".format(a=2,b=3))
+"""
+
+def loops():
+    for i in range(2, 11):
+        print("{} - HELLO".format(i))
+    list1 = [1,2,7,4,5,6]
+    for i in list1:
+        print(f"{i} - HELLO")
 
 main()
