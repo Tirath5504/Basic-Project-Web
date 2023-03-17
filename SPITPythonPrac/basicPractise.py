@@ -1,7 +1,5 @@
-main()
-
 def main():
-    
+    dictionaries()
 """
     tuples()
     functions()
@@ -81,3 +79,10 @@ def tuples():
     print(t.index("Tirath"))
     print(t.count(2))
 """
+
+def dictionaries():
+    my_dict = {"key1": "hello", "key2": [1,2,3,4], "key3": 3}
+    print(my_dict["key3"])
+    print(my_dict["key2"][2])
+    print(my_dict["key1"].toupper())
+main()
