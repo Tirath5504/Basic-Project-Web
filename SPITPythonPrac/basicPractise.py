@@ -84,5 +84,11 @@ def dictionaries():
     my_dict = {"key1": "hello", "key2": [1,2,3,4], "key3": 3}
     print(my_dict["key3"])
     print(my_dict["key2"][2])
-    print(my_dict["key1"].toupper())
+    print(my_dict["key1"].upper())
+    my_dict["key4"] = {"nestkey1": 4, "nestkey2": 5}
+    print(my_dict["key4"]["nestkey2"])
+    my_dict.keys()
+    my_dict.values()
+
+
 main()
