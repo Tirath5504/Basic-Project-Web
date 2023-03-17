@@ -1,7 +1,7 @@
 main()
 
 def main():
-
+    
 """
     tuples()
     functions()
