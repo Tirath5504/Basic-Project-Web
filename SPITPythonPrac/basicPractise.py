@@ -1,8 +1,8 @@
 from random import shuffle, randint
 
 def main():
-    listcomp()
 """
+    listcomp()
     rand()
     loops()
     conditionals()
@@ -98,6 +98,7 @@ def dictionaries():
     print(my_dict.keys())
     print(my_dict.values())
     print(my_dict.items())
+    print(my_dict.update())
 """
 
 """
@@ -150,6 +151,7 @@ def rand():
     print(randint(0,100))
 """
 
+"""
 def listcomp():
     l1 = [(x+1)**2 for x in range(10)]
     print(l1)
@@ -159,5 +161,6 @@ def listcomp():
     print(l3)
     l4 = [x for x in range(1,11) if x%2 == 0]
     print(l4)
+"""
 
 main()
