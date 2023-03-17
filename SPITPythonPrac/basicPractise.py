@@ -12,7 +12,7 @@ def main():
     else:
         print("WARM!")
     c = 1
-    while ans != int(input("Enter a number between 1 and 100: ")):
+    while ans != (int(input("Enter a number between 1 and 100: "))):
         if abs(ans - num) > diff:
             diff = abs(ans - num)
             print("COLDER!")
@@ -20,7 +20,7 @@ def main():
             diff = abs(ans - num)
             print("WARMER!")
         c += 1
-    print("CORRECT ANSWER {}".format(c))
+    print("CORRECT ANSWER in {} number of guesses".format(c))
 
 """
     listcomp()
