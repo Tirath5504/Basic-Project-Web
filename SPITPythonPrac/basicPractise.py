@@ -1,6 +1,10 @@
+from random import shuffle, randint
+
 def main():
-    loops()
+    listcomp()
 """
+    rand()
+    loops()
     conditionals()
     sets()
     dictionaries()
@@ -116,11 +120,44 @@ def conditionals():
         print("{a} is less than {b}".format(a=2,b=3))
 """
 
+"""
 def loops():
+    list1 = [1,2,7,4,5,6]
+
     for i in range(2, 11):
         print("{} - HELLO".format(i))
-    list1 = [1,2,7,4,5,6]
     for i in list1:
         print(f"{i} - HELLO")
+
+    x = 0
+    while x < 10:
+        if x%2 == 0:
+            x += 1
+            continue
+        print(x)
+        x += 1
+
+    print(min(list1))
+    print(max(list1))
+    print(sum(list1))
+"""
+
+"""
+def rand():
+    l = [1,2,3,4,5,6]
+    shuffle(l)
+    print(l)
+    print(randint(0,100))
+"""
+
+def listcomp():
+    l1 = [(x+1)**2 for x in range(10)]
+    print(l1)
+    l2 = [x for x in range(0,10,2)]
+    print(l2)
+    l3 = [x*2 for x in range(0,10)]
+    print(l3)
+    l4 = [x for x in range(1,11) if x%2 == 0]
+    print(l4)
 
 main()
