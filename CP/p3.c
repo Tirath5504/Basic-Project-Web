@@ -16,9 +16,10 @@ int main(void)
     }
     for (int i = 0; i < n; i++)
     {
+        max = 
         for (j = 1; j < num[i]; j++)
         {
-            
+            max =
         }
     }
 
