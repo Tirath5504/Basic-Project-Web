@@ -12,15 +12,15 @@ int main(void)
         int a = 0;
         for (int i = 0; i < num; i++)
         {
-            no[i] = i;
+            no[i] = i+1;
         }
         for (int i = 0; i < num; i++)
         {
             if (num % 2 == 1 && num >= 3)
             {
-                printf("3");
-                printf("1");
-                printf("2");
+                no[0] = 3;
+                no[1] = 1;
+                no[2] = 2;
                 for (int j = 4; j <= num; j += 2)
                 {
                     int temp = no[j+1];
@@ -30,7 +30,7 @@ int main(void)
             }
             else if (num % 2 == 0)
             {
-                for (int j = 1; j <= num; j += 2)
+                for (int j = 0; j < num; j += 2)
                 {
                     int temp = no[j+1];
                     no[j+1] = no[j];
