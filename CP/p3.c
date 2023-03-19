@@ -16,15 +16,18 @@ int main(void)
     for (int i = 0; i < n; i++)
     {
         int max = num[i][1], min = num[i][1];
-        for (int j = 1; j <= num[i][0]; j++)
+        for (int k = 1; k <= num[i][0]; k++)
         {
-            if (num[i][j] > max)
+            for (int j = k; j <= num[i][0]; j++)
             {
-                max = num[i][j];
-            }
-            else if (num[i][j] < min)
-            {
-                min = num[i][j];
+                if (num[i][j] > max)
+                {
+                    max = num[i][j];
+                }
+                else if (num[i][j] < min)
+                {
+                    min = num[i][j];
+                }
             }
         }
         printf("%d\n", max*min);
