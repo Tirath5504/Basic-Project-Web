@@ -13,12 +13,12 @@ int main(void)
         scanf("%s", str);
         for(int j = 0, k = num-1; j < num; j++, k--)
         {
-            if ((str[j] == 1 && str[k] == 0) || (str[j] == 0 && str[k] == 1))
+            if ((str[j] == '1' && str[k] == '0') || (str[j] == '0' && str[k] == '1'))
             {
                 count++;
             }
         }
-        printf("%d", count);
+        printf("%d\n", count);
     }
     return 0;
 }
