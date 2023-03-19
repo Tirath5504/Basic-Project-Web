@@ -14,8 +14,6 @@ int main(void)
         {
             no[i] = i+1;
         }
-        for (int i = 0; i < num; i++)
-        {
             if (num % 2 == 1 && num >= 3)
             {
                 no[0] = 3;
@@ -37,7 +35,7 @@ int main(void)
                     no[j] = temp;
                 }
             }
-        }
+
         for (int i = 0; i < num; i++)
         {
             printf("%d ", no[i]);
