@@ -27,10 +27,10 @@ int main(void)
                 }
             }
         }
+        }
         if (!flag)
         {
             printf("YES\n");
-        }
         }
     }
     return 0;
