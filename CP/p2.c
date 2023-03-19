@@ -18,7 +18,7 @@ int main(void)
         {
         if (str[k+1] != str[k])
         {
-            for (int j = k+2; j < strlen(str); j++)
+            for (int j = k+2; j < num[i]; j++)
             {
                 if (str[k] == str[j])
                 {
