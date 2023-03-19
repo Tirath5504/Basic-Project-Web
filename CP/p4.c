@@ -10,7 +10,7 @@ int main(void)
         scanf("%d", &num[i]);
     }
     int a = 0;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < num[i]; i++)
     {
         no[i] = i;
     }
