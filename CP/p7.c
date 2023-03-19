@@ -25,7 +25,11 @@ int main(void)
             {
                 continue;
             }
-            count = k - j + 1;
+            else
+            {
+                count = k - j + 1;
+                break;
+            }
         }
         printf("%d\n", count);
     }
