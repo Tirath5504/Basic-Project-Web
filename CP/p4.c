@@ -12,10 +12,17 @@ int main(void)
     int a = 0;
     for (int i = 0; i < n; i++)
     {
-        for (int j = 1; j < num[a]; j++)
-        if (num[a] % 2 == 0)
+        if (num[a] % 2 == 1 && num[a] > 3)
         {
-            printf();
+            for (int j = 1; j < 3; j++)
+            {
+                printf("%d", j);
+            }
+            for (int j = 4; j < num[a]; j++)
+            {
+                int temp = j+1;
+                
+            }
         }
         printf("\n");
         a++;
