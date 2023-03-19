@@ -4,12 +4,15 @@ int main(void)
 {
     int n1, n2, n, flag = 0;
     scanf("%d", &n);
-    int num[n];
+    int num;
     char str[n];
     for (int i = 0; i < n; i++)
     {
-        scanf("%d", &num[i]);
+        scanf("%d", &num);
+        for(int j = 0; j < num; j++)
+        {
         scanf("%s", &str[i]);
+        }
     }
     for (int i = 0; i < n; i++)
     {
