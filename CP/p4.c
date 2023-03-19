@@ -13,9 +13,9 @@ int main(void)
     for (int i = 0; i < n; i++)
     {
         for (int j = 1; j < num[a]; j++)
-        if ()
+        if (num[a] % 2 == 0)
         {
-            printf(" %d", j);
+            printf();
         }
         printf("\n");
         a++;
