@@ -13,19 +13,22 @@ int main(void)
     }
     for (int i = 0; i < n; i++)
     {
+        flag = 0;
         if (str[i+1] != str[i])
         {
             for (int j = i+2; j < n; j++)
             {
                 if (str[i] == str[j])
                 {
-                    printf("NO");
+                    printf("NO\n");
                     flag = 1;
                 }
             }
         }
         if (!flag)
-            printf("YES");
+        {
+            printf("YES\n");
+        }
     }
     return 0;
 }
