@@ -16,6 +16,7 @@ int main(void)
         flag = 0;
         for (int k = 0; k < strlen(str); k++)
         {
+        flag = 0;
         if (str[k+1] != str[k])
         {
             for (int j = k+2; j < n; j++)
