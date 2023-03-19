@@ -9,8 +9,11 @@ int main(void)
     for (int i = 0; i < n; i++)
     {
         scanf("%d", &num[i]);
-        scanf("%s", &n[i]);
+        for (j = 0; j < num[i]; j++)
+        {
+            scanf("%d", &n[j]);
+        }
     }
-
+    
     return 0;
 }
