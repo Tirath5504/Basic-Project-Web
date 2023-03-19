@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <string.h>
 int main(void)
 {
     int n1, n2, n, flag = 0;
@@ -14,11 +14,13 @@ int main(void)
     for (int i = 0; i < n; i++)
     {
         flag = 0;
-        if (str[i+1] != str[i])
+        for (int k = 0; k < strlen(str); k++)
         {
-            for (int j = i+2; j < n; j++)
+        if (str[k+1] != str[k])
+        {
+            for (int j = k+2; j < n; j++)
             {
-                if (str[i] == str[j])
+                if (str[k] == str[j])
                 {
                     printf("NO\n");
                     flag = 1;
@@ -28,6 +30,7 @@ int main(void)
         if (!flag)
         {
             printf("YES\n");
+        }
         }
     }
     return 0;
