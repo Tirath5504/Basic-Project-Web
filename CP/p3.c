@@ -16,9 +16,9 @@ int main(void)
     for (int i = 0; i < n; i++)
     {
         int max = num[i][1], min = num[i][1];
-        for (int k = 1; k <= num[i][0]; k++)
+        for (int k = 1; k <= num[i][0]+1; k++)
         {
-            for (int j = k; j <= num[i][0]; j++)
+            for (int j = k; j <= num[i][0]+1; j++)
             {
                 if (num[i][j] > max)
                 {
