@@ -21,7 +21,7 @@ int main(void)
                 no[0] = 3;
                 no[1] = 1;
                 no[2] = 2;
-                for (int j = 4; j <= num; j += 2)
+                for (int j = 3; j <= num; j += 2)
                 {
                     int temp = no[j+1];
                     no[j+1] = no[j];
