@@ -5,12 +5,12 @@ int main(void)
     int n1, n2, n, flag = 0;
     scanf("%d", &n);
     int num[n];
-    char str[100];
+    int n[1000];
     for (int i = 0; i < n; i++)
     {
         scanf("%d", &num[i]);
-        scanf("%s", &str[i]);
+        scanf("%s", &n[i]);
     }
- 
+
     return 0;
 }
