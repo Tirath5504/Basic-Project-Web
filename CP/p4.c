@@ -4,10 +4,11 @@ int main(void)
 {
     int n1, n2, n, flag = 0;
     scanf("%d", &n);
-    int num[n];
-    for (int i = 0; i < n; i++)
+    int num;
+    for (int k = 0; k < n; k++)
     {
-        scanf("%d", num);
+        scanf("%d", &num);
+        int no[num];
         int a = 0;
         for (int i = 0; i < num; i++)
         {
@@ -15,21 +16,21 @@ int main(void)
         }
         for (int i = 0; i < num; i++)
         {
-            if (num[a] % 2 == 1 && num[a] >= 3)
+            if (num % 2 == 1 && num >= 3)
             {
                 printf("3");
                 printf("1");
                 printf("2");
-                for (int j = 4; j <= num[a]; j += 2)
+                for (int j = 4; j <= num; j += 2)
                 {
                     int temp = no[j+1];
                     no[j+1] = no[j];
                     no[j] = temp;
                 }
             }
-            else if (num[a] % 2 == 0)
+            else if (num % 2 == 0)
             {
-                for (int j = 1; j <= num[a]; j += 2)
+                for (int j = 1; j <= num; j += 2)
                 {
                     int temp = no[j+1];
                     no[j+1] = no[j];
@@ -39,7 +40,7 @@ int main(void)
         }
         for (int i = 0; i < num; i++)
         {
-            printf("%d", no[i]);
+            printf("%d ", no[i]);
         }
         printf("\n");
         a++;
