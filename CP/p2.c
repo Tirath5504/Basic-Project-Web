@@ -11,7 +11,7 @@ int main(void)
         scanf("%d", &num[i]);
         scanf("%s", &str[i]);
     }
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < num[i]; i++)
     {
         flag = 0;
         for (int k = 0; k < strlen(str); k++)
