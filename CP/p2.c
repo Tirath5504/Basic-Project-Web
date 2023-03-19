@@ -25,6 +25,7 @@ int main(void)
                 {
                     printf("NO\n");
                     flag = 1;
+                    break;
                 }
             }
         }
