@@ -27,6 +27,10 @@ int main(void)
                     break;
                 }
             }
+            if (flag == 1)
+            {
+                break;
+            }
         }
         }
         if (!flag)
