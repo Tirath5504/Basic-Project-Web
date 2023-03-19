@@ -4,20 +4,17 @@ int main(void)
 {
     int n1, n2, n, flag = 0;
     scanf("%d", &n);
-    int num;
+    int num[n];
     char str[n];
     for (int i = 0; i < n; i++)
     {
-        scanf("%d", &num);
-        for(int j = 0; j < num; j++)
-        {
-        scanf("%s", &str[j]);
-        }
+        scanf("%d", &num[i]);
+        scanf("%s", &str[i]);
     }
     for (int i = 0; i < n; i++)
     {
         flag = 0;
-        for (int k = 0; k < strlen(str); k++)
+        for (int k = 0; k < num[i]; k++)
         {
         if (str[k+1] != str[k])
         {
