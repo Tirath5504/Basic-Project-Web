@@ -23,8 +23,9 @@ int main(void)
         {
             if ((str[j] == '1' && str[k] == '0') || (str[j] == '0' && str[k] == '1'))
             {
-                count++;
+                continue;
             }
+            count = 
         }
         printf("%d\n", count);
     }
