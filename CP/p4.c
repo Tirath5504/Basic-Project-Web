@@ -12,7 +12,7 @@ int main(void)
     int a = 0;
     for (int i = 0; i < n; i++)
     {
-        for (int )
+        no[i] = i;
     }
     for (int i = 0; i < n; i++)
     {
@@ -23,13 +23,14 @@ int main(void)
             {
                 printf("%d", j);
             }
-            for (int j = 4; j < num[a]; j++)
+            for (int j = 4; j < num[a]; j += 2)
             {
-                int temp = j+1;
-                j+1 =
-
+                int temp = no[j+1];
+                no[j+1] = no[j];
+                no[j] = temp;
             }
         }
+        printf()
         printf("\n");
         a++;
     }
