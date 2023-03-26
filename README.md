@@ -1,4 +1,4 @@
-# 11230032
-All of my cs50 and other important code
+All of my cs50 and SPC code!
 
-This repo is crucial
+Author and Owner: Tirath Bhathawala(GitHub Username: Tirath5504).
+# 11230032
